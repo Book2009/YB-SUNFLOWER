@@ -20,15 +20,15 @@
 
 `FlowChart` This folder includes diagrams showing the logic and sequence of the robot's control program, highlighting how it processes inputs and controls movements during missions.
 
-`Others` Other essential photos like, work schedule, and.
+`Others` Other essential photos like, work schedule, and robot assemble gif.
 
-`Program` This folder includes all programming used to participate in the WRO 2024 Future Engineers Category and all the programming flowcharts.
+`Program` This folder includes all the codes that are used in the WRO 2025 Future Engineers Category and all the programming flowcharts.
 
 `Robot-Photos` This folder contains photos of the vehicle from all perspectives, including side and bottom views.
 
 `Schemes` This folder contains one or more schematic diagrams in JPEG, PNG, or PDF format that depict the electromechanical components of the vehicle. These diagrams illustrate all the elements, including electronic components and motors, and show how they are interconnected.
 
-`Team-Photos` This folder includes photos of the team participating in the WRO 2024 Future Engineers Category.
+`Team-Photos` This folder includes photos of the team participating in the WRO 2025 Future Engineers Category.
 
 `Videos` This folder contains YouTube links that show how the robot operates to complete both missions.
 
