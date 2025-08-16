@@ -105,14 +105,14 @@ I am Pawit, the document designer of our team. My role is to make sure that ever
 <p align="center">
     <img src="https://github.com/ThanyawutII/Test/blob/main/Pongpapat_Putongkam.png" width="400"/>
 </p>
-Natapol is our master programmer, and sometimes we joke that he’s not even human because of how effortlessly he can code anything. From low-level languages to advanced systems, he can take on any programming challenge that comes his way. His ability to quickly understand problems and turn them into working solutions makes him a key part of our team’s success. With his skills, even the most complex systems feel possible to build — it’s like there’s no code in the world he cannot write.
+Natapol is our master programmer, and sometimes we joke that he’s not even human because of how effortlessly he can code anything. From bad-looking robot to advanced systems, he can take on any programming challenge that comes his way. His ability to quickly understand problems and turn them into working solutions makes him a key part of our team’s success. With his skills, even the most complex systems feel possible to build — it’s like there’s no code in the world he cannot write.
 
 </p>
 <hr>
 
 ### **Our Vision and Goal**
 
-We want to create a robot that can operate similarly to a self-driving car, with the hope of integrating it with an actual automobile. This competition is the first step toward our future goal of helping our country and inventing new things. Additionally, via participating in this competition, we have developed and learned numerous skills like collaboration, imagination, and foresight. We also desired to meet new friends from other nations in order to exchange cultures. Furthermore, we intend to utilize the experience we have obtained from this tournament to better ourselves and mentor our junior at school.
+We want to create a robot that can operate similarly to a self-driving car, with the hope of integrating it with an actual automobile. This competition is a step toward our future goal of helping our country and inventing new things. Additionally, via participating in this competition, we have developed and learned numerous skills like collaboration, imagination, and foresight. We also desired to meet new friends in order to exchange knowledge. Furthermore, we intend to utilize the experience we have obtained from this tournament to better ourselves and mentor our junior at school.
 <hr>
 
 ### **Work Schedule**
