@@ -53,9 +53,9 @@ Our team name, YB-SUNFLOWER, carries a meaningful story. The word “Sunflower�
  We are **YB-SUNFLOWER**, team from Bangkok, Thailand. We are a part of YB-Robot club from Yothinburana School with our mentor, Punnapon Tanasnitikul. This is our club website https://ybrobot.club/. The club was established in 2009 with the first name being “YB Dream Team”. Last year, we also attend in WRO 2024 that took place in Türkiye.
 
 
- This is the first generation.
+ This is the first international award.
   <p align="center">
-    <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/The%20Nocturnalists.JPG" width="500"/>
+    <img src="https://www.ybrobot.club/image/DSC_1209.jpg" width="500"/>
 </p>
   </p>
   </p>
