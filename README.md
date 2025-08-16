@@ -115,24 +115,6 @@ Natapol is our master programmer, and sometimes we joke that he’s not even hum
 We want to create a robot that can operate similarly to a self-driving car, with the hope of integrating it with an actual automobile. This competition is a step toward our future goal of helping our country and inventing new things. Additionally, via participating in this competition, we have developed and learned numerous skills like collaboration, imagination, and foresight. We also desired to meet new friends in order to exchange knowledge. Furthermore, we intend to utilize the experience we have obtained from this tournament to better ourselves and mentor our junior at school.
 <hr>
 
-### **Work Schedule**
-
-We created a thorough work plan demonstrating our devotion and cooperation and strategic planning skills. these are the well-defined people as well as deadlines that make sure that every individual in the team understands what is expected of them and by when. Setting priorities and milestones also help in effective time management, progress tracking and coping up with any unplanned activities. This approach boosts productivity in addition to teamwork as one can focus on the task at hand without risking wandering away. The plan we created is a guiding document that speeds us up and provides us with accuracy in achieving success.
-
-<p align="center">
-    <img src="https://github.com/ThanyawutII/Test/blob/main/Screenshot%202024-10-04%20124056.png" />
-</p>
-
-<p align="center">
-    <img src="https://github.com/ThanyawutII/Test/blob/main/Screenshot%202024-10-04%20124152.png" />
-</p>
-<p align="center">
-  " <em>We’re a team; we work as a whole, think as though we have a hundred heads, and know each other as if we’ve been together for years. We’ve come together, gathered the hands of each member, and moved forward with one, united mind.</em> "
-
-  <p align="center">
-  -The Nocturnalists
-</p>
-<hr>
 
 # **Part 2: MECHANICAL DESIGN**
 
