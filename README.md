@@ -44,15 +44,15 @@
 # **Part 1: About Us**
 
 ## **This is our team.**
-
- We are **YB-SUNFLOWER**, team from Bangkok, Thailand. We are a part of YB-Robot club from Yothinburana School with our mentor, Punnapon Tanasnitikul. This is our club website https://ybrobot.club/. The club was established in 2009 with the first name being “YB Dream Team”. Last year, we also attend in WRO 2024 that took place in Türkiye.
+Our team name, YB-SUNFLOWER, carries a meaningful story. The word “Sunflower” comes from one of our seniors, Tawan (ตะวัน). In Thai, “sunflower” is ทานตะวัน, which is directly connected to his name. Since 2023, he has inspired us to join the Future Engineers Competition, always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included “Sunflower” in our team name. This year is even more special, because for the first time, he is actually competing together with us as part of the team.
+ 
  <hr>
 
 ### **Team History** 
  
- Our team name, YB-SUNFLOWER, carries a meaningful story. The word “Sunflower” comes from one of our seniors, Tawan (ตะวัน). In Thai, “sunflower” is ทานตะวัน, which is directly connected to his name. Since 2023, he has inspired us to join the Future Engineers Competition, always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included “Sunflower” in our team name. This year is even more special, because for the first time, he is actually competing together with us as part of the team.
+ We are **YB-SUNFLOWER**, team from Bangkok, Thailand. We are a part of YB-Robot club from Yothinburana School with our mentor, Punnapon Tanasnitikul. This is our club website https://ybrobot.club/. The club was established in 2009 with the first name being “YB Dream Team”. Last year, we also attend in WRO 2024 that took place in Türkiye.
 
-The name The Nocturnalist starts from our senior since the year 2015 in FLL Asia Pacific competition that took place in Australia. They won first place in national and got the Innovation Solution Award in international stage.</p>
+
  This is the first generation.
   <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/The%20Nocturnalists.JPG" width="500"/>
