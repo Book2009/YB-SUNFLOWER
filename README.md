@@ -68,7 +68,7 @@ This is the second WRO international award in 2011.
 Currently in 2025, we are a part of YB Robot Team. Our senior brought this team name to global recognition, so there is a responsibility since our senior perform excellently. We are hoping to keep this name on the winning streak and make them proud. </p>
 This is the latest WRO international award in 2024 (13th place).  
  <p align="center">
-    <img src="![20241128_105002](https://github.com/user-attachments/assets/669b662d-9b7f-460a-bfa8-987d1f990fd4)" width="500"/>
+    <img src="https://github.com/user-attachments/assets/0a5434d2-1201-4911-a0f8-85d0b6c359f3" width="500"/>
 </p>
   </p>
   </p>
