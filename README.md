@@ -93,7 +93,7 @@ There are three members in our team, all extremely focused and dedicated to thei
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Thanyawut%20Krittikanon.png" width="400"/>
 </p>
-Thanyawut is known in our team as ==the god of Fusion==, with outstanding skills in **3D design and modeling**. His expertise in creating precise and creative robot designs makes him a crucial part of our team. With his talent, he can turn our ideas into detailed models that guide the building process and bring our concepts to life.
+Thanyawut is known in our team as ***the god of Fusion*** , with outstanding skills in **3D design and modeling**. His expertise in creating precise and creative robot designs makes him a crucial part of our team. With his talent, he can turn our ideas into detailed models that guide the building process and bring our concepts to life.
 
 #### 2. Pawit Nateenantasawasd – Document Designer and Electrician 
 <p align="center">
