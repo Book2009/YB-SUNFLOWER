@@ -75,11 +75,11 @@ This is the latest WRO international award in 2023 (7th and 8th place).
   <hr>
 
 ### **Our Team**
-   The team consists of three intimate friends Pawit Nateenantasawasd, Pongpapat Putongkam, and Thanyawut Krittikanon. We have been together for four years, forming a strong bond that enhances our collaborative efforts. We first met in high school, sharing the same class, and after some conversation, we discovered our similarities. For instance, we both share a passion for robotics and competition, which led us to join the YB-Robot club together. Much of what we know today has been learned from the experiences of our seniors, who have taught us valuable lessons and helped shape who we are now. This journey has brought us to this international stage.
+   The team consists of 2 intimate friends and 1 of our senior, 'Tawan'. Pawit Nateenantasawasd, Thanyawut Krittikanon, and Natapol Chusang. We have known each other for four years since 2021, forming a strong bond that enhances our collaborative efforts. We first met in high school, being in robot club, competing in many robot competitions together, and sharing our robotic knowledge. Much of what we know today has been learned from the experiences of our seniors in out team, who have taught us valuable lessons and helped shape who we are now.
 
-   Last year, with great enthusiasm and high spirits, we joined the WRO. Reaching the international round was already a great honor, but we were soon to realize that in order to win, one needs more than just enthusiasm. Our mistakes led us take the 8th position, a respectable position indeed. 
+   Last 2 years, with great enthusiasm and high spirits, we joined Future Engineers twice. Reaching the international round was already a great honor, but we were soon to realize that in order to win, one needs more than just enthusiasm. Our mistakes led us take the 8th and 13th position, a respectable position indeed. 
 
-   This year, we are back with greater confidence, and wiser from past experiences. We honed our strategies and prepared extensively. We fixed every mistake we have done last year and more. Being back at the international stage is one of our dreams. And we are here to make everyone proud.  
+   This year, we are back with greater confidence, and wiser from past experiences. We honed our strategies and prepared extensively. We fixed every mistake we have done last 2 years. Being back at this competition make us want to ensure the best outcome, and we are here to make everyone proud.  
 
 
 <p align="center">
