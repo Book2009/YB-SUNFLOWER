@@ -3,7 +3,7 @@
 
 </p>
 <p align="center">
-  <img src="(https://ybrobot.club/image/YB%20Robot%20logo.png)" width="420"/>
+  <img src="https://ybrobot.club/image/YB%20Robot%20logo.png" width="420"/>
 </p>
 
 
