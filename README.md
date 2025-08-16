@@ -89,23 +89,23 @@ This is the latest WRO international award in 2023 (7th and 8th place).
 <hr>
 There are three members in our team, all extremely focused and dedicated to their positions, performing functions as follows: 
  
-#### 1. Thanyawut Krittikanon – Team Coordinator and Document Designer
+#### 1. Thanyawut Krittikanon – Robot Designer
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Thanyawut%20Krittikanon.png" width="400"/>
 </p>
-Thanyawut is in charge of documentation. He possesses both robotics and programming skills which helps him assist us in keeping our processes organized. He also ensures that every procedure and system we work on is accurately done correctly, helping us maintain a clear workflow. This will not only enable us to move forward to the next stage but to also improve on the stages we have gone through.
+Thanyawut is known in our team as **the god of Fusion**, with outstanding skills in **3D design and modeling**. His expertise in creating precise and creative robot designs makes him a crucial part of our team. With his talent, he can turn our ideas into detailed models that guide the building process and bring our concepts to life.
 
-#### 2. Pawit Nateenantasawasd – The Programmer 
+#### 2. Pawit Nateenantasawasd – Document Designer and Electrician 
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Pawit%20Nateenantasawasd.png" width="400"/>
 </p>
-This is Pawit, our talented coder. He specializes in multiple coding language such as C++, C, Python, Micropython, HTML, etc. He may seem quiet at first, but his personality contributes to his work on coding “puzzles” in a very accurate and neat manner. It is his ability to focus which allows him to take up the challenge of programming very complicated systems like ours. It is this concentration that in the end enables us to have robots that work perfectly well. Pawit is always busy, it seems, and his engagement is what makes this group effective. 
+I am Pawit, the document designer of our team. My role is to make sure that everything we present — from reports to presentations — is clear, well-structured, and professional. I enjoy transforming complex ideas into something simple and easy to understand, while also giving it a creative and polished design. Besides designing documents, I also have strong coding skills in multiple languages such as C++, C, Python, Micropython, and HTML, which allow me to contribute to the technical side of our work.
 
-#### 3. Pongpapat Putongkam – The Mechanic and Constructor
+#### 3. Natapol Chusang - Programmer
 <p align="center">
     <img src="https://github.com/ThanyawutII/Test/blob/main/Pongpapat_Putongkam.png" width="400"/>
 </p>
-We have Pongpapat, our resident robotic designer who is stereotypically imaginative. He is responsible for our robot by designing it with both 3D and Lego parts. He uses Blender to design our 3D robot model. Sometimes, he built a Lego robot chassis to test if the new components work before he starts to design it in 3D parts. He also has an ability to form ideas quite literally out of nothing. He can picture the idea of the design in his mind, it is easy to take the ideas and put it into a design that is eye catching and unique.  
+Natapol is our **master programmer**, and sometimes we joke that he’s not even human because of how effortlessly he can code anything. From low-level languages to advanced systems, he can take on any programming challenge that comes his way. His ability to quickly understand problems and turn them into working solutions makes him a key part of our team’s success. With his skills, even the most complex systems feel possible to build — it’s like there’s no code in the world he cannot write.
 
 </p>
 <hr>
