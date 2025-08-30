@@ -138,7 +138,7 @@ The robot chassis design consists mainly of the 3D printed parts, which provide 
   </tr>
 </table>
 
-The main base provides the foundation for creating all other parts. It has cylindrical extensions meant to attach the servo and motor too — designed with LEGO connectors in mind, as opposed to clunky black pegs. Also detailed are the openings to accommodate both differential gear and regular gears so they do not hit the base when trying to rotate. One is a specially designed slot to work with this 3D-printed differential gear mount. The front part is cut out deeper so the servo for steering fits inside and has no problems to spin freely. This design allows to move effectively and optics in the small space of the robot.
+The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO pin attachment, enabling flexible prototyping and modular expansion. With additional cutouts for cable routing and space optimization, the Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
 
 <hr>
 
@@ -153,7 +153,22 @@ The main base provides the foundation for creating all other parts. It has cylin
   </tr>
 </table>
 
-The purpose of this component is to reinforce the main base securing attachments more firmly. It serves as an additional foundation to mount objects and 3D models, ensuring stability and strength in the overall structure.
+The Support Base is the second structural layer of the robot, positioned above the Main Base. It is designed to house the battery and includes a large central clearance to prevent interference with the control board mounted on the first layer, while also creating additional space for cable routing. At the front section, an interlocking joint mechanism is employed to mount the camera holder, reducing the need for screws and optimizing space efficiency.
+
+<hr>
+
+### Power Tray
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174812.png" width="400" > <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174820.png" width="400" >
+
+  <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Power%20Tray.stl" target="_blank">Click here to view 3D model.</a></p>
+  </tr>
+</table>
+
+This is the part that holds the 11.1V battery, which is easily removable for charging. This also serves to securely mount the step-down module in place. The raised portion at the back forms a stable platform for mounting the microcontroller board. Hence, this design optimizes the layout by keeping the important electronics of the best organization in space and providing stability.
 
 <hr>
 
@@ -213,7 +228,7 @@ Made for added security, precision grooves feature with special C-clips that ser
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174812.png" width="400" > <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174820.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20192249.png" width="400" > <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20192304.png" width="400" > 
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Power%20Tray.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
