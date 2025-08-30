@@ -157,21 +157,6 @@ The purpose of this component is to reinforce the main base securing attachments
 
 <hr>
 
-### C Clip
-
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20110026.png" width="400" >
-
-  <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/C%20Clip%20x4.stl" target="_blank">Click here to view 3D model.</a></p>
-  </tr>
-</table>
-
-This component functions as a stabilizing element, similar to a nut, preventing objects from shifting or moving out of place. The open, C-shaped design allows it to be easily positioned around shafts or other components, ensuring they remain securely fixed while maintaining flexibility for adjustments when needed.
-
-<hr>
-
 ### Differential Gear Mount
 
 <p align="center">
@@ -235,21 +220,6 @@ Made for added security, precision grooves feature with special C-clips that ser
 </table>
 
 This is the part that holds the 11.1V battery, which is easily removable for charging. This also serves to securely mount the step-down module in place. The raised portion at the back forms a stable platform for mounting the microcontroller board. Hence, this design optimizes the layout by keeping the important electronics of the best organization in space and providing stability.
-
-<hr>
-
-### Servo Bracket
-
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20184342.png" width="400" >
-
-  <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Servo%20Bracket.stl" target="_blank">Click here to view 3D model.</a></p>
-  </tr>
-</table>
-
-This component is intended for firm attachment of a servo motor accompanied by an ultrasonic sensor that is to be used in rotation. The design incorporates cylindrical spigots so as to eliminate the use of black pins which are used to fasten the servo motor fabricated for Lego use. With this arrangement, the sensor movement is stable, well positioned and rigid within the system that improves the overall utility of the sensor.
 
 <hr>
 
