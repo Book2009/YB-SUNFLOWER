@@ -132,7 +132,7 @@ The robot chassis design consists mainly of the 3D printed parts, which provide 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20172356.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20171843.png" width="400" >
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -147,7 +147,7 @@ The main base provides the foundation for creating all other parts. It has cylin
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20180757.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174349.png" width="400" >
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Support%20Plate.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -175,13 +175,13 @@ This component functions as a stabilizing element, similar to a nut, preventing 
 ### Differential Gear Mount
 
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20104249.png">
+<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173537.png">
 </p>
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20113421.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173543.png" width="300" alt="Left">
       <p><details>
   <summary>Left Differential Gear Mount</summary>
 
@@ -190,7 +190,7 @@ This component functions as a stabilizing element, similar to a nut, preventing 
 </details></p>
     </td>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20113506.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173555.png" width="300" alt="Right">
       <p><details>
   <summary>Left Differential Gear Mount</summary>
 
@@ -228,7 +228,7 @@ Made for added security, precision grooves feature with special C-clips that ser
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20182952.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174812.png" width="400" > <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174820.png" width="400" >
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Power%20Tray.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -258,7 +258,7 @@ This component is intended for firm attachment of a servo motor accompanied by a
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20185401.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20181804.png" width="400" >
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Camara%20Plate.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -270,13 +270,13 @@ This component is designed to attach to the back of the camera, providing a moun
 
 ### Handle
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20192510.png">
+<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20172941.png">
 </p>
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20192831.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20172948.png" width="300" alt="Left">
       <p><details>
   <summary>Left Side Handle Support</summary>
 
@@ -285,7 +285,7 @@ This component is designed to attach to the back of the camera, providing a moun
 </details></p>
     </td>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20193200.png" width="300" alt="Center">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173000.png" width="300" alt="Center">
       <p><details>
   <summary>Upper Handle Bracket</summary>
 
@@ -294,7 +294,7 @@ This component is designed to attach to the back of the camera, providing a moun
 </details></p>
     </td>
  <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20192950.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173226.png" width="300" alt="Right">
       <p><details>
   <summary>Right Side Handle Support</summary>
 
@@ -314,7 +314,7 @@ This handle is an important part as it allows the robot to be safely lifted, esp
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20191723.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20175500.png" width="400" >
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Gyro-Camara%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -326,13 +326,13 @@ This component is mounted to the handle and serves as the mounting area for the 
 
 ### Steering Module
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-29%20110445.png">
+<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173756.png">
 </p>
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-29%20111605.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173915.png" width="300" alt="Left">
       <p><details>
   <summary>Bottom Steering Mount</summary>
 
@@ -341,7 +341,7 @@ This component is mounted to the handle and serves as the mounting area for the 
 </details></p>
     </td>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-29%20112227.png" width="300" alt="Center">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173905.png" width="300" alt="Center">
       <p><details>
   <summary>Steering Linkage Arm</summary>
 
@@ -350,7 +350,7 @@ This component is mounted to the handle and serves as the mounting area for the 
 </details></p>
     </td>
  <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-29%20111522.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173842.png" width="300" alt="Right">
       <p><details>
   <summary>Top Steering Mount</summary>
 
@@ -364,7 +364,7 @@ This component is mounted to the handle and serves as the mounting area for the 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-29%20115511.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173820.png" width="300" alt="Left">
       <p><details>
   <summary>Steering Arm</summary>
 
@@ -373,7 +373,7 @@ This component is mounted to the handle and serves as the mounting area for the 
 </details></p>
     </td>
  <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-29%20112828.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173828.png" width="300" alt="Right">
       <p><details>
   <summary>Steering Arm Support</summary>
 
@@ -413,7 +413,7 @@ Its primary function is to provide additional support for the PCB mounting posts
 - #### **This is the appearance of chassis to show what our robot looks like without the components.**
 
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/f64fd934-e47b-4309-8232-b5b18add3711.png">
+<img width="700" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot_2025-08-30_184431-removebg-preview.png">
 
 ## Components
 
