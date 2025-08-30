@@ -172,7 +172,7 @@ This is the part that holds the 11.1V battery, which is easily removable for cha
 
 <hr>
 
-### Differential Gear Mount
+### Axle Sleeve Adapter
 
 <p align="center">
 <img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173537.png">
