@@ -180,57 +180,6 @@ This is the part that holds the 11.1V battery, which is easily removable for cha
 
 <hr>
 
-### Axle Sleeve Adapter
-
-<p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173537.png">
-</p>
-
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173543.png" width="300" alt="Left">
-      <p><details>
-  <summary>Left Differential Gear Mount</summary>
-
-  <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Left%20Differential%20Gear%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
-
-</details></p>
-    </td>
-    <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173555.png" width="300" alt="Right">
-      <p><details>
-  <summary>Left Differential Gear Mount</summary>
-
-  <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Right%20Differential%20Gear%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
-
-</details></p>
-    </td>
-  </tr>
-</table>
-
-This component is very important for supporting the differential gear firmly and creating solidity to the drivetrain of our robot. Among the basic choices that we made during the work on the robot design, one of the key decisions was to use as few bolts and nuts as possible. This reduction in weight is achieved by using ABS plastic filament instead of steel, which is significantly lighter. This choice not only decreases the overall weight but also simplifies the assembly by requiring fewer additional elements and connections.
-
-<p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/a0c387ff-fb17-4383-9e34-803489d1c718.png">
-
-A lighter robot just provides enhanced mobility and more efficiency, which is a crucial factor given the requirements of competitively in the competition. In order to attain a most stringent connection to the main base an interlocking joint was implemented. This design helps in assembling by minimizing the use of conventional fasteners during the construction process. 
-
-<p align="center">
-<img width="350" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20163905.png">  <img width="390" src="https://github.com/ThanyawutII/Test-2/blob/main/Wood-Joints-fdf0ae5b6e2c40438e6800fe91fe2733.png"> 
-  
-From this connection, we developed cylindrical formings which work more like bolts, used to place the parts in right position as well as fix them in place.
-
-<p align="center">
-<img width="300" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20105711.png">
-
-Made for added security, precision grooves feature with special C-clips that serve as a replacement for nuts, designed to fit seamlessly. These C-clips are held firmly in place within specially designed grooves that prevent any movement. The groove area has a smaller diameter than the other sections, which ensures a tight fit, preventing any up-and-down motion. The only way to release the C-clip would be to pull it sideways, making the design stable and secure.
-
-<p align="center">
-<img width="300" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20105604.png">
-
-<hr>
-
 ### Power Tray
 
 <table align="center">
@@ -299,6 +248,57 @@ This component is designed to attach to the back of the camera, providing a moun
 </table>
 
 This handle is an important part as it allows the robot to be safely lifted, especially at times of high speeds. Should it happen that the robot malfunctions or does not act as intended, reaching down quickly to grasp it is practically impossible and could cause unintentional damage by tugging at sensitive pieces, including wires. With the handle, the robot can be raised safely and securely with minimal risk of mishandling.
+
+<hr>
+
+### Axle Sleeve Adapter
+
+<p align="center">
+<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173537.png">
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173543.png" width="300" alt="Left">
+      <p><details>
+  <summary>Left Differential Gear Mount</summary>
+
+  <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Left%20Differential%20Gear%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+
+</details></p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173555.png" width="300" alt="Right">
+      <p><details>
+  <summary>Left Differential Gear Mount</summary>
+
+  <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Right%20Differential%20Gear%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+
+</details></p>
+    </td>
+  </tr>
+</table>
+
+This component is very important for supporting the differential gear firmly and creating solidity to the drivetrain of our robot. Among the basic choices that we made during the work on the robot design, one of the key decisions was to use as few bolts and nuts as possible. This reduction in weight is achieved by using ABS plastic filament instead of steel, which is significantly lighter. This choice not only decreases the overall weight but also simplifies the assembly by requiring fewer additional elements and connections.
+
+<p align="center">
+<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/a0c387ff-fb17-4383-9e34-803489d1c718.png">
+
+A lighter robot just provides enhanced mobility and more efficiency, which is a crucial factor given the requirements of competitively in the competition. In order to attain a most stringent connection to the main base an interlocking joint was implemented. This design helps in assembling by minimizing the use of conventional fasteners during the construction process. 
+
+<p align="center">
+<img width="350" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20163905.png">  <img width="390" src="https://github.com/ThanyawutII/Test-2/blob/main/Wood-Joints-fdf0ae5b6e2c40438e6800fe91fe2733.png"> 
+  
+From this connection, we developed cylindrical formings which work more like bolts, used to place the parts in right position as well as fix them in place.
+
+<p align="center">
+<img width="300" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20105711.png">
+
+Made for added security, precision grooves feature with special C-clips that serve as a replacement for nuts, designed to fit seamlessly. These C-clips are held firmly in place within specially designed grooves that prevent any movement. The groove area has a smaller diameter than the other sections, which ensures a tight fit, preventing any up-and-down motion. The only way to release the C-clip would be to pull it sideways, making the design stable and secure.
+
+<p align="center">
+<img width="300" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20105604.png">
 
 <hr>
 
