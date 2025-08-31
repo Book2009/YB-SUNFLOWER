@@ -374,27 +374,45 @@ The Lidar Mount is designed to secure the LiDAR sensor above the Support Base wh
   </tr>
 </table>
 
-- #### **Bottom Steering Mount**
+The Steering Module is responsible for controlling the orientation of the front wheels, enabling the robot to execute accurate and efficient turns. The design follows the Ackermann steering principle, which ensures that the inner and outer wheels rotate at different steering angles so that both wheels point toward a common instantaneous center of rotation located on the rear axle line. This geometry reduces tire slip, minimizes energy loss, and provides stable handling characteristics similar to real automotive systems.
 
-Its primary function is to ensure that both steering arms are aligned at the same angle during turns, providing precise and synchronized steering. It connects to the steering linkage arm, which is linked to the servo motor, allowing controlled movement and adjustments to the wheel angles. Additionally, we have designed a mounting point at the front of this component for a light sensor.
-
-- #### **Steering Linkage Arm**
-
-Its main function is to connect to the servo motor and control the steering direction of the robot.
+<p align="center">
+<img width="390" src="https://github.com/ThanyawutII/Test2/blob/main/80662.jpg">
 
 - #### **Top Steering Mount**
+Serves as both the supporting structure and the tie rod of the steering system. It directly links the left and right steering arms, transmitting input force across both sides to create synchronized wheel movement.
 
-Its primary function is to reinforce the bottom steering module, providing additional strength and stability to the steering structure. Additionally, we've designed a mount for an ultrasonic sensor
+- #### **Steering Linkage Arm**
+Connected to a servo motor, this arm receives the steering input and transfers the motion into the Top Steering Mount. By doing so, it initiates the coordinated rotation of the front wheels.
 
-- #### **Steering Arms**
+- #### **Cap**
+Positioned above the Steering Linkage Arm, the cap secures the arm to the Top Steering Mount, preventing detachment under load while still allowing free rotation of the linkage arm.
 
-Its main function is to keep the bottom and top steering mounts aligned with the front of the robot, ensuring stability and correct orientation. Additionally, it serves as the attachment point for the wheels. At the rear of this component, we've designed a large hole to fit a metal standoff or PCB support post, providing extra reinforcement to prevent breakage and enhance durability.
+- #### **Steering Arm**
+The Steering Arm is a component connected to each front wheel assembly that translates the motion from the Top Steering Mount into the actual pivoting of the wheels. Its geometry is angled inward to satisfy the Ackermann steering condition, ensuring the inner and outer wheels rotate at different angles during a turn.
+
+To improve durability and smoothness at the pivot point, each steering arm includes a dedicated hole designed to accommodate a small metal tube (used as a standoff). This tube passes through the arm and serves as a stable axle-like pivot. The metal tube itself is fixed securely between the Main Base and the Support Base, remaining stationary, while the steering arm rotates freely around it. Because of the smooth metal surface, the arm experiences minimal friction during operation, ensuring consistent and reliable steering motion without unnecessary wear.
+
 <p align="center">
 <img width="150" src="https://github.com/ThanyawutII/Test-2/blob/main/56827-removebg-preview.png">
 
-- #### **Steering Arm Supports**
+#### Operation (Ackermann Effect in Practice)
 
-Its primary function is to provide additional support for the PCB mounting posts, which are made of metal and are insufficiently long.
+During a left turn, the left (inner) wheel pivots at a sharper angle than the right (outer) wheel, with both wheels pointing toward the same turning center along the rear axle line.
+
+During a right turn, the situation mirrors, with the right wheel pivoting more sharply than the left.
+
+This behavior is achieved because the steering arms are angled inward toward the rear axle midpoint, and the Top Steering Mount acts as the tie rod transmitting force between them, producing unequal but coordinated wheel deflections.
+
+#### Advantages
+
+Reduced tire slip: Both wheels roll naturally along their turning radii.
+
+Improved efficiency: Less drag and energy loss during cornering.
+
+Realistic dynamics: Accurately mimics automotive steering geometry.
+
+Compact design: The integration of the tie rod into the Top Steering Mount reduces part count and simplifies assembly while maintaining reliable steering performance.
 
 <hr>
 
