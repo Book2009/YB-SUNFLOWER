@@ -123,7 +123,7 @@ We want to create a robot that can operate similarly to a self-driving car, with
 
 <img align="right" width="275" src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Others/Robot%20Assemble.gif">
 
-The robot chassis design consists mainly of the 3D printed parts, which provide a strong support for all the hardware and electronics devices. Each element is custom-designed to meet our specific requirements and interlocks seamlessly to create a lightweight yet resilient structure. Modification and extension of the orthotics and bambulab 3D-printed chassis is made easily due to its modular construction. It is designed to house the motors, electronic circuitry, and battery while enhancing thermal management and balanced weight distribution for efficient operation. This strategy not only allows for fast modeling and changes in design, but it also makes it easy if an operational change requires that some parts should be removed or replaced with better ones as the robot matures. [All the 3D printable models can be found here](https://github.com/Book2009/Nocturnalist-Future-Engineers/tree/main/3D_Models).
+The robot chassis is primarily composed of 3D-printed parts, providing a robust yet lightweight structural platform for all major components of the robot. Each element is custom-designed to meet specific requirements and interlocks seamlessly to create a resilient modular structure. This modularity enables easy modification and extension, allowing rapid adaptation as the design evolves. The chassis accommodates and organizes key systems including the motors, electronic circuitry, battery, and sensors, while also supporting efficient cable routing and effective thermal management. By leveraging 3D printing, components can be positioned with optimal spatial efficiency. In particular, the LiDAR sensor can be mounted in an unobstructed location (at a height not exceeding 10 cm above the ground), ensuring a clear field of view for precise obstacle detection during missions. This approach not only reduces overall weight and assembly complexity, but also provides flexibility for replacing or upgrading parts as the robot matures. [All the 3D printable models can be found here](https://github.com/Book2009/Nocturnalist-Future-Engineers/tree/main/3D_Models).
 
 <hr>
 
@@ -138,7 +138,7 @@ The robot chassis design consists mainly of the 3D printed parts, which provide 
   </tr>
 </table>
 
-The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO pin attachment, enabling flexible prototyping and modular expansion. With additional cutouts for cable routing and space optimization, the Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO pin attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
 
 <hr>
 
@@ -153,11 +153,19 @@ The Main Base is the primary structural platform of the robot and forms the foun
   </tr>
 </table>
 
-The Support Base is the second structural layer of the robot, positioned above the Main Base. It is designed to house the battery and includes a large central clearance to prevent interference with the control board mounted on the first layer, while also creating additional space for cable routing. At the front section, an interlocking joint mechanism is employed to mount the camera holder, reducing the need for screws and optimizing space efficiency.
+The Support Base is the second structural layer of the robot, positioned above the Main Base. It is designed to house the 11.1V battery, which is easily removable for charging. The base features a large central clearance to prevent interference with the control board mounted on the first layer, while also providing additional space for cable routing. Among the key design choices, one important decision was to minimize the use of bolts and nuts. This weight reduction is achieved by using ABS plastic filament instead of steel components, as ABS is considerably lighter. This choice not only decreases the overall weight but also simplifies the assembly by requiring fewer additional elements and connections.
+
+<p align="center">
+<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/a0c387ff-fb17-4383-9e34-803489d1c718.png">
+
+A lighter robot provides enhanced mobility and greater efficiency, which is a crucial factor given the competitive requirements of the event. At the front section, an interlocking joint mechanism is used to mount the camera holder, reducing the need for screws and optimizing space efficiency. As a result, assembly is streamlined by minimizing the use of conventional fasteners during the construction process.
+
+<p align="center">
+<img width="390" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-31%20154026.png">  <img width="390" src="https://github.com/ThanyawutII/Test-2/blob/main/Wood-Joints-fdf0ae5b6e2c40438e6800fe91fe2733.png"> 
 
 <hr>
 
-### Power Tray
+### Camera Holder
 
 <table align="center">
   <tr>
