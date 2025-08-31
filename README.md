@@ -138,7 +138,7 @@ The robot chassis is primarily composed of 3D-printed parts, providing a robust 
   </tr>
 </table>
 
-The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO pin attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
 
 <p align="center">
 <img width="200" src="https://github.com/ThanyawutII/Test-2/blob/main/wmremove-transformed.png">
@@ -179,7 +179,7 @@ A lighter robot provides enhanced mobility and greater efficiency, which is a cr
   </tr>
 </table>
 
-The camera holder is a 3D-printed component mounted at the back of the camera. It employs an interlocking joint mechanism to attach securely to the front section of the Support Base. This approach eliminates the need for conventional fasteners, reduces assembly complexity, and saves space within the front section of the chassis. The interlocking design also ensures stability of the camera position while allowing quick installation or removal when necessary.
+The camera holder is mounted at the back of the camera. It employs an interlocking joint mechanism to attach securely to the front section of the Support Base. This approach eliminates the need for conventional fasteners, reduces assembly complexity, and saves space within the front section of the chassis. The interlocking design also ensures stability of the camera position while allowing quick installation or removal when necessary.
 
 <hr>
 
@@ -201,7 +201,7 @@ The motor mount is the only component in the chassis assembly not produced by 3D
 
 <hr>
 
-### Camera Plate
+### Gear Adapter
 
 <table align="center">
   <tr>
@@ -212,11 +212,14 @@ The motor mount is the only component in the chassis assembly not produced by 3D
   </tr>
 </table>
 
-This component is designed to attach to the back of the camera, providing a mounting point that enables it to be securely connected to other components.
+The gear adapter is a custom-designed component developed to interface the GM25 motor with LEGO differential gears. Since the motor shaft of the GM25 cannot directly fit LEGO gears, this adapter was developed to provide a secure connection. The central bore is dimensioned to fit tightly onto the GM25 shaft, preventing slippage during operation. Two auxiliary holes are included to accommodate LEGO Technic pins, allowing the adapter to interlock with LEGO gears seamlessly. This design enables the integration of robust LEGO gearing systems with non-LEGO motors, ensuring smooth, reliable, and efficient transmission.
+
+<p align="center">
+<img width="200" src="https://github.com/ThanyawutII/Test/blob/main/maxresdefault-removebg-preview.png">  <img width="200" src="https://github.com/ThanyawutII/Test-2/blob/main/wmremove-transformed.png"> 
 
 <hr>
 
-### Handle
+### Rear Wheel Bearing Mount
 <p align="center">
 <img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20172941.png">
 </p>
@@ -226,25 +229,25 @@ This component is designed to attach to the back of the camera, providing a moun
     <td align="center">
       <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20172948.png" width="300" alt="Left">
       <p><details>
-  <summary>Left Side Handle Support</summary>
+  <summary>Right Bearing Mount</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Left%20Side%20Handle%20Support.stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173000.png" width="300" alt="Center">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173226.png" width="300" alt="Center">
       <p><details>
-  <summary>Upper Handle Bracket</summary>
+  <summary>Middle Bearing Mount</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Upper%20Handle%20Bracket.stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
  <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173226.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173000.png" width="300" alt="Right">
       <p><details>
-  <summary>Right Side Handle Support</summary>
+  <summary>Left Bearing Mount</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Right%20Side%20Handle%20Support.stl" target="_blank">Click here to view 3D model.</a></p>
 
@@ -253,7 +256,10 @@ This component is designed to attach to the back of the camera, providing a moun
   </tr>
 </table>
 
-This handle is an important part as it allows the robot to be safely lifted, especially at times of high speeds. Should it happen that the robot malfunctions or does not act as intended, reaching down quickly to grasp it is practically impossible and could cause unintentional damage by tugging at sensitive pieces, including wires. With the handle, the robot can be raised safely and securely with minimal risk of mishandling.
+The Rear Wheel Bearing Mount is designed to hold standard ball bearings, which support the differential output shaft. The inner race of the bearing interfaces with the shaft (via a custom sleeve), allowing smooth rotation, while the outer race is fixed securely in the mount. This configuration ensures that the rear axle remains stable and properly aligned, prevents bending under load, and eliminates friction that would otherwise occur if the shaft rotated directly against printed surfaces.
+
+<p align="center">
+<img width="300" src="https://github.com/ThanyawutII/Test2/blob/main/F6189957-01-removebg-preview.png">
 
 <hr>
 
@@ -268,7 +274,7 @@ This handle is an important part as it allows the robot to be safely lifted, esp
     <td align="center">
       <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173543.png" width="300" alt="Left">
       <p><details>
-  <summary>Left Differential Gear Mount</summary>
+  <summary>Right Axle Sleeve Adapter</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Left%20Differential%20Gear%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
 
@@ -277,7 +283,7 @@ This handle is an important part as it allows the robot to be safely lifted, esp
     <td align="center">
       <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173555.png" width="300" alt="Right">
       <p><details>
-  <summary>Left Differential Gear Mount</summary>
+  <summary>Left Axle Sleeve Adapter</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Right%20Differential%20Gear%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
 
@@ -286,29 +292,14 @@ This handle is an important part as it allows the robot to be safely lifted, esp
   </tr>
 </table>
 
-This component is very important for supporting the differential gear firmly and creating solidity to the drivetrain of our robot. Among the basic choices that we made during the work on the robot design, one of the key decisions was to use as few bolts and nuts as possible. This reduction in weight is achieved by using ABS plastic filament instead of steel, which is significantly lighter. This choice not only decreases the overall weight but also simplifies the assembly by requiring fewer additional elements and connections.
+The Axle Sleeve Adapter is designed to interface the LEGO cross axle with the inner bore of the bearing used in the Rear Wheel Bearing Mount. The cross axle, which transmits rotational power from the differential gear to the rear wheels, does not match the circular geometry of the bearing bore. To address this, the adapter features a cross-shaped internal profile that tightly mates with the LEGO axle, while its outer surface is circular and dimensioned to fit securely into the bearing. This design eliminates direct friction between the axle and printed surfaces, ensures smooth rotation through the bearing, and provides stable, automotive-like support for the drivetrain. By enabling a precise fit, the Axle Sleeve Adapter maintains alignment of the rear drive shaft and increases the durability and efficiency of the power transmission system.
 
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/a0c387ff-fb17-4383-9e34-803489d1c718.png">
-
-A lighter robot just provides enhanced mobility and more efficiency, which is a crucial factor given the requirements of competitively in the competition. In order to attain a most stringent connection to the main base an interlocking joint was implemented. This design helps in assembling by minimizing the use of conventional fasteners during the construction process. 
-
-<p align="center">
-<img width="350" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20163905.png">  <img width="390" src="https://github.com/ThanyawutII/Test-2/blob/main/Wood-Joints-fdf0ae5b6e2c40438e6800fe91fe2733.png"> 
-  
-From this connection, we developed cylindrical formings which work more like bolts, used to place the parts in right position as well as fix them in place.
-
-<p align="center">
-<img width="300" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20105711.png">
-
-Made for added security, precision grooves feature with special C-clips that serve as a replacement for nuts, designed to fit seamlessly. These C-clips are held firmly in place within specially designed grooves that prevent any movement. The groove area has a smaller diameter than the other sections, which ensures a tight fit, preventing any up-and-down motion. The only way to release the C-clip would be to pull it sideways, making the design stable and secure.
-
-<p align="center">
-<img width="300" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202024-10-28%20105604.png">
+<img width="300" src="https://github.com/ThanyawutII/Test2/blob/main/technic-axle-3-lego-part-4519-removebg-preview.png">
 
 <hr>
 
-### Gyro-Camara Mount
+### Lidar Mount
 
 <table align="center">
   <tr>
@@ -319,7 +310,7 @@ Made for added security, precision grooves feature with special C-clips that ser
   </tr>
 </table>
 
-This component is mounted to the handle and serves as the mounting area for the camera, which is secured through the camera plate. It allows the camera to tilt forward or backward, enabling flexible adjustments to capture the best angle for the robot's operations. Additionally, it offers a stable attachment point for the gyro sensor, ensuring accurate orientation and sensor alignment. The gyro mount is positioned around the middle top of the robot to achieve the most accurate output, while the camera mount is placed at the back to ensure precise object detection.
+The Lidar Mount is designed to secure the LiDAR sensor above the Support Base while maintaining proper alignment for obstacle detection. Its structure incorporates an open clearance beneath the LiDAR, ensuring that the space directly below remains available for installing a gyroscope module onto the Support Base. With this arrangement, the LiDAR and gyro can be vertically stacked in a compact layout, where the mount elevates the LiDAR sensor without interfering with the gyro underneath. This design maximizes space efficiency, enables multi-sensor integration on a single layer, and ensures stable and accurate sensor operation.
 
 <hr>
 
@@ -333,7 +324,7 @@ This component is mounted to the handle and serves as the mounting area for the 
     <td align="center">
       <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173915.png" width="300" alt="Left">
       <p><details>
-  <summary>Bottom Steering Mount</summary>
+  <summary>Top Steering Mount</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Bottom%20Steering%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
 
@@ -351,7 +342,7 @@ This component is mounted to the handle and serves as the mounting area for the 
  <td align="center">
       <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173842.png" width="300" alt="Right">
       <p><details>
-  <summary>Top Steering Mount</summary>
+  <summary>Cap</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Top%20Steering%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
 
@@ -365,7 +356,7 @@ This component is mounted to the handle and serves as the mounting area for the 
     <td align="center">
       <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173820.png" width="300" alt="Left">
       <p><details>
-  <summary>Steering Arm</summary>
+  <summary>Right Steering Arm</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Steering%20Arm.stl" target="_blank">Click here to view 3D model.</a></p>
 
@@ -374,7 +365,7 @@ This component is mounted to the handle and serves as the mounting area for the 
  <td align="center">
       <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173828.png" width="300" alt="Right">
       <p><details>
-  <summary>Steering Arm Support</summary>
+  <summary>Left Steering Arm</summary>
 
   <p><a href="https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Steering%20Arm%20Support.stl" target="_blank">Click here to view 3D model.</a></p>
 
