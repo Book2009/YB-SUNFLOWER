@@ -140,6 +140,9 @@ The robot chassis is primarily composed of 3D-printed parts, providing a robust 
 
 The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO pin attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
 
+<p align="center">
+<img width="200" src="https://github.com/ThanyawutII/Test-2/blob/main/wmremove-transformed.png">
+
 <hr>
 
 ### Support Base
@@ -176,11 +179,11 @@ A lighter robot provides enhanced mobility and greater efficiency, which is a cr
   </tr>
 </table>
 
-This is the part that holds the 11.1V battery, which is easily removable for charging. This also serves to securely mount the step-down module in place. The raised portion at the back forms a stable platform for mounting the microcontroller board. Hence, this design optimizes the layout by keeping the important electronics of the best organization in space and providing stability.
+The camera holder is a 3D-printed component mounted at the back of the camera. It employs an interlocking joint mechanism to attach securely to the front section of the Support Base. This approach eliminates the need for conventional fasteners, reduces assembly complexity, and saves space within the front section of the chassis. The interlocking design also ensures stability of the camera position while allowing quick installation or removal when necessary.
 
 <hr>
 
-### Power Tray
+### Motor Mount
 
 <table align="center">
   <tr>
@@ -191,7 +194,10 @@ This is the part that holds the 11.1V battery, which is easily removable for cha
   </tr>
 </table>
 
-This is the part that holds the 11.1V battery, which is easily removable for charging. This also serves to securely mount the step-down module in place. The raised portion at the back forms a stable platform for mounting the microcontroller board. Hence, this design optimizes the layout by keeping the important electronics of the best organization in space and providing stability.
+The motor mount is the only component in the chassis assembly not produced by 3D printing. Instead, it is manufactured from steel to ensure maximum durability and stability when securing the motors. While steel is generally heavier than ABS plastic, the compact design of the mount compensates for the weight difference. A plastic equivalent would require a larger and more reinforced structure to achieve comparable strength, ultimately resulting in a similar overall weight. By using steel, the mount guarantees resistance to mechanical stress and provides a stable foundation for the motors, ensuring reliable performance throughout operation.
+
+<p align="center">
+<img width="350" src="https://github.com/ThanyawutII/Test-2/blob/main/DeWatermark.ai_1756634356131-removebg-preview.png">
 
 <hr>
 
