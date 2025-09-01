@@ -595,58 +595,53 @@ There are many wheel options available, but this wheel was chosen primarily beca
 
 ### Controller
 
-- #### **Microcontroller Board** : Arduino Mega 2560 R3
-<img src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Controller/Arduino%20Mega.png" width = "400">
-This part is like a brain of our body. Its job is to store all the program of our robot from the computer, every component in the robot comes through here. We chose this board because of its connection port, it contains tons of ports that we want such as 3 UART port. We used Arduino Uno last year, but the problem is there's not enough port for OpenMV and GY-25. But there's some disadvantage in this board. Because this board has a lot of connection port, it comes with weight and size. It's almost 2 times longer than the UNO. And that makes the robot long and heavy.
+- #### **Main Board** : Raspberry Pi 4 Model B from Raspberry Pi
+<img src = "https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_134018-removebg-preview.png" width = "400">
+The Raspberry Pi 4 Model B serves as the main processor of the robot. It acts like a compact computer, handling heavy computational tasks such as processing camera and LiDAR data, making navigation decisions, and managing overall system logic. We use this board because it offers powerful processing capability in a small form factor, while also providing direct ports for high-bandwidth devices.
 
-| Specification           | Value                                  |
-|-------------------------|----------------------------------------|
-| Microcontroller         | ATmega2560                             |
-| Operating Voltage       | 5V                                     |
-| Input Voltage (recommended) | 7-12V                               |
-| Input Voltage (limit)   | 6-20V                                  |
-| Digital I/O Pins        | 54 (15 provide PWM output)             |
-| Analog Input Pins       | 16                                     |
-| DC Current per I/O Pin  | 20 mA                                   |
-| DC Current for 3.3V Pin | 50 mA                                   |
-| Flash Memory            | 256 KB (8 KB used by bootloader)       |
-| SRAM                    | 8 KB                                    |
-| EEPROM                  | 4 KB                                    |
-| Clock Speed             | 16 MHz                                  |
-| LED_BUILTIN             | 13                                      |
-| Length                  | 101.52 mm                               |
-| Width                   | 53.3 mm                                 |
-| Weight                  | 37 g                                    |
-
-Additional information about UART:
-UART operates by transmitting data as a series of bits, including a start bit, data bits, an optional parity bit, and stop bit(s). Unlike parallel communication, where multiple bits are transmitted simultaneously, UART sends data serially, one bit at a time. As the name reveals the protocol operates asynchronous which means that it doesn't rely on a shared clock signal. Instead, it uses predefined baud rates to determine the timing of data bits.
-
-<img src = "https://github.com/Book2009/FE-NOC/blob/main/Schemes/UART.png" width = "400">
-
-Our robot has serial1 and serial3, serial1 is connected to compass while serial3 is connected to OpenMV camera. They are connected to the UART port on the Arduino mega.
+| Specification | Value |
+|---------|---------|
+| **Processor** | Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.8GHz |
+| **Memory Options** | 1GB, 2GB, 4GB or 8GB LPDDR4-3200 SDRAM |
+| **Wireless** | 2.4 GHz and 5.0 GHz IEEE 802.11ac, Bluetooth 5.0, BLE |
+| **Ethernet** | Gigabit Ethernet |
+| **USB Ports** | 2 × USB 3.0, 2 × USB 2.0 |
+| **GPIO** | 40-pin header (fully backwards compatible) |
+| **Display Output** | 2 × micro-HDMI® (up to 4kp60), 2-lane MIPI DSI |
+| **Camera Interface** | 2-lane MIPI CSI port |
+| **Audio/Video** | 4-pole stereo audio and composite video port |
+| **Video Support** | H.265 (4kp60 decode), H.264 (1080p60 decode, 1080p30 encode) |
+| **Graphics** | OpenGL ES 3.1, Vulkan 1.0 |
+| **Storage** | Micro-SD card slot (OS and data storage) |
+| **Power Input** | 5V DC via USB-C (min 3A), 5V DC via GPIO (min 3A), Power over Ethernet (PoE with HAT) |
+| **Operating Temperature** | 0 – 50 °C ambient |
 
 <hr>
 
-- #### **Sensor Shield** : Gravity IO Sensor Shield for Arduino Mega Due
-<img src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Controller/Sensor%20shield.png" width = "400">
-This part is an extension of the board. It is where ultrasonic, light sensors, button sensors, camera, compass, and servos go. It has a lot of connection pin which can be used for each component. But with that it also come with a very long design. Make it hard to design where to place it on robot.
+- #### **Interface Board** : Arduino Shield for Raspberry Pi (DFR0327)
+<img src = "https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_141700-removebg-preview.png" width = "400">
+The second piece in the stack is the Arduino Shield for Raspberry Pi (DFR0327). While the Raspberry Pi is excellent for high-level processing, it is not designed to directly interface with many types of low-level sensors and devices. This shield bridges that gap by expanding the I/O and allowing us to easily connect components such as the light sensor, switches, servos, and the gyroscope. Without this layer, the integration of analog and PWM-based devices would be much more complex and less reliable.
 
-| Specification                               | Value                                         |
-|---------------------------------------------|-----------------------------------------------|
-| Compatibility                               | Most Arduino shields                         |
-| Compatible Boards                           | Arduino Mega boards, DFRobot megaADK, Arduino megaADK |
-| Extended TTL Connection Pins                | Four Serial ports                            |
-| Prototyping Area                            | DIP prototyping area for additional modules or components |
-| Xbee Slots                                  | 3                                             |
-| microSD Slot                                | 1                                             |
-| Power Switch                                | Between Arduino Mega or external power       |
-| Size                                        | 125 x 57 mm (4.92 x 2.24")                   |
+| Specification                  | Value                                                                 |
+|--------------------------------|-----------------------------------------------------------------------|
+| Onboard Microcontroller        | ATmega32u4                                                            |
+| Chip                           | Arduino Leonardo Chip                                                 |
+| Compatibility                  | Arduino compatible pin mapping, supports all Arduino standard shields and sensors |
+| System Voltage                 | 5V                                                                   |
+| Arduino Digital I/O            | 20                                                                    |
+| Arduino Analog I/O             | 6                                                                     |
+| Raspberry Pi B+ GPIO           | 16                                                                    |
+| Raspberry Pi B+ I2C            | 1                                                                     |
+| Raspberry Pi B+ ID_I2C         | 1                                                                     |
+| Raspberry Pi B+ SPI            | 1                                                                     |
+| Raspberry Pi B+ TTL UART       | 1                                                                     |
+| Dimension                      | 86 mm x 61 mm x 26 mm (3.46" x 2.20" x 1.02")                         |
 
 <hr>
 
 - #### **Motor Shield** : Gravity 2x2A Motor Shield for Arduino Twin
 <img src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Controller/Motorshield.png" width = "400">
-This part is also an extension of the board. It makes the connection between the board and motor easier. We connect the pin with the top of sensor shield.
+The final layer is the Gravity 2x2A Motor Shield for Arduino. Motors draw significantly higher current than what the Raspberry Pi or the Arduino shield can provide. This shield was added to handle motor control independently, with its own dedicated power input. It ensures stable operation of the drive system, prevents electrical noise from affecting sensitive components, and allows precise control of motor speed and direction.
 
 | Specification            | Value                                  |
 |--------------------------|----------------------------------------|
