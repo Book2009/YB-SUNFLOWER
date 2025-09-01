@@ -586,13 +586,10 @@ The wires are a standard servo pinout -
 
 <hr>
 
-- #### **Front Wheel** : Lego Tire 43.2 x 22 ZR and Wheel 30.4mm D. x 20mm with No Pin Holes and Reinforced Rim
+- #### **Wheel** : Lego Tire 43.2 x 22 ZR and Wheel 30.4mm D. x 20mm with No Pin Holes and Reinforced Rim
 <image src = "https://github.com/ThanyawutII/Test/blob/main/Screenshot_2024-10-23_143240-removebg-preview.png" width = "200"> <image src = "https://github.com/ThanyawutII/Test/blob/main/56145-removebg-preview%20(1).png" width = "200">
-  
-  - #### **Rear Wheel** : Lego Tire 49.6 x 28 VR and Wheel 36.8mm D. x 26mm VR with Axle Hole
-<image src = "https://github.com/ThanyawutII/Test-2/blob/main/S__5021716-removebg-preview.png" width = "200"> <image src = "https://github.com/ThanyawutII/Test-2/blob/main/S__5021714-removebg-preview.png" width = "200">
 
-There are a lot of wheels to select. We chose this one because of it's size. If the wheels are too small, it reduces the speed due to the lack of rotation. But if the wheels are too big, it makes the robot slower and harder to control. With the combination of the motor and the wheels, the robot can maintain the speed we can control.
+There are many wheel options available, but this wheel was chosen primarily because of its optimal size for the drivetrain configuration. If the wheels are too small, the robot loses speed since the ground distance covered per rotation is reduced. On the other hand, if the wheels are too large, the robot becomes slower to accelerate, requires more torque to drive, and is harder to control precisely. By selecting a medium-sized wheel, the design achieves a good balance between speed and controllability. In combination with the chosen motor, this wheel size allows the robot to maintain a competitive ground speed while ensuring smooth handling and stable maneuverability during tasks.
 
 <hr><br>
 
