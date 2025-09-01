@@ -637,6 +637,11 @@ The second piece in the stack is the Arduino Shield for Raspberry Pi (DFR0327). 
 | Raspberry Pi B+ TTL UART       | 1                                                                     |
 | Dimension                      | 86 mm x 61 mm x 26 mm (3.46" x 2.20" x 1.02")                         |
 
+Additional information about UART:
+UART operates by transmitting data as a series of bits, including a start bit, data bits, an optional parity bit, and stop bit(s). Unlike parallel communication, where multiple bits are transmitted simultaneously, UART sends data serially, one bit at a time. As the name reveals the protocol operates asynchronous which means that it doesn't rely on a shared clock signal. Instead, it uses predefined baud rates to determine the timing of data bits.
+
+<img src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Schemes/UART.png" width = "400">
+
 <hr>
 
 - #### **Motor Shield** : Gravity 2x2A Motor Shield for Arduino Twin
