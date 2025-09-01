@@ -513,44 +513,54 @@ The Chihai 25-370K DC 12V gear motor with a 1:20 reduction ratio was selected as
 
 <hr>
 
-- #### **Differential** : Technic, Gear Differential with Inner Tabs and Closed Center, 28 Bevel Teeth
-<image src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Movement/differential%20gear.png" width = "300"> <image src = "https://github.com/ThanyawutII/Test-2/blob/main/different.jpg" width = "400">
+- #### **Motor Drive Gear** : LEGO Technic Gear 28 Tooth
+<image src = "https://github.com/ThanyawutII/Test/blob/main/maxresdefault-removebg-preview.png" width = "250">
 
-This part ensure that both wheels have the power from the motor, which makes the robot drive forward. This part has gear teeth on the side, which are connected to the gear we put on the motor earlier, and then we put 3 small gears inside the differential. The differential is attached to the main body using an axle from the wheel.
+The 28-tooth motor drive gear was selected because it provides a perfect 1:1 connection with the 28-tooth differential gear, ensuring smooth and direct power transfer from the motor to the drivetrain. By using gears with equal tooth counts, the system avoids unnecessary changes in torque or speed at this stage, maintaining the rated output characteristics of the motor. This choice simplifies the design, reduces potential misalignment, and ensures high efficiency by minimizing frictional losses. Additionally, the 28-tooth gear is widely compatible with LEGO Technic components, making it reliable and easy to integrate with the differential assembly. Overall, this gear was chosen to achieve stable, efficient, and precise transmission between the motor and the differential system.
+
+<hr>
+
+- #### **Differential Gear** : LEGO Technic Differential Gear (28 teeth)
+<image src = "https://github.com/ThanyawutII/Test2/blob/main/80696-removebg-preview.png" width = "300"> <image src = "https://github.com/ThanyawutII/Test-2/blob/main/different.jpg" width = "400">
+
+The LEGO Technic Differential Gear (28 teeth) is a compact gear unit designed to distribute power from a single input to two output shafts, allowing each wheel to rotate at different speeds while still receiving balanced torque. Inside the housing, bevel gears transmit motion from the input gear to the cross axles, ensuring smooth operation during turns. This mechanism replicates the function of a real automotive differential: when the robot moves straight, both wheels rotate together, but during cornering, the inner wheel slows down while the outer wheel speeds up, reducing slip and energy loss. Its 28-tooth outer gear integrates seamlessly with other LEGO gears, making it easy to combine with custom adapters and non-LEGO components. By using this differential, the drivetrain achieves smoother cornering, improved maneuverability, and more realistic vehicle dynamics essential for competitive robotics.
 
 <hr>
 
 - #### **Driving Motor with Differential Gear**
-<image src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot_2024-11-16_223901-removebg-preview.png" width = "500">
+<image src="https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_124212-removebg-preview.png" width = "500">
 
 After presenting the information and the reasons for selecting the motor and the differential gear, the next crucial step is to understand the outcomes resulting from the connection of these two components. This analysis aims to determine the speed and torque that the system can deliver, which are key factors in optimizing and enhancing the system's performance. Below are the calculation methods and the results derived from our analysis
 
 #### **Step 1: Calculate the gear ratio**
 <p>The gear ratio is determined by the ratio of the number of teeth on the input and output gears:</p>
 <div class="equation">
-    Gear Ratio = <sup>Number of teeth on input gear</sup> / <sub>Number of teeth on output gear</sub> = <sup>36</sup> / <sub>28</sub> = 1.2857
+    Gear Ratio = <sup>Number of teeth on input gear</sup> / <sub>Number of teeth on output gear</sub> = <sup>28</sup> / <sub>28</sub> = 1.0
 </div>
 
 #### **Step 2: Calculate output RPM**
-<p>The output RPM increases due to the gear ratio. To find the output RPM:</p>
+<p>The output RPM is calculated based on the motor's rated speed and the gear ratio:</p>
 <div class="equation">
-    Output RPM = Input RPM × Gear Ratio = 390 × 1.2857 = 501.4 RPM
+    Output RPM = Input RPM × Gear Ratio = 780 × 1.0 = 780 RPM
 </div>
+<p>(Using the no-load speed would give approximately 980 RPM.)</p>
 
 #### **Step 3: Calculate output torque**
-<p>The torque decreases inversely proportional to the gear ratio. To find the output torque:</p>
+<p>The torque decreases inversely proportional to the gear ratio. With a 1:1 ratio, the torque remains unchanged from the motor:</p>
 <div class="equation">
-    Output Torque = <sup>Input Torque</sup> / <sub>Gear Ratio</sub> = <sup>40</sup> / <sub>1.2857</sub> = 31.1 N·cm
+    Output Torque = <sup>Input Torque</sup> / <sub>Gear Ratio</sub> = <sup>0.21</sup> / <sub>1.0</sub> = 0.21 N·m
+</div>
+<p>Since the differential splits torque between two wheels, each wheel receives approximately half:</p>
+<div class="equation">
+    Per-wheel Torque ≈ 0.105 N·m
 </div>
 
 #### **Final Results:**
 <ul>
-    <li><strong>Output RPM</strong>: ~501.4 RPM</li>
-    <li><strong>Output Torque</strong>: ~31.1 N·cm</li>
+    <li><strong>Output RPM @ differential</strong>: ~780 RPM (rated), ~980 RPM (no-load)</li>
+    <li><strong>Output Torque @ differential</strong>: ~0.21 N·m (≈ 2.3 kg·cm)</li>
+    <li><strong>Per-wheel Torque</strong>: ~0.105 N·m (≈ 1.05 kg·cm)</li>
 </ul>
-
-</body>
-</html>
 
 <hr>
 
