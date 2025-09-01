@@ -123,7 +123,7 @@ We want to create a robot that can operate similarly to a self-driving car, with
 
 <img align="right" width="275" src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Others/Robot%20Assemble.gif">
 
-The robot chassis is primarily composed of 3D-printed parts, providing a robust yet lightweight structural platform for all major components of the robot. Each element is custom-designed to meet specific requirements and interlocks seamlessly to create a resilient modular structure. This modularity enables easy modification and extension, allowing rapid adaptation as the design evolves. The chassis accommodates and organizes key systems including the motors, electronic circuitry, battery, and sensors, while also supporting efficient cable routing and effective thermal management. By leveraging 3D printing, components can be positioned with optimal spatial efficiency. In particular, the LiDAR sensor can be mounted in an unobstructed location (at a height not exceeding 10 cm above the ground), ensuring a clear field of view for precise obstacle detection during missions. This approach not only reduces overall weight and assembly complexity, but also provides flexibility for replacing or upgrading parts as the robot matures. [All the 3D printable models can be found here](https://github.com/Book2009/Nocturnalist-Future-Engineers/tree/main/3D_Models).
+The robot chassis is primarily composed of 3D-printed parts, providing a robust yet lightweight structural platform for all major components of the robot. Each element is custom-designed to meet specific requirements and interlocks seamlessly to create a resilient modular structure. This modularity enables easy modification and extension, allowing rapid adaptation as the design evolves. The chassis accommodates and organizes key systems including the motors, electronic circuitry, battery, and sensors, while also supporting efficient cable routing and effective thermal management. By leveraging 3D printing, components can be positioned with optimal spatial efficiency. In particular, the LiDAR sensor can be mounted in an unobstructed location (at a height not exceeding 10 cm above the ground), ensuring a clear field of view for precise obstacle detection during missions. This approach not only reduces overall weight and assembly complexity, but also provides flexibility for replacing or upgrading parts as the robot matures. [All the 3D printable models can be found here](https://github.com/Book2009/YB-SUNFLOWER/tree/main/3DModels).
 
 <hr>
 
@@ -427,6 +427,7 @@ Compact design: The integration of the tie rod into the Top Steering Mount reduc
 
 - #### **3D Printer**: Bambu Lab X1 Carbon by Bambu Lab
 <image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/3D/3D%20Printer.png" width = "400">
+  
 The reasons that we use Bambu Lab X1-Carbon 3D printer because this printer is a high-performance 3D printer designed for precision and efficiency. It is equipped with advanced technology and features, making it suitable for professional use as well as hobbyist projects that require high-quality prints.
 
 ##### General Specifications
@@ -478,28 +479,37 @@ The reasons that we use Bambu Lab X1-Carbon 3D printer because this printer is a
 
 - #### **Filament** : Acrylonitrile Butadiene Styrene or simply known as ***ABS***
 <image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/3D/ABS%20Filament.png" width = "400">
+  
 ABS (Acrylonitrile Butadiene Styrene) was selected as the primary material for the robot’s structural components due to its balanced mechanical and thermal properties. Unlike more brittle plastics, ABS provides a unique combination of rigidity and impact resistance, which allows the parts to endure operational stresses without cracking. Its slight flexibility enables the structures to absorb shocks and vibrations while maintaining dimensional stability. Moreover, ABS retains its form and strength across a wide range of operating temperatures, ensuring reliable performance under varying environmental conditions. These properties make ABS particularly suitable for 3D-printed parts, where durability, accuracy, and stability are essential for assembling complex robotic systems.
 
 <hr><br>
 
 ### Movement Parts
 
-- #### **Driving motor** : Power Functions Large-Motor made by LEGO™.
-<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Movement/Motor.png" width = "400">
-It's a simple motor, and we chose this motor because of its easy connection to our robot and its cost-effectiveness. This motor is small yet powerful and small power consumption. It is the perfect size for our robot comparing to other motor in the market which typically round on all side and need specific mounting bracket for example ZGA32RI. The motor comes with a dedicated port for Lego. So, we modified it to make it able to connect to the board. 
+- #### **Driving motor** : Chihai 25-370K DC 12V (Gear Ratio 1:20)™.
+<image src="https://github.com/ThanyawutII/Test2/blob/main/Hf0a6048f4d30411fbd880a854753fdeaF-removebg-preview.png" width = "400"> <image src="https://github.com/ThanyawutII/Test2/blob/main/DeWatermark.ai_1756699222216.jpg" width = "500">
+
+The Chihai 25-370K DC 12V gear motor with a 1:20 reduction ratio was selected as the drive motor for the robot because it offers an effective balance between speed and torque. The high output speed provided by this configuration allows the robot to achieve competitive ground velocity, while the available torque remains sufficient to drive the system reliably under load. The motor operates efficiently within the limits of the designed power system, and its compact size makes it easy to integrate into the chassis without adding unnecessary weight. In addition, the motor is well suited for use with the LEGO differential gear, ensuring smooth power transmission and responsive handling. Overall, this motor was chosen as the optimal trade-off to provide both performance and stability for competition tasks.
 
 ##### Electrical Specifications
 
 | Specification     | Value    |
 |-------------------|----------|
-| Voltage           | 9 V      |
+| Voltage           | 12V DC      |
 
 ##### Mechanical Specifications
 
 | Specification     | Value    |
 |-------------------|----------|
-| Speed             | 390 rpm  |
-| Maximum torque    | 40 Ncm   |
+| RATIO             | 1: 20  |
+| no-load current(mA)    | ≤600   |
+| no-load speed(rpm)             | 980  |
+| rated torque(Kg.cm)    | 2.3   |
+| rated torque(N.m)             | 0.21  |
+| rated speed (rpm)             | 780  |
+| rated current (A)    | ≤2.7   |
+| stall current (A)             | ≤16.0  |
+| length of gearbox(L)    | 19.0   |
 
 <hr>
 
