@@ -765,8 +765,45 @@ This switch is for cutting the power from the battery to the robot. The regulati
 
 <hr>
 
+- #### **Step-down** : LM2596
+The LM2596 step-down converter is used to supply the Raspberry Pi with a dedicated 5 V power rail. Since the Pi is sensitive to voltage fluctuations and electrical noise, relying on the same power source as the motors could cause sudden resets or instability. By using this compact module exclusively for the Pi, we ensure a stable supply that remains unaffected by high current changes elsewhere in the system. The output is tuned to around 5.1 V to compensate for cable and connector losses, providing a consistent and reliable 5.0 V input to the Pi during operation.
+
+<img src = "https://github.com/ThanyawutII/Test2/blob/main/LM2596-DC-DC-Buck-Converter-Step-Down-Module-Power-Supply-Output-1-5-1-768x768-removebg-preview.png" width = "400">
+
+##### Input
+
+| Specification           | Value                  |
+|-------------------------|------------------------|
+| Input voltage           | DC 4.5 ~ 40V           |
+
+##### Output
+
+| Specification           | Value                                  |
+|-------------------------|----------------------------------------|
+| Output voltage          | DC 1.25V ~ 37V (adjustable)            |
+| Output current          | Up to 2A (without heatsink), 3A max with heatsink |
+| Output power            | ≤ 15W (typical), up to 20W with heatsink |
+
+##### Performance
+
+| Specification           | Value                  |
+|-------------------------|------------------------|
+| Conversion efficiency   | Up to 92%              |
+| Switching frequency     | ~150 kHz               |
+| Load regulation         | ±0.5%                  |
+| Voltage regulation      | ±2.5%                  |
+
+##### Measurements
+
+| Specification           | Value                  |
+|-------------------------|------------------------|
+| Module dimension        | ~43 × 21 × 14 mm       |
+| Typical voltage ripple  | ~30 mV                 |
+
+<hr>
+
 - #### **Step-down** : HW-360 V6.0
-This is a step-down DC-DC module. It comes with a status indicator light, a display screen that shows the voltage meter, and self-calibration of the voltage meter. The electrical voltage has an error of 0.05 V, with a measuring range of 0–40 V. We need this step down to show us how long until we need to recharge the battery.
+The HW316E V6.0.1 step-down converter is dedicated to supplying the motor shield and the drive motors, which draw significantly higher current than the Raspberry Pi. This module features a built-in digital display that shows the input voltage, which corresponds directly to the shared battery pack. Because both the LM2596 and HW316E draw from the same battery, a single display on the HW316E is sufficient to monitor the pack’s remaining voltage and determine when recharging is necessary. By isolating the motor power from the logic supply and providing real-time monitoring of the battery, this module ensures reliable performance for the drivetrain while simplifying overall system management.
 
 <img src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Step%20Down.png" width = "400">
 
@@ -798,6 +835,20 @@ This is a step-down DC-DC module. It comes with a status indicator light, a disp
 | Conversion efficiency   | Up to 96%                              |
 | Load regulation         | S (I) ≤ 0.8%                           |
 | Voltage Regulation      | S (u) ≤ 0.8%                           |
+
+<hr>
+
+- #### **Quick Wire Connector** : PCT-21 a3nd D1-2 Connector
+
+PCT-21 Connector
+
+<image src = "https://github.com/ThanyawutII/Test2/blob/main/80755_0.jpg" width = "300">
+
+D1-2 Connector
+
+<image src = "https://github.com/ThanyawutII/Test2/blob/main/80754_0.jpg" width = "300">
+
+The robot’s power distribution system is designed around a single battery pack, which is split into two separate branches to supply both the Raspberry Pi and the motor shield. The positive pole of the battery is connected through the PCT-213 connector, where it is divided into multiple outputs, one directed to each step-down converter. The negative pole is handled by the D1-2 connector, providing a secure and stable ground reference that is also split between the converters. From there, the LM2596 module regulates clean 5 V power for the Raspberry Pi, while the HW316E V6.0.1 module delivers high-current power to the motor shield and motors. This arrangement ensures that both control logic and drivetrain receive isolated, stable power from the same battery source, while the connectors simplify wiring, improve safety, and make the system easier to maintain.
 
 <hr>
 
