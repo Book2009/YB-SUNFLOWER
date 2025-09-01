@@ -476,9 +476,9 @@ The reasons that we use Bambu Lab X1-Carbon 3D printer because this printer is a
 
 <hr>
 
-- #### **Filament** : Acrylonitrile Butadiene Styrene or simply known as ***ABS**
+- #### **Filament** : Acrylonitrile Butadiene Styrene or simply known as ***ABS***
 <image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/3D/ABS%20Filament.png" width = "400">
-ABS (acrylonitrile butadiene styrene) is probably the most common filament used in 3D printing. It is especially valuable in strong plastic parts that must remain resilient in the face of temperature swings. It is mainly used in FDM (fused deposition modeling) 3D printers. ABS is a thermoplastic polymer composed of three monomers: acrylonitrile, butadiene, and styrene. The material was first patented in the 1940s and very quickly gained popularity.
+ABS (Acrylonitrile Butadiene Styrene) was selected as the primary material for the robot’s structural components due to its balanced mechanical and thermal properties. Unlike more brittle plastics, ABS provides a unique combination of rigidity and impact resistance, which allows the parts to endure operational stresses without cracking. Its slight flexibility enables the structures to absorb shocks and vibrations while maintaining dimensional stability. Moreover, ABS retains its form and strength across a wide range of operating temperatures, ensuring reliable performance under varying environmental conditions. These properties make ABS particularly suitable for 3D-printed parts, where durability, accuracy, and stability are essential for assembling complex robotic systems.
 
 <hr><br>
 
