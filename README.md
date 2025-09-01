@@ -663,105 +663,55 @@ The final layer is the Gravity 2x2A Motor Shield for Arduino. Motors draw signif
 <hr><br>
 
 ### Power Management And Inspection
-- #### **Camera** : OpenMV H7 R1
-<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/OpenMV%20Camera.png" width = "400">
-This component is very important for avoiding obstacle. It can detect red and green obstacle from distance to avoid crashing into it. The OpenMV also comes with its own microcontroller. Making the robot locate and think faster when see the obstacle. The OpenMV also comes with GLCD screen at the back of it to display what the camera sees. This camera can be coded with MicroPython. Additionally, this camera wires are connected with the sensor shield.
+- #### **Camera** : IMX-190
+<image src="https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_144626-removebg-preview.png" width = "400">
+The IMX378-190 wide-angle camera module was selected for its high resolution (4056 × 3040, 12.3 MP) and ultra-wide 190° field of view, which make it highly effective for color detection across a large area of the field. Detecting color is an essential part of the competition tasks, and the wide coverage ensures that the robot does not miss important visual cues. By connecting the camera directly to the Raspberry Pi on the first layer, the system benefits from high-bandwidth data transfer and real-time image processing. This direct integration minimizes latency and allows the robot to react quickly to visual input, providing both accuracy and responsiveness during operation.
 
-##### STM32H743VI Specifications
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| **Processor**             | STM32H743VI ARM Cortex M7                       |
-| **Clock Speed**           | 480 MHz                                         |
-| **SRAM**                  | 1 MB                                             |
-| **Flash Memory**          | 2 MB                                             |
-| **I/O Voltage**           | 3.3V (5V tolerant)                              |
-| **Number of I/O Pins**    | 10                                              |
-
-##### Interfaces
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| **USB**                   | Full-speed USB (12 Mbps) interface             |
-| **μSD Card Socket**       | Capable of 100 Mbps read/write                  |
-| **SPI Bus**               | Up to 80 Mbps                                  |
-| **I2C Bus**               | Up to 1 Mbps                                   |
-| **CAN Bus**               | Up to 1 Mbps                                   |
-| **Asynchronous Serial Bus** | Up to 7.5 Mbps                                |
-
-##### Analog
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| **ADC**                   | 12-bit                                          |
-| **DAC**                   | 12-bit                                          |
-
-##### Control
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| **Servo Control Pins**    | 3 I/O pins                                      |
-| **Interrupts and PWM**    | Available on all I/O pins                      |
-
-##### LEDs
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| **RGB LED**               | Yes                                             |
-| **High Power IR LEDs**    | Two 850nm                                      |
-
-##### Camera Module
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| **Default Sensor**        | OV7725                                          |
-| **Resolution**            | 640x480                                         |
-| **Modes**                 | 8-bit Grayscale at 75 FPS, 16-bit RGB565 (75 FPS above 320x240, 150 FPS below 320x240) |
-| **Lens**                  | 2.8mm, M12 mount                                |
-| **Additional Modules**    | Global Shutter Camera, FLIR Lepton Adapter     |
-
-##### Power
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| **Battery Connector**     | Compatible with 3.7V LiPo batteries             |
-
+| Specification       | Value                        |
+|---------------------|------------------------------|
+| Photosensitive chip | Sony IMX378                  |
+| Pixels              | 12.3 million                 |
+| Chip pixel size     | 1.55 µm × 1.55 µm            |
+| Resolution          | 4056 × 3040                  |
+| Camera type         | Color                        |
+| Shutter mode        | Rolling shutter              |
+| Focus mode          | Fixed focus                  |
+| CMOS size           | 1/2.3 inches                 |
+| Infrared filter     | Integrated                   |
+| Aperture            | f/2.4                        |
+| Focal length        | 6.5 mm                       |
+| Field of view       | 190°                         |
+| Distortion          | ＜58%                        |
+| Interface           | MIPI-CSI-2 Lane              |
+| Lens size           | M12                          |
+| PCB size            | 38 × 38 mm                   |
 
   <hr>
 
-- #### **Ultrasonic sensor** : Gravity URM 09 ultrasonic distance sensor.
-<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Ultrasonic.png" width = "400">
+- #### **Lidar** : RPLiDAR C1
+<image src="https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_145336-removebg-preview.png" width = "400">
   
-An Ultrasonic sensor is a device that can measure the distance to an object by using sound waves. It measures distance by sending out a sound wave at a specific frequency and listening for that sound wave to bounce back.
-
-Since it is known that sound travels through air at about 344 m/s (1129 ft/s), you can take the time for the sound wave to return and multiply it by 344 meters (or 1129 feet) to find the total round-trip distance of the sound wave. Round-trip means that the sound wave traveled 2 times the distance to the object before it was detected by the sensor; it includes the 'trip' from the sonar sensor to the object AND the 'trip' from the object to the Ultrasonic sensor (after the sound wave bounced off the object). To find the distance to the object, simply divide the round-trip distance in half.
-
-DFRobot URM09 is an ultrasonic sensor specially designed for fast ranging and obstacle avoidance applications. Its measuring frequency can reach up to 30Hz. The sensor adopts built-in temperature compensation and analog output. Meanwhile, it can provide accurate distance measurement within 500 cm. The sensor is compatible with Arduino, Raspberry Pi, or other main controllers.
+The RPLIDAR C1 was selected as the primary distance measurement sensor of the robot because it provides 360° scanning with a reliable detection range in a compact design. This makes it ideal for mapping the environment, detecting obstacles, and assisting in navigation during competition tasks. By connecting the LiDAR directly to the Raspberry Pi on the first layer, the system can process scan data in real time with minimal latency. The wide field of view ensures that the robot has continuous situational awareness, while the lightweight and low-power design makes it easy to integrate into the chassis without adding unnecessary load. Overall, the RPLIDAR C1 enables accurate environmental perception and enhances the robot’s ability to navigate efficiently and safely.
 
 <p align="center">
-<img width="400" src="https://github.com/Book2009/FE-NOC/blob/main/Others/Sensor%20Test.png">
+<img width="600" src="https://github.com/ThanyawutII/Test2/blob/main/4_0x0.jpg%20(1).webp">
 
-<p align="center">
-<img width="400" src="https://github.com/Book2009/FE-NOC/blob/main/Others/Attenuation.jpg">
-
-We use the Ultrasonic Sensor (SEN0307) to measure the distance between the robot and the walls. This sensor utilizes an analog voltage output and provides accurate distance measurements within the range of 2-500 cm, with a precision of 1 cm and an accuracy of ±1%. It is highly suitable for this competition and is compatible with boards that have 3.3V or 5V logic levels.
-
-##### Electrical Specifications
-
-| Specification                   | Value                  |
-|---------------------------------|------------------------|
-| Supply Voltage                  | 3.3~5.5V DC            |
-| Operating Current               | 20mA                   |
-
-##### Performance Specifications
-
-| Specification                   | Value                  |
-|---------------------------------|------------------------|
-| Operating Temperature Range      | -10°C to +70°C          |
-| Measurement Range                | 2cm to 500cm (can be set) |
-| Resolution                       | 1cm                    |
-| Accuracy                         | 1%                     |
-| Frequency                        | 50Hz Max               |
+| Specification               | Value                                                                 |
+|-----------------------------|-----------------------------------------------------------------------|
+| Distance Range              | White object: 0.05–12 m (70% reflection), Black object: 0.05–6 m (10% reflection) |
+| Sample Rate                 | 5 kHz                                                                |
+| Scanning Frequency          | 8–12 Hz (10 Hz typical)                                              |
+| Angular Resolution          | 0.72° (typical)                                                      |
+| Scan Field Flatness         | 0°–1.5°                                                              |
+| Communication Interface     | TTL UART                                                             |
+| Communication Speed         | 460800 bps                                                           |
+| Accuracy                    | ±30 mm                                                               |
+| Resolution                  | 15 mm                                                                |
+| Degree of Protection        | IP54                                                                 |
+| Ambient Light Limit         | 40000 lux                                                            |
+| Weight                      | 110 g                                                                |
+| Working Temperature Range   | -10 ~ 40 °C                                                          |
+| Storage Temperature Range   | -20 ~ 60 °C                                                          |
 
 <hr>
 
@@ -779,31 +729,25 @@ The color sensors play an important role in both rounds, as we use them for line
 
 <hr>
 
-- #### **Gyro/Compass** :GY-25
-A gyro is a component that enables a robot to determine its orientation and turn in the appropriate direction. We chose this gyro sensor specifically because of how effective it is. It also comes in a very small
-size to attach to our robot.
+- #### **Gyro/Compass** :Gravity: 10 DOF IMU AHRS (BNO055 + BMP280)
+<image src = "https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_150533-removebg-preview.png" width = "400">
 
-<image src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Compass.png" width = "400">
+The Gravity: 10 DOF IMU AHRS (BNO055 + BMP280) was chosen as the gyroscope and compass module for this year’s design after replacing the ZX-IMU used previously, which suffered from significant drift and instability. The BNO055 integrates a 9-axis sensor with onboard sensor fusion, providing absolute orientation data without the need for complex external algorithms, while the BMP280 adds barometric pressure sensing for more accurate altitude estimation. This combination delivers highly stable and reliable motion tracking, minimizing drift over time and ensuring consistent heading information. With these improvements, the module provides precise orientation and environmental awareness, making it a robust upgrade that enhances both navigation accuracy and overall performance of the robot.
 
-##### Power and Communication
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| Power supply              | 3-5V (internal low dropout regulator)          |
-| Used Chip                 | MCU+MPU6050                                     |
-| Communication mode        | Serial communication (baud 9600, 115200), IIC communication |
-| Operating Current         | 15 mA                                          |
-
-##### Angular Measurement
-
-| Specification             | Value                                           |
-|---------------------------|-------------------------------------------------|
-| Angular Resolution        | 0.01°                                           |
-| Direct Data               | YAW ROLL PITCH                                 |
-| Measuring range of axes   | -180 to +180 degrees                           |
-| Resolution                | 0.01 degrees                                  |
-| Frequency Response        | 100Hz (115200bps)                              |
-| Operating Temperature     | -20 to 85°C                                    |
+| Specification               | Value                                                                 |
+|-----------------------------|-----------------------------------------------------------------------|
+| Operating Voltage           | 3.3V ~ 5V DC                                                          |
+| Operating Current           | 5 mA                                                                  |
+| Interface                   | Gravity-I2C                                                           |
+| BNO055 Accelerometer        | ±2g / ±4g / ±8g / ±16g, LPF 1 kHz ~ <8 Hz, modes: normal, suspend, low power, standby, deep suspend |
+| Accelerometer Interrupt     | Motion-triggered interrupt-signal                                     |
+| BNO055 Gyroscope            | ±125°/s ~ ±2000°/s, LPF 523 Hz ~ 12 Hz, modes: normal, fast power up, deep suspend, suspend, advanced power save |
+| Gyroscope Interrupt         | Motion-triggered interrupt-signal                                     |
+| BNO055 Geomagnetic Sensor   | ±1300 µT (x-, y-axis), ±2500 µT (z-axis), resolution ~0.3 µT, modes: low power, regular, enhanced regular, high accuracy |
+| BMP280 Pressure Sensor      | 300 ~ 1100 hPa, relative accuracy ±0.12 hPa (±1 m), absolute accuracy ±1 hPa (±8.33 m) |
+| BMP280 Temperature Range    | 0℃ ~ 65℃, resolution 0.01℃                                           |
+| Operating Temperature       | -40℃ ~ 80℃                                                           |
+| Dimension                   | 32 × 27 mm (1.26 × 1.06 in)                                           |
 
 <hr>
 
