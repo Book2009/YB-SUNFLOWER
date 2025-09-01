@@ -842,11 +842,11 @@ The HW316E V6.0.1 step-down converter is dedicated to supplying the motor shield
 
 PCT-21 Connector
 
-<image src = "https://github.com/ThanyawutII/Test2/blob/main/80755_0.jpg" width = "300">
+<image src = "https://github.com/ThanyawutII/Test2/blob/main/80755_0.jpg" width = "400">
 
 D1-2 Connector
 
-<image src = "https://github.com/ThanyawutII/Test2/blob/main/80754_0.jpg" width = "300">
+<image src = "https://github.com/ThanyawutII/Test2/blob/main/80754_0.jpg" width = "400">
 
 The robot’s power distribution system is designed around a single battery pack, which is split into two separate branches to supply both the Raspberry Pi and the motor shield. The positive pole of the battery is connected through the PCT-213 connector, where it is divided into multiple outputs, one directed to each step-down converter. The negative pole is handled by the D1-2 connector, providing a secure and stable ground reference that is also split between the converters. From there, the LM2596 module regulates clean 5 V power for the Raspberry Pi, while the HW316E V6.0.1 module delivers high-current power to the motor shield and motors. This arrangement ensures that both control logic and drivetrain receive isolated, stable power from the same battery source, while the connectors simplify wiring, improve safety, and make the system easier to maintain.
 
