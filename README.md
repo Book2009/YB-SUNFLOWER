@@ -618,8 +618,8 @@ The Raspberry Pi 4 Model B serves as the main processor of the robot. It acts li
 
 <hr>
 
-- #### **Interface Board** : Arduino Shield for Raspberry Pi (DFR0327)
-<img src = "https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_141700-removebg-preview.png" width = "400">
+- #### **Interface Board** : IO Expansion HAT for Raspberry Pi
+<img src = "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4112/MFG_DFR0566.jpg?hidebanner=true" width = "400">
 The second piece in the stack is the Arduino Shield for Raspberry Pi (DFR0327). While the Raspberry Pi is excellent for high-level processing, it is not designed to directly interface with many types of low-level sensors and devices. This shield bridges that gap by expanding the I/O and allowing us to easily connect components such as the light sensor, switches, servos, and the gyroscope. Without this layer, the integration of analog and PWM-based devices would be much more complex and less reliable.
 
 | Specification                  | Value                                                                 |
