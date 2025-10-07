@@ -44,13 +44,13 @@
 # **Part 1: About Us**
 
 ## **This is our team.**
-Our team name, YB-SUNFLOWER, carries a meaningful story. In Thai, the word “Sunflower” means 'ดอกทานตะวัน', which is directly connected to one of our senior name. Since 2023, he has inspired us to join the Future Engineers Competition; always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included “Sunflower” in our team name. This year is even more special, because in the national competition round, he is actually competing together with us as part of the team. Unfortunately, he's unable to join  the international round competition.
+Our team name, Sunflower, carries a meaningful story. In Thai, the word “Sunflower” means 'ดอกทานตะวัน', which is directly connected to one of our senior name. Since 2023, he has inspired us to join the Future Engineers Competition; always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included “Sunflower” in our team name. This year is even more special, because in the national competition round, he is actually competing together with us as part of the team. Unfortunately, he's unable to join  the international round competition.
  
  <hr>
 
 ### **Team History** 
  
- We are **YB-SUNFLOWER**, team from Bangkok, Thailand. We are a part of YB-Robot club from Yothinburana School with our mentor, Punnapon Tanasnitikul. This is our club website https://ybrobot.club/. The club was established in 2009 with the first name being “YB Dream Team”. Last year, we also attend in WRO 2024 that took place in Türkiye.
+ We are **Sunflower**, team from Bangkok, Thailand. We are a part of YB-Robot club from Yothinburana School with our mentor, Punnapon Tanasnitikul. This is our club website https://ybrobot.club/. The club was established in 2009 with the first name being “YB Dream Team”. Last year, we also attend in WRO 2024 that took place in Türkiye.
 
 
  This is the first WRO international award in 2010.
