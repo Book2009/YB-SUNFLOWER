@@ -44,7 +44,7 @@
 # **Part 1: About Us**
 
 ## **This is our team.**
-Our team name, YB-SUNFLOWER, carries a meaningful story. The word “Sunflower” comes from one of our seniors, Tawan (ตะวัน). In Thai, “sunflower” is ทานตะวัน, which is directly connected to his name. Since 2023, he has inspired us to join the Future Engineers Competition, always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included “Sunflower” in our team name. This year is even more special, because for the first time, he is actually competing together with us as part of the team.
+Our team name, YB-SUNFLOWER, carries a meaningful story. In Thai, the word “Sunflower” means 'ดอกทานตะวัน', which is directly connected to one of our senior name. Since 2023, he has inspired us to join the Future Engineers Competition; always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included “Sunflower” in our team name. This year is even more special, because in the national competition round, he is actually competing together with us as part of the team. Unfortunately, he's unable to join  the international round competition.
  
  <hr>
 
