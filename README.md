@@ -1,77 +1,77 @@
-# Welcome to team Sunflower's repository🌻✨
+# Welcome to Team Sunflower's Repository 🌻✨
 ### ***We Are Team Sunflower From Thailand***
 
-</p>
 <p align="center">
   <img src="https://ybrobot.club/image/YB%20Robot%20logo.png" width="420"/>
 </p>
 
-
-
 <p align="center">
- by Yothinburana School
-
+  By Yothinburana School
 </p>
 
+---
+
 # Content
-`3DModels` This folder includes the 3D design of the vehicle and the rendered model of the vehicle.
 
-`FlowChart` This folder includes diagrams showing the logic and sequence of the robot's control program, highlighting how it processes inputs and controls movements during missions.
+`3DModels` – This folder includes the 3D design files of the vehicle. These files show the mechanical structure, dimensions, and how each part fits together.
 
-`Others` Other essential photos like, work schedule, and robot assemble gif.
+`FlowChart` – This folder contains flowcharts that illustrate the robot’s control logic and how it processes sensor inputs during missions.
 
-`Program` This folder includes all the codes that are used in the WRO 2025 Future Engineers Category and all the programming flowcharts.
+`Others` – This folder includes supporting materials such as the work schedule, and robot assembly GIFs.
 
-`Robot-Photos` This folder contains photos of the vehicle from all perspectives, including side and bottom views.
+`Program` – This folder includes all source codes used in the WRO 2025 Future Engineers category.
 
-`Schemes` This folder contains one or more schematic diagrams in JPEG, PNG, or PDF format that depict the electromechanical components of the vehicle. These diagrams illustrate all the elements, including electronic components and motors, and show how they are interconnected.
+`Robot-Photos` – This folder contains photos of the vehicle from multiple perspectives.
 
-`Team-Photos` This folder includes photos of the team participating in the WRO 2025 Future Engineers Category.
+`Schemes` – `Schemes` – This folder contains wiring and electrical schematic diagrams. These diagrams show all components in the robot and how they are connected together.
 
-`Videos` This folder contains YouTube links that show how the robot operates to complete both missions.
+`Team-Photos` – This folder includes photos of the team participating in the WRO 2025 Future Engineers Category.
 
-`Readme` This Readme contain 3 parts.
+`Videos` – This folder contains YouTube links that demonstrate how the robot operates to complete both missions.
 
+`Readme` – This README contains 3 parts:
   - [About Us](#part-1-about-us)
   - [Mechanical Design](#part-2-mechanical-design)
   - [Obstacle Management](#part-3-obstacle-management)
 
-
-</p>
+---
 
 # **Part 1: About Us**
 
 ## **This is our team.**
-Our team name, Sunflower, carries a meaningful story. In Thai, the word “Sunflower” means 'ดอกทานตะวัน', which is directly connected to one of our senior name. Since 2023, he has inspired us to join the Future Engineers Competition; always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included “Sunflower” in our team name. This year is even more special, because in the national competition round, he is actually competing together with us as part of the team. Unfortunately, he's unable to join  the international round competition.
- 
- <hr>
+Our team name, **Sunflower**, carries a meaningful story. In Thai, the word “Sunflower” means *ดอกทานตะวัน*, which is directly connected to the name of one of our seniors. Since 2023, he has inspired us to join the Future Engineers competition—always supporting us and giving guidance from outside the team. To honor the role he played in motivating us, we included **“Sunflower”** in our team name.
 
-### **Team History** 
- 
- We are **Sunflower**, team from Bangkok, Thailand. We are a part of YB-Robot club from Yothinburana School with our mentor, Punnapon Tanasnitikul. This is our club website https://ybrobot.club/. The club was established in 2009 with the first name being “YB Dream Team”. Last year, we also attend in WRO 2024 that took place in Türkiye.
+This year is even more special, because in the national competition round, he was finally able to compete together with us as part of the team. Unfortunately, he is unable to join the international round of the competition.
 
+<hr>
 
- This is the first WRO international award in 2010.
-  <p align="center">
-    <img src="https://www.ybrobot.club/image/DSC_1209.jpg" width="500"/>
+### **Team History**
+We are **Sunflower**, a team from Bangkok, Thailand. We are part of the **YB-Robot Club** from Yothinburana School, with our mentor **Punnapon Tanasnitikul**.  
+Our club website: https://ybrobot.club/
+
+The club was established in 2009 under the original name **“YB Dream Team.”** Last year, we also participated in **WRO 2024**, which took place in Türkiye.
+
+`2010 — First International Round Achievement`  
+Our first time competing in the WRO international round, where our team achieved **3rd place (Second Runner-Up)**.  
+<p align="center">
+  <img src="https://www.ybrobot.club/image/DSC_1209.jpg" width="500"/>
 </p>
-  </p>
-  </p>
-This is the second WRO international award in 2011.
- <p align="center">
-    <img src="https://www.ybrobot.club/image/IMG_4283.jpg" width="500"/>
-</p>
-  </p> 
-  </p>
 
-This is the latest WRO international award in 2024 (13th place).  
- <p align="center">
-    <img src="https://github.com/user-attachments/assets/0a5434d2-1201-4911-a0f8-85d0b6c359f3" width="500"/>
+`2011 — Second International Round Achievement`  
+In our second participation in the WRO international round, our team won **1st place (Champion)**.  
+<p align="center">
+  <img src="https://www.ybrobot.club/image/IMG_4283.jpg" width="500"/>
 </p>
-Currently in 2025, we are a part of YB Robot Team. Our senior brought this team name to global recognition, so there is a responsibility since our senior perform excellently. We are hoping to keep this name on the winning streak and make them proud. </p>
-  </p>
-  </p>
-  <hr>
+
+`Latest International Round Result`  
+Among our many years of participation, the most recent highlighted result is from **2024**, where we placed **13th** in the international round.  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0a5434d2-1201-4911-a0f8-85d0b6c359f3" width="500"/>
+</p>
+
+Currently in 2025, we are part of the **YB Robot Team**. Our senior helped bring this team name to global recognition, and we aim to continue the legacy and make them proud.
+
+<hr>
 
 ### **Our Team**
    The team consists of 2 intimate friends and 1 of our senior, 'Tawan'. Pawit Nateenantasawasd, Thanyawut Krittikanon, and Natapol Chusang. We have known each other for four years since 2021, forming a strong bond that enhances our collaborative efforts. We first met in high school, being in robot club, competing in many robot competitions together, and sharing our robotic knowledge. Much of what we know today has been learned from the experiences of our seniors in out team, who have taught us valuable lessons and helped shape who we are now.
@@ -86,32 +86,32 @@ Currently in 2025, we are a part of YB Robot Team. Our senior brought this team 
 </p>
 
 <hr>
-There are three members in our team, all extremely focused and dedicated to their positions, performing functions as follows: 
+  There are three members in our team, all extremely focused and dedicated to their positions, performing functions as follows: 
  
 #### 1. Thanyawut Krittikanon – Robot Designer
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Thanyawut%20Krittikanon.png" width="400"/>
 </p>
-Thanyawut is known in our team as **The God of Fusion**, with outstanding skills in 3D design and modeling. His expertise in creating precise and creative robot designs makes him a crucial part of our team. With his talent, he can turn our ideas into detailed models that guide the building process and bring our concepts to life.
+  Thanyawut is known in our team as **The God of Fusion**, with outstanding skills in 3D design and modeling. His expertise in creating precise and creative robot designs makes him a crucial part of our team. With his talent, he can turn our ideas into detailed models that guide the building process and bring our concepts to life.
 
 #### 2. Pawit Nateenantasawasd – Document Designer and Electrician 
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Pawit%20Nateenantasawasd.png" width="400"/>
 </p>
-I am Pawit, the document designer of our team. My role is to make sure that everything we present — from reports to presentations — is clear, well-structured, and professional. I enjoy transforming complex ideas into something simple and easy to understand, while also giving it a creative and polished design. Besides designing documents, I also have strong coding skills in multiple languages such as C++, C, Python, Micropython, and HTML, which allow me to contribute to the technical side of our work.
+  I am Pawit, the document designer of our team. My role is to make sure that everything we present — from reports to presentations — is clear, well-structured, and professional. I enjoy transforming complex ideas into something simple and easy to understand, while also giving it a creative and polished design. Besides designing documents, I also have strong coding skills in multiple languages such as C++, C, Python, Micropython, and HTML, which allow me to contribute to the technical side of our work.
 
 #### 3. Natapol Chusang - Programmer
 <p align="center">
     <img src="https://github.com/ThanyawutII/Test/blob/main/Pongpapat_Putongkam.png" width="400"/>
 </p>
-Natapol is our master programmer, and sometimes we joke that he’s not even human because of how effortlessly he can code anything. From bad-looking robot to advanced systems, he can take on any programming challenge that comes his way. His ability to quickly understand problems and turn them into working solutions makes him a key part of our team’s success. With his skills, even the most complex systems feel possible to build — it’s like there’s no code in the world he cannot write.
+  Natapol is our master programmer, and sometimes we joke that he’s not even human because of how effortlessly he can code anything. From bad-looking robot to advanced systems, he can take on any programming challenge that comes his way. His ability to quickly understand problems and turn them into working solutions makes him a key part of our team’s success. With his skills, even the most complex systems feel possible to build — it’s like there’s no code in the world he cannot write.
 
 </p>
 <hr>
 
 ### **Our Vision and Goal**
 
-We want to create a robot that can operate similarly to a self-driving car, with the hope of integrating it with an actual automobile. This competition is a step toward our future goal of helping our country and inventing new things. Additionally, via participating in this competition, we have developed and learned numerous skills like collaboration, imagination, and foresight. We also desired to meet new friends in order to exchange knowledge. Furthermore, we intend to utilize the experience we have obtained from this tournament to better ourselves and mentor our junior at school.
+  We want to create a robot that can operate similarly to a self-driving car, with the hope of integrating it with an actual automobile. This competition is a step toward our future goal of helping our country and inventing new things. Additionally, via participating in this competition, we have developed and learned numerous skills like collaboration, imagination, and foresight. We also desired to meet new friends in order to exchange knowledge. Furthermore, we intend to utilize the experience we have obtained from this tournament to better ourselves and mentor our junior at school.
 <hr>
 
 
