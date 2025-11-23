@@ -23,7 +23,7 @@
 
 `Robot-Photos` – This folder contains photos of the vehicle from multiple perspectives.
 
-`Schemes` – `Schemes` – This folder contains wiring and electrical schematic diagrams. These diagrams show all components in the robot and how they are connected together.
+`Schemes` – This folder contains wiring and electrical schematic diagrams. These diagrams show all components in the robot and how they are connected together.
 
 `Team-Photos` – This folder includes photos of the team participating in the WRO 2025 Future Engineers Category.
 
