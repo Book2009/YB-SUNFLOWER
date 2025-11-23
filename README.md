@@ -74,54 +74,66 @@ Currently in 2025, we are part of the **YB Robot Team**. Our senior helped bring
 <hr>
 
 ### **Our Team**
-   The team consists of 2 intimate friends and 1 of our senior, 'Tawan'. Pawit Nateenantasawasd, Thanyawut Krittikanon, and Natapol Chusang. We have known each other for four years since 2021, forming a strong bond that enhances our collaborative efforts. We first met in high school, being in robot club, competing in many robot competitions together, and sharing our robotic knowledge. Much of what we know today has been learned from the experiences of our seniors in out team, who have taught us valuable lessons and helped shape who we are now.
+Our team consists of two close friends, **Thanyawut Krittikanon** and **Pawit Nateenantasawasd**. We have known each other since 2021 and formed a strong bond through years of working together in our school’s robotics club. Throughout high school, we joined many robotics competitions, shared knowledge, and improved our skills side by side. These shared experiences have shaped how well we collaborate today.
 
-   Last 2 years, with great enthusiasm and high spirits, we joined Future Engineers twice. Reaching the international round was already a great honor, but we were soon to realize that in order to win, one needs more than just enthusiasm. Our mistakes led us take the 8th and 13th position, a respectable position indeed. 
+Over the past two years, we joined the **Future Engineers** category twice. Reaching the international round was already an honor, and although we finished in **8th** and **13th** place, those experiences taught us that enthusiasm alone is not enough—we needed stronger strategies, cleaner designs, and better execution.
 
-   This year, we are back with greater confidence, and wiser from past experiences. We honed our strategies and prepared extensively. We fixed every mistake we have done last 2 years. Being back at this competition make us want to ensure the best outcome, and we are here to make everyone proud.  
-
+This year, we return with greater confidence and far more experience. We refined our workflow, strengthened our engineering approach, and fixed the mistakes from previous years. Coming back to this competition motivates us to do our best, and we aim to deliver results that make everyone proud.
 
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Formal.png" width="500"/>
 </p>
 
 <hr>
-  There are three members in our team, all extremely focused and dedicated to their positions, performing functions as follows: 
- 
-#### 1. Thanyawut Krittikanon – Robot Designer
+
+There are two members on our team, each focused and dedicated to their responsibilities:
+
+### **1. Thanyawut Krittikanon – Team Coordinator, Robot Designer & Document Designer**
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Thanyawut%20Krittikanon.png" width="400"/>
 </p>
-  Thanyawut is known in our team as **The God of Fusion**, with outstanding skills in 3D design and modeling. His expertise in creating precise and creative robot designs makes him a crucial part of our team. With his talent, he can turn our ideas into detailed models that guide the building process and bring our concepts to life.
 
-#### 2. Pawit Nateenantasawasd – Document Designer and Electrician 
+Thanyawut is responsible for team coordination, robot design, and documentation. His background in both robotics and programming helps him organize the team’s workflow and ensure that every process is clearly recorded and accurately presented.  
+
+As the robot designer, he works on mechanical concepts and 3D modeling, turning ideas into practical and efficient designs. As the document designer, he structures the reports, diagrams, and technical explanations, ensuring that all information is clear, professional, and aligned with the competition requirements.
+
+His creativity, attention to detail, and ability to combine engineering with presentation make him a key part of the team’s success.
+
+---
+
+### **2. Pawit Nateenantasawasd – Programmer**
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Pawit%20Nateenantasawasd.png" width="400"/>
 </p>
-  I am Pawit, the document designer of our team. My role is to make sure that everything we present — from reports to presentations — is clear, well-structured, and professional. I enjoy transforming complex ideas into something simple and easy to understand, while also giving it a creative and polished design. Besides designing documents, I also have strong coding skills in multiple languages such as C++, C, Python, Micropython, and HTML, which allow me to contribute to the technical side of our work.
 
-#### 3. Natapol Chusang - Programmer
-<p align="center">
-    <img src="https://github.com/ThanyawutII/Test/blob/main/Pongpapat_Putongkam.png" width="400"/>
-</p>
-  Natapol is our master programmer, and sometimes we joke that he’s not even human because of how effortlessly he can code anything. From bad-looking robot to advanced systems, he can take on any programming challenge that comes his way. His ability to quickly understand problems and turn them into working solutions makes him a key part of our team’s success. With his skills, even the most complex systems feel possible to build — it’s like there’s no code in the world he cannot write.
+Pawit is our lead programmer, specializing in languages such as **C++, C, Python, MicroPython, and HTML**.  
+Quiet and focused, he excels at solving complex programming challenges with precision. His ability to stay concentrated allows him to implement highly detailed control logic and ensure that our robot operates smoothly and reliably. His dedication plays a key role in keeping the entire system functioning.
 
-</p>
 <hr>
 
 ### **Our Vision and Goal**
 
-  We want to create a robot that can operate similarly to a self-driving car, with the hope of integrating it with an actual automobile. This competition is a step toward our future goal of helping our country and inventing new things. Additionally, via participating in this competition, we have developed and learned numerous skills like collaboration, imagination, and foresight. We also desired to meet new friends in order to exchange knowledge. Furthermore, we intend to utilize the experience we have obtained from this tournament to better ourselves and mentor our junior at school.
-<hr>
+We aim to create a robot that operates similarly to a self-driving car, with the long-term dream of integrating our technology into real vehicles. This competition is an important step toward our future goals of contributing to our country and developing innovative solutions.  
 
+Through participating in this competition, we have gained valuable skills such as collaboration, creativity, and forward thinking. We also hoped to meet new friends and exchange knowledge with teams from around the world.  
+
+Furthermore, we plan to use the experience we gain from this tournament to improve ourselves and to guide and mentor our juniors at school, helping them grow just as we have.
+
+<hr>
 
 # **Part 2: MECHANICAL DESIGN**
 
-## Robot's Chassis
+## Robot Design Overview
 
 <img align="right" width="275" src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Others/Robot%20Assemble.gif">
 
-The robot chassis is primarily composed of 3D-printed parts, providing a robust yet lightweight structural platform for all major components of the robot. Each element is custom-designed to meet specific requirements and interlocks seamlessly to create a resilient modular structure. This modularity enables easy modification and extension, allowing rapid adaptation as the design evolves. The chassis accommodates and organizes key systems including the motors, electronic circuitry, battery, and sensors, while also supporting efficient cable routing and effective thermal management. By leveraging 3D printing, components can be positioned with optimal spatial efficiency. In particular, the LiDAR sensor can be mounted in an unobstructed location (at a height not exceeding 10 cm above the ground), ensuring a clear field of view for precise obstacle detection during missions. This approach not only reduces overall weight and assembly complexity, but also provides flexibility for replacing or upgrading parts as the robot matures. [All the 3D printable models can be found here](https://github.com/Book2009/YB-SUNFLOWER/tree/main/3DModels).
+The robot is primarily composed of custom 3D-printed components, forming a lightweight yet durable structure for all major systems. Each part is designed to fit its specific purpose and connects cleanly with others, creating a modular framework that can be easily upgraded or adjusted as our design evolves.
+
+The overall layout supports the placement of motors, electronics, the battery, and key sensors while maintaining neat cable routing and good airflow. With the flexibility of 3D printing, we optimized the internal spacing, balance, and part placement to improve stability and functionality.
+
+To ensure accurate obstacle detection, the LiDAR sensor is mounted in an unobstructed position (below 10 cm from the ground), giving it a clear field of view throughout the missions. This approach minimizes weight, simplifies assembly, and allows for quick replacement or upgrading of components.
+
+[All 3D-printable models can be found here.](https://github.com/Book2009/YB-SUNFLOWER/tree/main/3DModels)
 
 <hr>
 
