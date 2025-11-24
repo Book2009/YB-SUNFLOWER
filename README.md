@@ -721,13 +721,15 @@ There are many wheel options available, but this wheel was chosen primarily beca
 
 ### Controller
 
-- #### **Main Board** : Raspberry Pi 4 Model B from Raspberry Pi
-<img src = "https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_134018-removebg-preview.png" width = "400">
+- #### **Main Board** : Raspberry Pi 5 (8GB) from Raspberry Pi
+<img src = "<img width="700" height="700" alt="image-Photoroom (14)" src="https://github.com/user-attachments/assets/3aaf27cc-818f-493f-b64f-25e2a9e370e8" />
+" width = "400">
 The Raspberry Pi 4 Model B serves as the main processor of the robot. It acts like a compact computer, handling heavy computational tasks such as processing camera and LiDAR data, making navigation decisions, and managing overall system logic. We use this board because it offers powerful processing capability in a small form factor, while also providing direct ports for high-bandwidth devices.
 
 | Specification | Value |
 |---------|---------|
-| **Processor** | Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.8GHz |
+| **Main Board / SOC** | BCM2712 |
+| **Processor** | Quad-core 64-bit ARM Cortex-A76, 2.4 GHz, with cryptography extensions, 512 KB L2 per core + 2 MB shared L3  |
 | **Memory Options** | 1GB, 2GB, 4GB or 8GB LPDDR4-3200 SDRAM |
 | **Wireless** | 2.4 GHz and 5.0 GHz IEEE 802.11ac, Bluetooth 5.0, BLE |
 | **Ethernet** | Gigabit Ethernet |
