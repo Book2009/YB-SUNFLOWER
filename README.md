@@ -81,9 +81,8 @@ Over the past two years, we joined the **Future Engineers** category twice. Reac
 This year, we return with greater confidence and far more experience. We refined our workflow, strengthened our engineering approach, and fixed the mistakes from previous years. Coming back to this competition motivates us to do our best, and we aim to deliver results that make everyone proud.
 
 <p align="center">
-    <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Formal.png" width="500"/>
+    <img src="https://ibb.co/RpfTBBWW" width="500"/>
 </p>
-
 <hr>
 
 There are two members on our team, each focused and dedicated to their responsibilities:
