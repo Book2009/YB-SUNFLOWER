@@ -159,7 +159,7 @@ The Main Base is the primary structural platform of the robot and forms the foun
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20113332.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20113208.png" width="400" > 
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Motor%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Support%20Base%201.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
@@ -174,7 +174,7 @@ The Support Base is the second structural layer of the robot, positioned above t
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114750.png" width="500" >
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Support%20Base%202.1.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
@@ -189,22 +189,7 @@ The Main Base is the primary structural platform of the robot and forms the foun
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114811.png" width="500" >
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
-  </tr>
-</table>
-
-The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
-
-<hr>
-
-### Support Base 2.2
-
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114811.png" width="500" >
-
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Support%20Base%202.2.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
@@ -223,27 +208,27 @@ The Main Base is the primary structural platform of the robot and forms the foun
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20122124.png" width="300" alt="Left">
       <p><details>
-  <summary>Right Bearing Mount</summary>
+  <summary>Camera Height Adjustment Link</summary>
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Right%20Bearing%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Camera%20Height%20Adjustment%20Link.stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20122138.png" width="300" alt="Center">
       <p><details>
-  <summary>Middle Bearing Mount</summary>
+  <summary>Angle Adjustment Link</summary>
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Middle%20Bearing%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Angle%20Adjustment%20Link.stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
  <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20122212.png" width="300" alt="Right">
       <p><details>
-  <summary>Left Bearing Mount</summary>
+  <summary>Camera Adjustment Column</summary>
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Left%20Bearing%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Camera%20Adjustment%20Column.stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
@@ -261,7 +246,7 @@ The camera holder is mounted at the back of the camera. It employs an interlocki
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20121139.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20121200.png" width="400" >
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Camera%20Holder.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Servo%20Bracket.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
@@ -276,7 +261,7 @@ This component is intended for firm attachment of a servo motor accompanied by a
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20123551.png" width="500" >
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Ultrasonic%20Sensor%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
@@ -291,7 +276,7 @@ The Main Base is the primary structural platform of the robot and forms the foun
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114049.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114109.png" width="400" > 
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Motor%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Lidar%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
@@ -390,18 +375,18 @@ The Rear Wheel Bearing Mount is designed to hold standard ball bearings, which s
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20111310.png" width="300" alt="Left">
       <p><details>
-  <summary>Right Axle Sleeve Adapter</summary>
+  <summary>Right Axle Sleeve Adapter(For Rear Wheel)</summary>
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Right%20Axle%20Sleeve%20Adapter.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Right%20Axle%20Sleeve%20Adapter(For%20Rear%20Wheel).stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
     <td align="center">
       <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20111245.png" width="300" alt="Right">
       <p><details>
-  <summary>Left Axle Sleeve Adapter</summary>
+  <summary>Left Axle Sleeve Adapter(For Rear Wheel)</summary>
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Left%20Bearing%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Left%20Axle%20Sleeve%20Adapter(For%20Rear%20Wheel).stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
