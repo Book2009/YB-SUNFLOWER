@@ -723,6 +723,7 @@ There are many wheel options available, but this wheel was chosen primarily beca
 
 - #### **Main Board** : Raspberry Pi 5 (8GB) from Raspberry Pi
 <img width="700" height="700" alt="image-Photoroom (14)" src="https://github.com/user-attachments/assets/3aaf27cc-818f-493f-b64f-25e2a9e370e8" />
+
 The Raspberry Pi 5 (8GB) serves as the main processing unit of the robot. It functions like a high-performance mini computer, capable of handling advanced and computationally intensive tasks such as camera processing, LiDAR data analysis, SLAM, navigation algorithms, and real-time decision-making. Compared to previous generations, the Raspberry Pi 5 provides a major leap in CPU, GPU, and I/O performance, making it ideal for robotics applications that require fast data throughput and reliable multitasking.
 
 We use this board because it delivers significantly higher processing power in the same compact form factor, while also providing improved interfaces for high-bandwidth devices such as multiple cameras, high-speed sensors, and NVMe storage.
