@@ -197,6 +197,21 @@ The Main Base is the primary structural platform of the robot and forms the foun
 
 <hr>
 
+### Support Base 2.2
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114811.png" width="500" >
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  </tr>
+</table>
+
+The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+
+<hr>
+
 ### Camera Positioning Mechanism
 
 <p align="center">
