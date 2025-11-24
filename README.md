@@ -1000,7 +1000,7 @@ To ensure compatibility with our motor's maximum voltage rating of 9V, we incorp
 
 - #### **This is the appearance of our robot in real life to show what our robot looks like with the components.**
 <p align="center">
-<img width="750" src="https://github.com/ThanyawutII/Test-2/blob/main/20241118_165519.jpg">
+<img width="750" src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Isometric%20View.jpg">
 </p>
 
 - #### **It shows the inside of the robot, detailing where and how to place everything.**
