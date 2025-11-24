@@ -125,7 +125,7 @@ Furthermore, we plan to use the experience we gain from this tournament to impro
 
 ## Robot Design Overview
 
-<img align="right" width="275" src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Others/Robot%20Assemble.gif">
+<img align="right" width="275" src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Others/Robot-Design-Overview.gif">
 
 The robot is primarily composed of custom 3D-printed components, forming a lightweight yet durable structure for all major systems. Each part is designed to fit its specific purpose and connects cleanly with others, creating a modular framework that can be easily upgraded or adjusted as our design evolves.
 
@@ -198,7 +198,7 @@ The camera holder is mounted at the back of the camera. It employs an interlocki
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20192249.png" width="400" > <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20192304.png" width="400" > 
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20101710.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20101654.png" width="400" > 
 
   <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Motor%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -216,7 +216,7 @@ The motor mount is the only component in the chassis assembly not produced by 3D
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20181804.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20103827.png" width="400" >
 
   <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Gear%20Adapter.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -231,13 +231,13 @@ The gear adapter is a custom-designed component developed to interface the GM25 
 
 ### Rear Wheel Bearing Mount
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20172941.png">
+<img width="400" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20102828.png">
 </p>
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20172948.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20102921.png" width="300" alt="Left">
       <p><details>
   <summary>Right Bearing Mount</summary>
 
@@ -246,7 +246,7 @@ The gear adapter is a custom-designed component developed to interface the GM25 
 </details></p>
     </td>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173226.png" width="300" alt="Center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20102937.png" width="300" alt="Center">
       <p><details>
   <summary>Middle Bearing Mount</summary>
 
@@ -255,7 +255,7 @@ The gear adapter is a custom-designed component developed to interface the GM25 
 </details></p>
     </td>
  <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173000.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20103006.png" width="300" alt="Right">
       <p><details>
   <summary>Left Bearing Mount</summary>
 
@@ -326,13 +326,13 @@ The Lidar Mount is designed to secure the LiDAR sensor above the Support Base wh
 
 ### Steering Module
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173756.png">
+<img width="400" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20104633.png">
 </p>
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173915.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20104809.png" width="300" alt="Left">
       <p><details>
   <summary>Top Steering Mount</summary>
 
@@ -341,7 +341,7 @@ The Lidar Mount is designed to secure the LiDAR sensor above the Support Base wh
 </details></p>
     </td>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173905.png" width="300" alt="Center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20105132.png" width="300" alt="Center">
       <p><details>
   <summary>Steering Linkage Arm</summary>
 
@@ -350,7 +350,7 @@ The Lidar Mount is designed to secure the LiDAR sensor above the Support Base wh
 </details></p>
     </td>
  <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173842.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20104934.png" width="300" alt="Right">
       <p><details>
   <summary>Cap</summary>
 
@@ -364,20 +364,29 @@ The Lidar Mount is designed to secure the LiDAR sensor above the Support Base wh
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173820.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20104733.png" width="300" alt="Left">
       <p><details>
-  <summary>Right Steering Arm</summary>
+  <summary>Top Steering Mount</summary>
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Right%20Steering%20Arm.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Top%20Steering%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+
+</details></p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20105113.png" width="300" alt="Center">
+      <p><details>
+  <summary>Steering Linkage Arm</summary>
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Steering%20Linkage%20Arm.stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
  <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173828.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20104700.png" width="300" alt="Right">
       <p><details>
-  <summary>Left Steering Arm</summary>
+  <summary>Cap</summary>
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Left%20Steering%20Arm.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Cap.stl" target="_blank">Click here to view 3D model.</a></p>
 
 </details></p>
     </td>
@@ -431,7 +440,7 @@ Compact design: The integration of the tie rod into the Top Steering Mount reduc
 - #### **This is the appearance of chassis to show what our robot looks like without the components.**
 
 <p align="center">
-<img width="700" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot_2025-08-30_184431-removebg-preview.png">
+<img width="900" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20110220.png">
 
 ## Components
 
