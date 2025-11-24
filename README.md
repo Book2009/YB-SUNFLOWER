@@ -741,8 +741,7 @@ We use this board because it delivers significantly higher processing power in t
 | **Audio/Video** | 4-pole stereo audio and composite video port |
 | **Video Support** | H.265 (4kp60 decode), H.264 (1080p60 decode, 1080p30 encode) |
 | **Graphics** | OpenGL ES 3.1, Vulkan 1.0 |
-| **Storage** | Micro-SD card slot (supports high-speed SDR104) 
-Raspberry Pi BD Also supports PCIe 2.0 x1 for NVMe SSD via HAT |
+| **Storage** | Micro-SD card slot (supports high-speed SDR104) Raspberry Pi BD Also supports PCIe 2.0 x1 for NVMe SSD via HAT |
 | **Power Input** | 5V DC via USB-C (min 3A), 5V DC via GPIO (min 3A), Power over Ethernet (PoE with HAT) |
 | **Operating Temperature** | 0 – 50 °C ambient |
 
