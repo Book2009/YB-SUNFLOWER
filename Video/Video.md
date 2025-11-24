@@ -10,4 +10,4 @@ Open Challenge round:
 https://youtu.be/-mydtj7d2Hc
 
 Obstacle Challenge round:
-https://youtu.be/9oGPSgff0DQ
+https://youtu.be/DKxKQNMbDbE
