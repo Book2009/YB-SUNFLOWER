@@ -142,7 +142,7 @@ To ensure accurate obstacle detection, the LiDAR sensor is mounted in an unobstr
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20171843.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20113020.png" width="500" >
 
   <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
@@ -150,46 +150,137 @@ To ensure accurate obstacle detection, the LiDAR sensor is mounted in an unobstr
 
 The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
 
-<p align="center">
-<img width="200" src="https://github.com/ThanyawutII/Test-2/blob/main/wmremove-transformed.png">
-
 <hr>
 
-### Support Base
+### Support Base 1
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174349.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20113332.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20113208.png" width="400" > 
 
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Support%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Motor%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
 The Support Base is the second structural layer of the robot, positioned above the Main Base. It is designed to house the 11.1V battery, which is easily removable for charging. The base features a large central clearance to prevent interference with the control board mounted on the first layer, while also providing additional space for cable routing. Among the key design choices, one important decision was to minimize the use of bolts and nuts. This weight reduction is achieved by using ABS plastic filament instead of steel components, as ABS is considerably lighter. This choice not only decreases the overall weight but also simplifies the assembly by requiring fewer additional elements and connections.
 
-<p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/a0c387ff-fb17-4383-9e34-803489d1c718.png">
-
-A lighter robot provides enhanced mobility and greater efficiency, which is a crucial factor given the competitive requirements of the event. At the front section, an interlocking joint mechanism is used to mount the camera holder, reducing the need for screws and optimizing space efficiency. As a result, assembly is streamlined by minimizing the use of conventional fasteners during the construction process.
-
-<p align="center">
-<img width="390" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-31%20154026.png">  <img width="390" src="https://github.com/ThanyawutII/Test-2/blob/main/Wood-Joints-fdf0ae5b6e2c40438e6800fe91fe2733.png"> 
-
 <hr>
 
-### Camera Holder
+### Support Base 2.1
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174812.png" width="400" > <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20174820.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114750.png" width="500" >
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  </tr>
+</table>
+
+The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+
+<hr>
+
+### Support Base 2.2
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114811.png" width="500" >
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  </tr>
+</table>
+
+The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+
+<hr>
+
+### Camera Positioning Mechanism
+
+<p align="center">
+<img width="400" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20122106.png">
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20122124.png" width="300" alt="Left">
+      <p><details>
+  <summary>Right Bearing Mount</summary>
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Right%20Bearing%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+
+</details></p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20122138.png" width="300" alt="Center">
+      <p><details>
+  <summary>Middle Bearing Mount</summary>
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Middle%20Bearing%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+
+</details></p>
+    </td>
+ <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20122212.png" width="300" alt="Right">
+      <p><details>
+  <summary>Left Bearing Mount</summary>
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Left%20Bearing%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+
+</details></p>
+    </td>
+  </tr>
+</table>
+
+The camera holder is mounted at the back of the camera. It employs an interlocking joint mechanism to attach securely to the front section of the Support Base. This approach eliminates the need for conventional fasteners, reduces assembly complexity, and saves space within the front section of the chassis. The interlocking design also ensures stability of the camera position while allowing quick installation or removal when necessary.
+
+<hr>
+
+### Servo Bracket
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20121139.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20121200.png" width="400" >
 
   <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Camera%20Holder.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
 </table>
 
-The camera holder is mounted at the back of the camera. It employs an interlocking joint mechanism to attach securely to the front section of the Support Base. This approach eliminates the need for conventional fasteners, reduces assembly complexity, and saves space within the front section of the chassis. The interlocking design also ensures stability of the camera position while allowing quick installation or removal when necessary.
+This component is intended for firm attachment of a servo motor accompanied by an ultrasonic sensor that is to be used in rotation. The design incorporates cylindrical spigots so as to eliminate the use of black pins which are used to fasten the servo motor fabricated for Lego use. With this arrangement, the sensor movement is stable, well positioned and rigid within the system that improves the overall utility of the sensor.
+
+<hr>
+
+### Ultrasonic Sensor Mount
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20123551.png" width="500" >
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+  </tr>
+</table>
+
+The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+
+<hr>
+
+### Lidar Mount
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114049.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20114109.png" width="400" > 
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Motor%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
+  </tr>
+</table>
+
+The Lidar Mount is designed to secure the LiDAR sensor above the Support Base while maintaining proper alignment for obstacle detection. Its structure incorporates an open clearance beneath the LiDAR, ensuring that the space directly below remains available for installing a gyroscope module onto the Support Base. With this arrangement, the LiDAR and gyro can be vertically stacked in a compact layout, where the mount elevates the LiDAR sensor without interfering with the gyro underneath. This design maximizes space efficiency, enables multi-sensor integration on a single layer, and ensures stable and accurate sensor operation.
 
 <hr>
 
@@ -276,13 +367,13 @@ The Rear Wheel Bearing Mount is designed to hold standard ball bearings, which s
 ### Axle Sleeve Adapter
 
 <p align="center">
-<img width="400" src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173537.png">
+<img width="400" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20111229.png">
 </p>
 
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173543.png" width="300" alt="Left">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20111310.png" width="300" alt="Left">
       <p><details>
   <summary>Right Axle Sleeve Adapter</summary>
 
@@ -291,7 +382,7 @@ The Rear Wheel Bearing Mount is designed to hold standard ball bearings, which s
 </details></p>
     </td>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20173555.png" width="300" alt="Right">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20111245.png" width="300" alt="Right">
       <p><details>
   <summary>Left Axle Sleeve Adapter</summary>
 
@@ -306,21 +397,6 @@ The Axle Sleeve Adapter is designed to interface the LEGO cross axle with the in
 
 <p align="center">
 <img width="300" src="https://github.com/ThanyawutII/Test2/blob/main/technic-axle-3-lego-part-4519-removebg-preview.png">
-
-<hr>
-
-### Lidar Mount
-
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/ThanyawutII/Test-2/blob/main/Screenshot%202025-08-30%20175500.png" width="400" >
-
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Lidar%20Mount.stl" target="_blank">Click here to view 3D model.</a></p>
-  </tr>
-</table>
-
-The Lidar Mount is designed to secure the LiDAR sensor above the Support Base while maintaining proper alignment for obstacle detection. Its structure incorporates an open clearance beneath the LiDAR, ensuring that the space directly below remains available for installing a gyroscope module onto the Support Base. With this arrangement, the LiDAR and gyro can be vertically stacked in a compact layout, where the mount elevates the LiDAR sensor without interfering with the gyro underneath. This design maximizes space efficiency, enables multi-sensor integration on a single layer, and ensures stable and accurate sensor operation.
 
 <hr>
 
@@ -440,7 +516,7 @@ Compact design: The integration of the tie rod into the Top Steering Mount reduc
 - #### **This is the appearance of chassis to show what our robot looks like without the components.**
 
 <p align="center">
-<img width="900" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20110220.png">
+<img width="1000" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20110220.png">
 
 ## Components
 
