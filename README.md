@@ -142,13 +142,17 @@ To ensure accurate obstacle detection, the LiDAR sensor is mounted in an unobstr
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20113020.png" width="500" >
-
-  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view 3D model.</a></p>
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20113020.png" width="500">
+      <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Main%20Base.stl" target="_blank">Click here to view the 3D model.</a></p>
+    </td>
   </tr>
 </table>
 
-The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+The Main Base serves as the robot’s primary structural layer. The Raspberry Pi 5 is mounted on this level to keep the board low, since an extension board sits on top of it; this position prevents unnecessary height, simplifies cable routing, and avoids blocking the camera’s field of view.
+
+This layer provides mounting positions for the **Servo Bracket** and **Motor Mount**, which hold the steering servo and the motors with the differential gear mechanism. These mounting locations are centered to maintain proper alignment and balanced weight distribution. 
+
+The Main Base also includes dedicated connection points for attaching the next structural layer, allowing the upper components to stack securely. 
 
 <hr>
 
@@ -163,7 +167,9 @@ The Main Base is the primary structural platform of the robot and forms the foun
   </tr>
 </table>
 
-The Support Base is the second structural layer of the robot, positioned above the Main Base. It is designed to house the 11.1V battery, which is easily removable for charging. The base features a large central clearance to prevent interference with the control board mounted on the first layer, while also providing additional space for cable routing. Among the key design choices, one important decision was to minimize the use of bolts and nuts. This weight reduction is achieved by using ABS plastic filament instead of steel components, as ABS is considerably lighter. This choice not only decreases the overall weight but also simplifies the assembly by requiring fewer additional elements and connections.
+Support Base 1 is the structural layer positioned above the Main Base. It provides mounting locations for the gyro sensor and the Lidar Mount, forming the platform where these components are securely attached. The rear section includes a recessed cutout that allows the power cable to pass through to the Raspberry Pi 5 without interference.
+
+This part also features countersunk mounting holes, preventing the screw heads or nuts from protruding. This ensures that the wiring and the steering mechanism beneath the layer have sufficient clearance and do not come into contact with any hardware. Support Base 1 establishes a clean separation between the lower mechanical systems and the upper sensing components.
 
 <hr>
 
@@ -178,7 +184,11 @@ The Support Base is the second structural layer of the robot, positioned above t
   </tr>
 </table>
 
-The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+Support Base 2.1 is an upper structural layer used to mount the motor driver, touch sensor, and step-down module. The touch sensor and step-down are installed on angled surfaces, allowing the sensor to remain easily accessible even after **Support Base 2.2** is mounted above this layer, while also preventing the solder joints of the step-down module from contacting the printed part.
+
+The angled geometry also improves printability and durability, as fully vertical mounts would be harder to print and more prone to breaking. A cable-routing slot is integrated to organize power wires and keep them clear of surrounding components. The part also includes mounting holes designed specifically for attaching the next structural layer.
+
+This layer provides an efficient layout for key electronic modules while forming the connection point for the robot’s multi-layer assembly.
 
 <hr>
 
@@ -194,6 +204,23 @@ The Main Base is the primary structural platform of the robot and forms the foun
 </table>
 
 The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+
+<hr>
+
+### Camera Shield Plate
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20131255.png" width="400" > <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20131543.png" width="400" > 
+
+  <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Camera%20Shield%20Plate.stl" target="_blank">Click here to view 3D model.</a></p>
+  </tr>
+</table>
+
+Support Base 1 is the structural layer positioned above the Main Base. It provides mounting locations for the gyro sensor and the Lidar Mount, forming the platform where these components are securely attached. The rear section includes a recessed cutout that allows the power cable to pass through to the Raspberry Pi 5 without interference.
+
+This part also features countersunk mounting holes, preventing the screw heads or nuts from protruding. This ensures that the wiring and the steering mechanism beneath the layer have sufficient clearance and do not come into contact with any hardware. Support Base 1 establishes a clean separation between the lower mechanical systems and the upper sensing components.
 
 <hr>
 
@@ -307,7 +334,7 @@ The motor mount is the only component in the chassis assembly not produced by 3D
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20103827.png" width="400" >
+      <img src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20103827.png" width="500" >
 
   <p><a href="https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Gear%20Adapter.stl" target="_blank">Click here to view 3D model.</a></p>
   </tr>
