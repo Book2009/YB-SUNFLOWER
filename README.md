@@ -722,25 +722,27 @@ There are many wheel options available, but this wheel was chosen primarily beca
 ### Controller
 
 - #### **Main Board** : Raspberry Pi 5 (8GB) from Raspberry Pi
-<img src = "<img width="700" height="700" alt="image-Photoroom (14)" src="https://github.com/user-attachments/assets/3aaf27cc-818f-493f-b64f-25e2a9e370e8" />
-" width = "400">
-The Raspberry Pi 4 Model B serves as the main processor of the robot. It acts like a compact computer, handling heavy computational tasks such as processing camera and LiDAR data, making navigation decisions, and managing overall system logic. We use this board because it offers powerful processing capability in a small form factor, while also providing direct ports for high-bandwidth devices.
+<img width="700" height="700" alt="image-Photoroom (14)" src="https://github.com/user-attachments/assets/3aaf27cc-818f-493f-b64f-25e2a9e370e8" />
+The Raspberry Pi 5 (8GB) serves as the main processing unit of the robot. It functions like a high-performance mini computer, capable of handling advanced and computationally intensive tasks such as camera processing, LiDAR data analysis, SLAM, navigation algorithms, and real-time decision-making. Compared to previous generations, the Raspberry Pi 5 provides a major leap in CPU, GPU, and I/O performance, making it ideal for robotics applications that require fast data throughput and reliable multitasking.
+
+We use this board because it delivers significantly higher processing power in the same compact form factor, while also providing improved interfaces for high-bandwidth devices such as multiple cameras, high-speed sensors, and NVMe storage.
 
 | Specification | Value |
 |---------|---------|
 | **Main Board / SOC** | BCM2712 |
 | **Processor** | Quad-core 64-bit ARM Cortex-A76, 2.4 GHz, with cryptography extensions, 512 KB L2 per core + 2 MB shared L3  |
-| **Memory Options** | 1GB, 2GB, 4GB or 8GB LPDDR4-3200 SDRAM |
-| **Wireless** | 2.4 GHz and 5.0 GHz IEEE 802.11ac, Bluetooth 5.0, BLE |
-| **Ethernet** | Gigabit Ethernet |
+| **Memory Options** | 1 GB, 2 GB, 4 GB, 8 GB LPDDR4X-4267 SDRAM |
+| **Wireless** | Dual-band Wi-Fi (2.4 GHz & 5 GHz, 802.11ac), Bluetooth 5.0 / BLE |
+| **Ethernet** | Gigabit Ethernet, with support for PoE+ via separate HAT |
 | **USB Ports** | 2 × USB 3.0, 2 × USB 2.0 |
 | **GPIO** | 40-pin header (fully backwards compatible) |
-| **Display Output** | 2 × micro-HDMI® (up to 4kp60), 2-lane MIPI DSI |
-| **Camera Interface** | 2-lane MIPI CSI port |
+| **Display Output** | 2 × micro-HDMI (dual 4Kp60 with HDR) |
+| **Camera Interface** | 2 × 4-lane MIPI CSI / DSI transceivers (i.e., supports two cameras or two displays) |
 | **Audio/Video** | 4-pole stereo audio and composite video port |
 | **Video Support** | H.265 (4kp60 decode), H.264 (1080p60 decode, 1080p30 encode) |
 | **Graphics** | OpenGL ES 3.1, Vulkan 1.0 |
-| **Storage** | Micro-SD card slot (OS and data storage) |
+| **Storage** | Micro-SD card slot (supports high-speed SDR104) 
+Raspberry Pi BD Also supports PCIe 2.0 x1 for NVMe SSD via HAT |
 | **Power Input** | 5V DC via USB-C (min 3A), 5V DC via GPIO (min 3A), Power over Ethernet (PoE with HAT) |
 | **Operating Temperature** | 0 – 50 °C ambient |
 
