@@ -203,7 +203,11 @@ This layer provides an efficient layout for key electronic modules while forming
   </tr>
 </table>
 
-The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+Support Base 2.2 is the structural layer installed above Support Base 2.1. It provides mounting locations for the step-down module that supplies power to the motor driver, as well as attachment points for the camera positioning mechanism, the camera shield plate, and the switch box.
+
+The central recessed opening is designed specifically to allow the step-down module to sit lower in the structure, preventing its solder joints from contacting the printed surface and ensuring safe electrical clearance. The surrounding frame maintains rigidity while keeping all mounting points properly aligned with the lower layer.
+
+This layer organizes several functional electronic and camera-related components while maintaining secure integration within the robot’s multi-layer mechanical structure.
 
 <hr>
 
@@ -218,9 +222,9 @@ The Main Base is the primary structural platform of the robot and forms the foun
   </tr>
 </table>
 
-Support Base 1 is the structural layer positioned above the Main Base. It provides mounting locations for the gyro sensor and the Lidar Mount, forming the platform where these components are securely attached. The rear section includes a recessed cutout that allows the power cable to pass through to the Raspberry Pi 5 without interference.
+The Camera Shield Plate is designed to prevent internal wires and electronic components from entering the camera’s field of view. Although software cropping can remove unwanted areas, this physical shield provides additional reliability—especially important when competing internationally, where lighting conditions and arena environments may differ from our testing setup. Since a 3D printer cannot be brought to the competition venue, the shield serves as a precaution against unexpected visual obstructions.
 
-This part also features countersunk mounting holes, preventing the screw heads or nuts from protruding. This ensures that the wiring and the steering mechanism beneath the layer have sufficient clearance and do not come into contact with any hardware. Support Base 1 establishes a clean separation between the lower mechanical systems and the upper sensing components.
+The plate is mounted using shared screw points with the lower support layers, forming an integrated structure. Its hood-like geometry blocks the camera’s downward and forward viewing angles, while the recessed underside creates extra clearance for the components beneath it, ensuring the shield sits correctly without interfering with wiring or modules.
 
 <hr>
 
@@ -262,7 +266,11 @@ This part also features countersunk mounting holes, preventing the screw heads o
   </tr>
 </table>
 
-The camera holder is mounted at the back of the camera. It employs an interlocking joint mechanism to attach securely to the front section of the Support Base. This approach eliminates the need for conventional fasteners, reduces assembly complexity, and saves space within the front section of the chassis. The interlocking design also ensures stability of the camera position while allowing quick installation or removal when necessary.
+The Camera Positioning Mechanism is designed to provide adjustable camera height and angle, allowing the camera to be tuned for varying lighting conditions or different field environments during competition. This adjustability ensures the robot can adapt even when the lighting or arena setup in an international venue differs from our testing conditions.
+
+The mechanism consists of three main components: the Camera Adjustment Column, the Height Adjustment Link, and the Angle Adjustment Link. The vertical slots in the column allow the camera to be raised or lowered, while the pivoting links enable precise angle adjustment. Together, these components form a compact and stable assembly that maintains the camera’s alignment while offering flexible configuration options.
+
+This mechanism allows rapid on-site adjustments without requiring redesign or reprinting of parts.
 
 <hr>
 
@@ -277,7 +285,11 @@ The camera holder is mounted at the back of the camera. It employs an interlocki
   </tr>
 </table>
 
-This component is intended for firm attachment of a servo motor accompanied by an ultrasonic sensor that is to be used in rotation. The design incorporates cylindrical spigots so as to eliminate the use of black pins which are used to fasten the servo motor fabricated for Lego use. With this arrangement, the sensor movement is stable, well positioned and rigid within the system that improves the overall utility of the sensor.
+The Servo Bracket is designed to mount a LEGO-compatible steering servo, which normally attaches using Technic pins instead of screws. To support this, the bracket includes integrated cylindrical pegs that function like Technic pins, allowing the servo to snap and lock securely into place.
+
+Its U-shaped structure with side mounting plates provides stability and proper alignment when attached to the Main Base. The geometry positions the servo at the correct height and orientation for the steering mechanism while remaining lightweight and easy to print.
+
+This design enables the LEGO-style servo to integrate seamlessly with the custom 3D-printed chassis.
 
 <hr>
 
@@ -292,7 +304,7 @@ This component is intended for firm attachment of a servo motor accompanied by a
   </tr>
 </table>
 
-The Main Base is the primary structural platform of the robot and forms the foundation for the entire assembly. It is the layer where critical components — including sensors, servo, differential gears, and motors — are directly mounted and secured in place. To support this role, the base is designed with precisely positioned holes, slots, and mounting features that ensure accurate alignment, structural stability, and ease of integration. At the front, a servo mount is included with compatibility for LEGO Technic pins attachment, enabling flexible prototyping and modular expansion. The Main Base not only provides strength and balance but also acts as the central layer from which all other subsystems are built.
+The Ultrasonic Sensor Mount positions the sensor in a fixed forward-facing orientation. It is attached using the same screws that secure the rear side of the motor driver, allowing the mount to be installed without additional fasteners. Its slim, elongated shape provides the required spacing and keeps the sensor aligned and stable within the chassis.
 
 <hr>
 
@@ -307,7 +319,7 @@ The Main Base is the primary structural platform of the robot and forms the foun
   </tr>
 </table>
 
-The Lidar Mount is designed to secure the LiDAR sensor above the Support Base while maintaining proper alignment for obstacle detection. Its structure incorporates an open clearance beneath the LiDAR, ensuring that the space directly below remains available for installing a gyroscope module onto the Support Base. With this arrangement, the LiDAR and gyro can be vertically stacked in a compact layout, where the mount elevates the LiDAR sensor without interfering with the gyro underneath. This design maximizes space efficiency, enables multi-sensor integration on a single layer, and ensures stable and accurate sensor operation.
+The Lidar Mount holds the LiDAR sensor in its optimal position and is shaped with a recessed center area, allowing it to sit directly above the gyro module without interference. The mounting tabs on both sides secure the plate to the support structure, while the rounded top surface provides a stable platform for the LiDAR to operate with a clear field of view.
 
 <hr>
 
@@ -322,7 +334,9 @@ The Lidar Mount is designed to secure the LiDAR sensor above the Support Base wh
   </tr>
 </table>
 
-The motor mount is the only component in the chassis assembly not produced by 3D printing. Instead, it is manufactured from steel to ensure maximum durability and stability when securing the motors. While steel is generally heavier than ABS plastic, the compact design of the mount compensates for the weight difference. A plastic equivalent would require a larger and more reinforced structure to achieve comparable strength, ultimately resulting in a similar overall weight. By using steel, the mount guarantees resistance to mechanical stress and provides a stable foundation for the motors, ensuring reliable performance throughout operation.
+The Motor Mount is the only chassis component not produced with a 3D printer. It is made from steel to provide exceptional strength and rigidity for securing the motors. The mount includes threaded holes, allowing screws to be fastened directly without the need for nuts, making the part both compact and easy to assemble.
+
+Although steel is heavier than plastic, the mount’s small size keeps the weight minimal. A plastic version would need to be larger and reinforced to match the required strength, resulting in no real weight advantage. Using steel ensures long-term durability, high resistance to mechanical stress, and a stable foundation for the motor system.
 
 <p align="center">
 <img width="350" src="https://github.com/ThanyawutII/Test-2/blob/main/DeWatermark.ai_1756634356131-removebg-preview.png">
@@ -340,7 +354,9 @@ The motor mount is the only component in the chassis assembly not produced by 3D
   </tr>
 </table>
 
-The gear adapter is a custom-designed component developed to interface the GM25 motor with LEGO differential gears. Since the motor shaft of the GM25 cannot directly fit LEGO gears, this adapter was developed to provide a secure connection. The central bore is dimensioned to fit tightly onto the GM25 shaft, preventing slippage during operation. Two auxiliary holes are included to accommodate LEGO Technic pins, allowing the adapter to interlock with LEGO gears seamlessly. This design enables the integration of robust LEGO gearing systems with non-LEGO motors, ensuring smooth, reliable, and efficient transmission.
+The gear adapter is a custom-designed component that interfaces the GM25 motor with LEGO differential gears. Since the GM25 motor shaft cannot directly engage with LEGO gears, this adapter provides a secure and precise connection. The central bore is dimensioned for a tight press-fit onto the GM25 shaft to prevent slippage during operation, while two side holes accommodate LEGO Technic pins, allowing the adapter to lock seamlessly into the LEGO gear system.
+
+This design enables a robust integration between a non-LEGO motor and LEGO drivetrain components, ensuring smooth, reliable, and efficient power transmission.
 
 <p align="center">
 <img width="200" src="https://github.com/ThanyawutII/Test/blob/main/maxresdefault-removebg-preview.png">  <img width="200" src="https://github.com/ThanyawutII/Test-2/blob/main/wmremove-transformed.png"> 
@@ -384,7 +400,9 @@ The gear adapter is a custom-designed component developed to interface the GM25 
   </tr>
 </table>
 
-The Rear Wheel Bearing Mount is designed to hold standard ball bearings, which support the differential output shaft. The inner race of the bearing interfaces with the shaft (via a custom sleeve), allowing smooth rotation, while the outer race is fixed securely in the mount. This configuration ensures that the rear axle remains stable and properly aligned, prevents bending under load, and eliminates friction that would otherwise occur if the shaft rotated directly against printed surfaces.
+The Rear Wheel Bearing Mount is designed to hold standard ball bearings that support the differential output shaft. The inner race of the bearing interfaces with the shaft through a custom sleeve, allowing smooth and low-friction rotation, while the outer race is securely fixed within the mount. This configuration keeps the rear axle properly aligned, prevents bending under load, and avoids the friction that would occur if the shaft were to rotate directly against 3D-printed surfaces.
+
+The bearing mounts are split into left, middle, and right sections to match the spacing and geometry of the drivetrain, functioning similarly to a pillow block bearing while fitting the robot’s compact chassis layout.
 
 <p align="center">
 <img width="300" src="https://github.com/ThanyawutII/Test2/blob/main/F6189957-01-removebg-preview.png">
@@ -420,7 +438,9 @@ The Rear Wheel Bearing Mount is designed to hold standard ball bearings, which s
   </tr>
 </table>
 
-The Axle Sleeve Adapter is designed to interface the LEGO cross axle with the inner bore of the bearing used in the Rear Wheel Bearing Mount. The cross axle, which transmits rotational power from the differential gear to the rear wheels, does not match the circular geometry of the bearing bore. To address this, the adapter features a cross-shaped internal profile that tightly mates with the LEGO axle, while its outer surface is circular and dimensioned to fit securely into the bearing. This design eliminates direct friction between the axle and printed surfaces, ensures smooth rotation through the bearing, and provides stable, automotive-like support for the drivetrain. By enabling a precise fit, the Axle Sleeve Adapter maintains alignment of the rear drive shaft and increases the durability and efficiency of the power transmission system.
+The Axle Sleeve Adapter is designed to interface the LEGO cross axle with the inner bore of the bearing used in the Rear Wheel Bearing Mount. The cross axle, which transmits rotational power from the differential gear to the rear wheels, does not match the circular geometry of the The Axle Sleeve Adapter is designed to interface the LEGO cross axle with the circular inner bore of the bearing used in the Rear Wheel Bearing Mount. Because the LEGO cross axle does not match the round geometry of the bearing, the adapter includes a cross-shaped internal profile that fits the axle tightly, while the outer surface is machined as a precise cylinder sized for the bearing.
+
+This sleeve prevents the axle from rubbing against printed surfaces, allowing the rear shaft to rotate smoothly through the bearing while remaining properly aligned. By providing a secure and accurate connection between the LEGO drivetrain and the bearing-supported structure, the Axle Sleeve Adapter improves durability, reduces friction, and increases the efficiency of the rear-wheel power transmission system.
 
 <p align="center">
 <img width="300" src="https://github.com/ThanyawutII/Test2/blob/main/technic-axle-3-lego-part-4519-removebg-preview.png">
