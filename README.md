@@ -443,7 +443,7 @@ The Axle Sleeve Adapter is designed to interface the LEGO cross axle with the in
 This sleeve prevents the axle from rubbing against printed surfaces, allowing the rear shaft to rotate smoothly through the bearing while remaining properly aligned. By providing a secure and accurate connection between the LEGO drivetrain and the bearing-supported structure, the Axle Sleeve Adapter improves durability, reduces friction, and increases the efficiency of the rear-wheel power transmission system.
 
 <p align="center">
-<img width="300" src="https://github.com/ThanyawutII/Test2/blob/main/technic-axle-3-lego-part-4519-removebg-preview.png">
+<img width="200" src="https://github.com/ThanyawutII/Test2/blob/main/technic-axle-3-lego-part-4519-removebg-preview.png">
 
 <hr>
 
@@ -516,51 +516,35 @@ This sleeve prevents the axle from rubbing against printed surfaces, allowing th
   </tr>
 </table>
 
-The Steering Module is responsible for controlling the orientation of the front wheels, enabling the robot to execute accurate and efficient turns. The design follows the Ackermann steering principle, which ensures that the inner and outer wheels rotate at different steering angles so that both wheels point toward a common instantaneous center of rotation located on the rear axle line. This geometry reduces tire slip, minimizes energy loss, and provides stable handling characteristics similar to real automotive systems.
-
-<p align="center">
-<img width="390" src="https://github.com/ThanyawutII/Test2/blob/main/80662.jpg">
+- #### **Steering Linkage Arm**
+Connected directly to the steering servo, this arm converts the servo’s rotational output into a push–pull motion. This motion is transferred to both steering arms, allowing the front wheels to change direction together. The linkage is dimensioned to provide smooth and precise steering response.
 
 - #### **Top Steering Mount**
-Serves as both the supporting structure and the tie rod of the steering system. It directly links the left and right steering arms, transmitting input force across both sides to create synchronized wheel movement.
+The top bracket that holds the steering assembly together. It stabilizes the upper side of the steering arms and ensures they remain aligned during rotation. Together with the bottom mount, it keeps the module rigid while still allowing the arms to pivot freely.
 
-- #### **Steering Linkage Arm**
-Connected to a servo motor, this arm receives the steering input and transfers the motion into the Top Steering Mount. By doing so, it initiates the coordinated rotation of the front wheels.
+- #### **Bottom Steering Mount**
+The lower structural plate of the steering module. Aside from supporting and aligning the steering arms from below, it also includes a dedicated mounting position for the light sensor. This placement allows the sensor to stay close to the ground for accurate line detection while being protected inside the steering assembly.
 
-- #### **Cap**
-Positioned above the Steering Linkage Arm, the cap secures the arm to the Top Steering Mount, preventing detachment under load while still allowing free rotation of the linkage arm.
+- #### **Steering Arm (Left & Right)**
+These arms connect directly to each front wheel and convert the push–pull input from the linkage into wheel rotation. Each arm includes a dedicated cylindrical pivot point that fits a metal standoff tube, allowing the arm to rotate smoothly with minimal friction.
+The geometry is angled inward to approximate Ackermann steering, ensuring correct wheel angles during turns for improved cornering stability and reduced tire scrub.
 
-- #### **Steering Arm**
-The Steering Arm is a component connected to each front wheel assembly that translates the motion from the Top Steering Mount into the actual pivoting of the wheels. Its geometry is angled inward to satisfy the Ackermann steering condition, ensuring the inner and outer wheels rotate at different angles during a turn.
+<p align="center">
+<img width="300" src="https://github.com/ThanyawutII/Test2/blob/main/F6189957-01-removebg-preview.png">
 
-To improve durability and smoothness at the pivot point, each steering arm includes a dedicated hole designed to accommodate a small metal tube (used as a standoff). This tube passes through the arm and serves as a stable axle-like pivot. The metal tube itself is fixed securely between the Main Base and the Support Base, remaining stationary, while the steering arm rotates freely around it. Because of the smooth metal surface, the arm experiences minimal friction during operation, ensuring consistent and reliable steering motion without unnecessary wear.
+The metal tube remains fixed between the Main Base and Support Base 1, acting as a pivot shaft, while the steering arm rotates around it smoothly.
 
 <p align="center">
 <img width="150" src="https://github.com/ThanyawutII/Test-2/blob/main/56827-removebg-preview.png">
 
-#### Operation (Ackermann Effect in Practice)
-
-During a left turn, the left (inner) wheel pivots at a sharper angle than the right (outer) wheel, with both wheels pointing toward the same turning center along the rear axle line.
-
-During a right turn, the situation mirrors, with the right wheel pivoting more sharply than the left.
-
-This behavior is achieved because the steering arms are angled inward toward the rear axle midpoint, and the Top Steering Mount acts as the tie rod transmitting force between them, producing unequal but coordinated wheel deflections.
-
-#### Advantages
-
-Reduced tire slip: Both wheels roll naturally along their turning radii.
-
-Improved efficiency: Less drag and energy loss during cornering.
-
-Realistic dynamics: Accurately mimics automotive steering geometry.
-
-Compact design: The integration of the tie rod into the Top Steering Mount reduces part count and simplifies assembly while maintaining reliable steering performance.
+- #### **Axle Sleeve Adapter(For Front Wheel) x2**
+These adapters allow the LEGO cross axle of the front wheels to interface with the circular inner diameter of the bearings mounted inside the steering arms. The inner profile matches the LEGO axle, while the outer profile fits tightly into the bearing. This ensures smooth bearing rotation and stable wheel alignment—just like the system used for the rear wheels.
 
 <hr>
 
-### Chassis
+### Bare Robot Frame
 
-- #### **This is the appearance of chassis to show what our robot looks like without the components.**
+- #### **This image shows the robot’s bare frame, illustrating what the structure looks like without any components installed.**
 
 <p align="center">
 <img width="1000" src="https://github.com/ThanyawutII/Essent1/blob/main/Screenshot%202025-11-24%20110220.png">
