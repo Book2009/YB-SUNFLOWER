@@ -7,7 +7,7 @@ How the robot works:
 https://www.youtube.com/watch?v=qQTfzTyW7DM
 
 Open Challenge round:
-https://youtu.be/8S626QcRaPA
+https://youtu.be/-mydtj7d2Hc
 
 Obstacle Challenge round:
 https://youtu.be/9oGPSgff0DQ
