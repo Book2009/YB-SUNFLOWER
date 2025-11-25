@@ -1367,7 +1367,7 @@ The robot will drive to park in the purple parking area that was detected, using
 
 ### **Flowchart**
 
-<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/FlowChart/Obstacle_Challenge.jpg" height = "1000">
+<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/FlowChart/Obstacle_Challenge.jpg" height = "1100">
 
 <hr>
 
