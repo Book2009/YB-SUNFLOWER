@@ -551,7 +551,7 @@ These adapters allow the LEGO cross axle of the front wheels to interface with t
 ## Components
 
 - #### **3D Printer**: Bambu Lab X1 Carbon by Bambu Lab
-<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/3D/3D%20Printer.png" width = "400">
+<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/3D/3D%20Printer.png" width = "400">
   
 The reasons that we use Bambu Lab X1-Carbon 3D printer because this printer is a high-performance 3D printer designed for precision and efficiency. It is equipped with advanced technology and features, making it suitable for professional use as well as hobbyist projects that require high-quality prints.
 
@@ -603,7 +603,7 @@ The reasons that we use Bambu Lab X1-Carbon 3D printer because this printer is a
 <hr>
 
 - #### **Filament** : Acrylonitrile Butadiene Styrene or simply known as ***ABS***
-<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/3D/ABS%20Filament.png" width = "400">
+<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/3D/ABS%20Filament.png" width = "400">
   
 ABS (Acrylonitrile Butadiene Styrene) was selected as the primary material for the robot’s structural components due to its balanced mechanical and thermal properties. Unlike more brittle plastics, ABS provides a unique combination of rigidity and impact resistance, which allows the parts to endure operational stresses without cracking. Its slight flexibility enables the structures to absorb shocks and vibrations while maintaining dimensional stability. Moreover, ABS retains its form and strength across a wide range of operating temperatures, ensuring reliable performance under varying environmental conditions. These properties make ABS particularly suitable for 3D-printed parts, where durability, accuracy, and stability are essential for assembling complex robotic systems.
 
@@ -1011,10 +1011,10 @@ To ensure compatibility with our motor's maximum voltage rating of 9V, we incorp
 
 ### **Open Challenge round (Youtube Link)**
 
-This video shows our robot completing the first round(Open Challenge), you can [click here](https://youtu.be/8S626QcRaPA) to view the video we created.
+This video shows our robot completing the first round(Open Challenge), you can [click here](https://youtu.be/-mydtj7d2Hc) to view the video we created.
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=8S626QcRaPA">
+  <a href="https://youtu.be/-mydtj7d2Hc">
     <img src="https://github.com/ThanyawutII/Test-2/blob/main/dgddv.png" width="600">
   </a>
 </div>
