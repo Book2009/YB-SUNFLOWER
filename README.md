@@ -832,6 +832,42 @@ The RPLIDAR C1 was selected as the primary distance measurement sensor of the ro
 
 <hr>
 
+- #### **Ultrasonic sensor** : Gravity URM 09 ultrasonic distance sensor.
+<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Ultrasonic.png" width = "400">
+  
+An Ultrasonic sensor is a device that can measure the distance to an object by using sound waves. It measures distance by sending out a sound wave at a specific frequency and listening for that sound wave to bounce back.
+
+Since it is known that sound travels through air at about 344 m/s (1129 ft/s), you can take the time for the sound wave to return and multiply it by 344 meters (or 1129 feet) to find the total round-trip distance of the sound wave. Round-trip means that the sound wave traveled 2 times the distance to the object before it was detected by the sensor; it includes the 'trip' from the sonar sensor to the object AND the 'trip' from the object to the Ultrasonic sensor (after the sound wave bounced off the object). To find the distance to the object, simply divide the round-trip distance in half.
+
+DFRobot URM09 is an ultrasonic sensor specially designed for fast ranging and obstacle avoidance applications. Its measuring frequency can reach up to 30Hz. The sensor adopts built-in temperature compensation and analog output. Meanwhile, it can provide accurate distance measurement within 500 cm. The sensor is compatible with Arduino, Raspberry Pi, or other main controllers.
+
+<p align="center">
+<img width="400" src="https://github.com/Book2009/FE-NOC/blob/main/Others/Sensor%20Test.png">
+
+<p align="center">
+<img width="400" src="https://github.com/Book2009/FE-NOC/blob/main/Others/Attenuation.jpg">
+
+We use the Ultrasonic Sensor (SEN0307) to measure the distance between the robot and the walls. This sensor utilizes an analog voltage output and provides accurate distance measurements within the range of 2-500 cm, with a precision of 1 cm and an accuracy of ±1%. It is highly suitable for this competition and is compatible with boards that have 3.3V or 5V logic levels.
+
+##### Electrical Specifications
+
+| Specification                   | Value                  |
+|---------------------------------|------------------------|
+| Supply Voltage                  | 3.3~5.5V DC            |
+| Operating Current               | 20mA                   |
+
+##### Performance Specifications
+
+| Specification                   | Value                  |
+|---------------------------------|------------------------|
+| Operating Temperature Range      | -10°C to +70°C          |
+| Measurement Range                | 2cm to 500cm (can be set) |
+| Resolution                       | 1cm                    |
+| Accuracy                         | 1%                     |
+| Frequency                        | 50Hz Max               |
+
+<hr>
+
 - #### **Light Sensor** : ZX-03B and ZX-03R By INEX
 
 Light Sensor White
