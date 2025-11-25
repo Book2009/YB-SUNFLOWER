@@ -2042,8 +2042,30 @@ class Vehicle:
                         heading_correction = self.calculate_heading_correction()
                         self.steer_smooth(heading_correction)
                         
-                        time.
+                        time.sleep(0.02)
+                    
+                    self.execute_forward_turn(self.turn_direction)
+                    time.sleep(0.3)
+                    break
+                
+                obstacle = self.get_closest_obstacle()
+                
+                if obstacle and self.check_emergency_obstacle(obstacle):
+                    self.execute_emergency_maneuver()
+                    continue
+                
+                if obstacle:
+                    obstacle_steer = self.calculate_obstacle_avoidance_angle(obstacle)
+                    if obstacle_steer is not None:
+                        self.steer_smooth(obstacle_steer)
+                    else:
+                        wall_steer = self.calculate_steering()
+                        self.steer_smooth(wall_steer)
+                else:
+                    wall_steer = self.calculate_steering()
+                    self.steer_smooth(wall_steer)
+                
+                time.sleep(0.02)
 ```
-
 
 
