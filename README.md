@@ -1371,11 +1371,34 @@ The robot will drive to park in the purple parking area that was detected, using
 
 - #### **Section 1 [Obstacle Challenge round]**
 
-```c++
-#include <Mapf.h>
-#include <PID_v2.h>
-#include <Servo.h>
-#include "CameraHandler.h"
+```python
+import sys
+sys.path.append("/home/Book_Pi/DFRobot_RaspberryPi_Expansion_Board")
+from DFRobot_RaspberryPi_Expansion_Board import DFRobot_Expansion_Board_IIC as Board
+from DFRobot_RaspberryPi_Expansion_Board import DFRobot_Expansion_Board_Servo as Servo
+
+import serial
+import time
+from collections import deque
+import RPi.GPIO as GPIO
+
+try:
+    import board as board_pins
+    import busio
+    import adafruit_bno055
+    COMPASS_AVAILABLE = True
+except ImportError as e:
+    COMPASS_AVAILABLE = False
+    board_pins = None
+    busio = None
+    adafruit_bno055 = None
+
+import math
+import atexit
+import cv2 as cv
+from picamera2 import Picamera2
+import numpy as np
+import statistics
 ```
 We declare essential libraries for robot control: `Mapf.h` for Mapping the constrained distance from one range to another, `PID_v2.h` for smooth movement control, `Servo.h` for servo motor positioning, and `CameraHandler.h` for processing camera data. These libraries enable the robot to navigate, adjust movement, and interpret visual information effectively.
 
