@@ -1023,10 +1023,10 @@ To ensure compatibility with our motor's maximum voltage rating of 9V, we incorp
 
 ### **How the robot works (Youtube Link)**
 
-To help you better understand what I'm explaining, you can [click here](https://youtu.be/qQTfzTyW7DM) to view the video we created.
+To help you better understand what I'm explaining, you can [click here](https://youtu.be/-mydtj7d2Hc) to view the video we created.
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=qQTfzTyW7DM">
+  <a href="https://youtu.be/-mydtj7d2Hc">
     <img src="https://github.com/ThanyawutII/Test-2/blob/main/dgddv.png" width="600">
   </a>
 </div>
@@ -1273,10 +1273,10 @@ The last traffic sign in the second round indicates the next move: a green sign 
 
 ### **Obstacle Challenge round(Youtube Link)**
 
-This video shows our robot completing the Second round(Obstacle Challenge), you can [click here](https://youtu.be/9oGPSgff0DQ) to view the video we created.
+This video shows our robot completing the Second round(Obstacle Challenge), you can [click here](https://youtu.be/DKxKQNMbDbE) to view the video we created.
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=9oGPSgff0DQ">
+  <a href="https://youtu.be/DKxKQNMbDbE">
     <img src="https://github.com/ThanyawutII/Test-2/blob/main/dgddv.png" width="600">
   </a>
 </div>
