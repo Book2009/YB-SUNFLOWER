@@ -748,7 +748,7 @@ We use this board because it delivers significantly higher processing power in t
 <hr>
 
 ### **Interface Board — IO Expansion HAT for Raspberry Pi (DFR0566)**
-<img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/IO%20Expansion%20HAT%20for%20Raspberry%20Pi.png" width="400">
+<img src="https://github.com/ThanyawutII/Essent1/blob/main/IO%20Expansion%20HAT%20for%20Raspberry%20Pi.png" width="400">
 
 The IO Expansion HAT for Raspberry Pi (DFR0566) acts as the main interface layer between the Raspberry Pi and most of the robot’s low-level electronics. In our system, only the camera and LiDAR are connected directly to the Raspberry Pi; all other sensors and actuators—such as the light sensor, touch sensor, gyroscope, ultrasonic sensor, and motor driver control signals—are routed through this expansion board. It adds analog input capability, provides 5V-compatible I/O ports, and uses Gravity-style connectors to simplify wiring and reduce mistakes. By offloading sensor interfacing to this HAT, the Raspberry Pi can focus on high-level tasks like camera processing and mission logic, while the overall wiring becomes cleaner, safer, and easier to maintain during the competition.
 
@@ -766,7 +766,7 @@ The IO Expansion HAT for Raspberry Pi (DFR0566) acts as the main interface layer
 <hr>
 
 ### **Motor Driver — L298N**
-<img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/L298N.png" width="400">
+<img src="https://github.com/ThanyawutII/Essent1/blob/main/L298N.png" width="400">
 
 The L298N motor driver is used to power our GM25 motors, which require a **12V supply**—a voltage far higher than what the Raspberry Pi or the IO Expansion HAT can handle. Since the Raspberry Pi operates at only **5V**, the motor power must be isolated to prevent damage. The L298N receives 12V directly from the battery and handles all high-current motor output, while the control signals (direction and PWM) are safely provided through the Expansion HAT. This separation protects the Raspberry Pi, ensures stable power delivery to the motors, and allows precise control of speed and direction during movement.
 
@@ -786,7 +786,7 @@ The L298N motor driver is used to power our GM25 motors, which require a **12V s
 
 ### Power Management And Inspection
 ### **Camera — Raspberry Pi Night Vision Camera Module**
-<img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Raspberry%20Pi%20Night%20Vision%20Camera%20Module.png" width="400">
+<img src="https://github.com/ThanyawutII/Essent1/blob/main/Raspberry%20Pi%20Night%20Vision%20Camera%20Module.png" width="400">
 
 The Raspberry Pi Night Vision Camera Module is used as the main vision system of our robot. It connects directly to the Raspberry Pi through the MIPI-CSI interface, allowing high-speed image transmission for real-time processing. The built-in infrared capability ensures that the camera can maintain consistent brightness detection even under uneven lighting conditions, which is especially useful when competing abroad where lighting environments may differ from local testing. Its compact size and fixed-focus lens make it stable, lightweight, and easy to mount on our adjustable camera mechanism.
 
@@ -836,11 +836,11 @@ The RPLIDAR C1 was selected as the primary distance measurement sensor of the ro
 
 Light Sensor White
 
-<image src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Light%20Sensor%20White.png" width = "300">
+<image src = "https://github.com/ThanyawutII/Essent1/blob/main/Light%20Sensor%20White.png" width = "300">
 
 Light Sensor Red
 
-<image src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Light%20Sensor%20Red.png" width = "300">
+<image src = "https://github.com/ThanyawutII/Essent1/blob/main/Light%20Sensor%20Red.png" width = "300">
 
 The color sensors play an important role in both rounds, as we use them for line detection. There are 2 lines with different colors in the corner of the race field, which is why we use 2 different colors of the color sensor, white and red. The white color sensor is used for detecting both colors, while the red color sensor is only used for the blue line.
 
