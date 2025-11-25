@@ -54,19 +54,19 @@ The club was established in 2009 under the original name **“YB Dream Team.”*
 `2010 — First International Round Achievement`  
 Our first time competing in the WRO international round, where our team achieved **3rd place (Second Runner-Up)**.  
 <p align="center">
-  <img src="https://www.ybrobot.club/image/DSC_1209.jpg" width="500"/>
+  <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Team-Photos/First%20International%20Round.jpg" width="500"/>
 </p>
 
 `2011 — Second International Round Achievement`  
 In our second participation in the WRO international round, our team won **1st place (Champion)**.  
 <p align="center">
-  <img src="https://www.ybrobot.club/image/IMG_4283.jpg" width="500"/>
+  <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Team-Photos/Second%20International%20Round.jpg" width="500"/>
 </p>
 
 `Latest International Round Result`  
 Among our many years of participation, the most recent highlighted result is from **2024**, where we placed **13th** in the international round.  
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0a5434d2-1201-4911-a0f8-85d0b6c359f3" width="500"/>
+  <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Team-Photos/Latest%20International%20Round.jpg" width="500"/>
 </p>
 
 Currently in 2025, we are part of the **YB Robot Team**. Our senior helped bring this team name to global recognition, and we aim to continue the legacy and make them proud.
@@ -81,7 +81,7 @@ Over the past two years, we joined the **Future Engineers** category twice. Reac
 This year, we return with greater confidence and far more experience. We refined our workflow, strengthened our engineering approach, and fixed the mistakes from previous years. Coming back to this competition motivates us to do our best, and we aim to deliver results that make everyone proud.
 
 <p align="center">
-    <img src="https://github.com/ThanyawutII/Essent1/blob/main/S__10887172.jpeg" width="500"/>
+    <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Team-Photos/Formal.jpg" width="500"/>
 </p>
 <hr>
 
