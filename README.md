@@ -3512,3 +3512,1397 @@ This video shows our robot completing the Second round(Obstacle Challenge), you 
 <image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/FlowChart/Obstacle_Challenge.jpg" height = "1200">
 
 <br><hr>
+
+## Program Explanation - Obstacle Round
+
+## Table of Contents
+1. [Library Imports and Setup](#library-imports)
+2. [Constants and Configuration](#constants)
+3. [Utility Functions](#utility-functions)
+4. [Motor Control](#motor-control)
+5. [Camera and Object Detection](#camera-detection)
+6. [Vehicle Class - Initialization](#vehicle-init)
+7. [Sensor Systems](#sensors)
+8. [Navigation and Control](#navigation)
+9. [Obstacle Avoidance](#obstacles)
+10. [Parking Logic](#parking)
+11. [Main Mission Loop](#main-loop)
+
+---
+
+<a name="library-imports"></a>
+## 1. Library Imports and Setup
+
+```python
+import sys
+sys.path.append("/home/Book_Pi/DFRobot_RaspberryPi_Expansion_Board")
+from DFRobot_RaspberryPi_Expansion_Board import DFRobot_Expansion_Board_IIC as Board
+from DFRobot_RaspberryPi_Expansion_Board import DFRobot_Expansion_Board_Servo as Servo
+
+import serial
+import time
+from collections import deque
+import RPi.GPIO as GPIO
+
+try:
+    import board as board_pins
+    import busio
+    import adafruit_bno055
+    COMPASS_AVAILABLE = True
+except ImportError as e:
+    COMPASS_AVAILABLE = False
+
+import math
+import atexit
+import cv2 as cv
+from picamera2 import Picamera2
+import numpy as np
+import statistics
+```
+
+**Explanation:** This section imports all necessary libraries for the robot:
+- **DFRobot libraries**: Control the expansion board and servo motors
+- **serial**: Communicates with the LiDAR sensor
+- **RPi.GPIO**: Controls Raspberry Pi GPIO pins for motor control
+- **adafruit_bno055**: Interfaces with the BNO055 compass sensor
+- **OpenCV (cv2) and Picamera2**: Handle camera input and image processing
+- **numpy and statistics**: Perform mathematical operations and data filtering
+- **deque**: Stores recent sensor readings for averaging
+
+---
+
+<a name="constants"></a>
+## 2. Constants and Configuration
+
+```python
+# Motor pins
+MOTOR_IN1 = 6
+MOTOR_IN2 = 7
+MOTOR_ENA = 5
+
+# Servo configuration
+SERVO_CHANNEL = 0
+SERVO_CENTER = 94
+MAX_TURN_ANGLE = 60
+
+# LiDAR configuration
+LIDAR_PORT = '/dev/ttyAMA0'
+LIDAR_BAUD = 460800
+
+# Camera settings
+CAMERA_WIDTH = 640
+CAMERA_HEIGHT = 480
+CROP_TOP = 220
+CROP_BOTTOM = 380
+```
+
+**Explanation:** These constants define hardware connections and operating parameters:
+- **Motor pins**: GPIO pins that control motor direction and speed
+- **Servo settings**: The steering servo's center position (94°) and maximum turn angle (±60°)
+- **LiDAR**: Serial port and baud rate for the distance sensor
+- **Camera**: Resolution and crop region to focus on the relevant area ahead
+
+```python
+# Color detection ranges (HSV)
+RED_RANGES = [(np.array([173, 144, 61]), np.array([179, 255, 165]))]
+GREEN_RANGES = [(np.array([53, 90, 79]), np.array([68, 198, 150]))]
+
+# Sensor ports
+ULTRA = 0
+LIGHT_SENSOR_RED = 2
+LIGHT_SENSOR_WHITE = 3
+RED_THRESHOLD = 2000
+WHITE_THRESHOLD = 3200
+
+# LiDAR zones (angles in degrees)
+FRONT_MIN = 355
+FRONT_MAX = 5
+LEFT_ZONE_MIN = 250
+LEFT_ZONE_MAX = 290
+RIGHT_ZONE_MIN = 70
+RIGHT_ZONE_MAX = 110
+```
+
+**Explanation:**
+- **Color ranges**: HSV values that define what the camera recognizes as red and green obstacles
+- **Light sensors**: Analog ports for line detection sensors with threshold values to detect red and white lines
+- **LiDAR zones**: Angle ranges that define what the robot considers "front," "left," and "right" distances
+
+```python
+# Speed settings
+BASE_SPEED = 50
+SLOW_SPEED = 40
+TURN_SPEED = 40
+PARKING_SPEED = 50
+
+# Wall following parameters
+TARGET_WALL_WIDE = 450
+TARGET_WALL_NARROW = 180
+MIN_SAFE_DISTANCE = 150
+KP_WALL = 0.015
+KD_WALL = 0.025
+
+# Obstacle detection parameters
+OBSTACLE_MIN_AREA = 275
+OBSTACLE_Y_MIN = 35
+OBSTACLE_Y_MAX = 250
+RED_TARGET = 100
+GREEN_TARGET = 500
+OBSTACLE_KP = 0.08
+OBSTACLE_KD = 0.012
+```
+
+**Explanation:**
+- **Speed settings**: Different speeds for various situations (normal driving, slow maneuvers, parking)
+- **Wall following**: Target distances from walls and PID constants (KP, KD) for smooth wall tracking
+- **Obstacle detection**: Minimum size for detecting obstacles, vertical position limits, and target X positions for steering around red (left side) and green (right side) pillars
+
+---
+
+<a name="utility-functions"></a>
+## 3. Utility Functions
+
+```python
+def clamp(value, min_val, max_val):
+    return max(min_val, min(max_val, value))
+```
+
+**Purpose:** Limits a value to stay within a specified range. If the value is below `min_val`, it returns `min_val`; if above `max_val`, it returns `max_val`.
+
+```python
+def normalize_angle(angle):
+    while angle < 0:
+        angle += 360
+    while angle >= 360:
+        angle -= 360
+    return angle
+```
+
+**Purpose:** Converts any angle to the 0-360° range. For example, -10° becomes 350°, and 370° becomes 10°.
+
+```python
+def angle_difference(target, current):
+    diff = target - current
+    if diff > 180:
+        diff -= 360
+    elif diff < -180:
+        diff += 360
+    return diff
+```
+
+**Purpose:** Calculates the shortest angular distance between two headings. For example, the difference between 350° and 10° is 20° (not 340°), which helps the robot turn efficiently.
+
+```python
+def correct_lidar_angle(lidar_angle, heading_offset):
+    corrected = lidar_angle - heading_offset
+    return normalize_angle(corrected)
+```
+
+**Purpose:** Adjusts LiDAR readings based on the robot's current heading offset, ensuring distance measurements align with the robot's actual orientation.
+
+---
+
+<a name="motor-control"></a>
+## 4. Motor Control
+
+```python
+class SimpleMotor:
+    def __init__(self, in1, in2, ena):
+        self.in1, self.in2, self.ena = in1, in2, ena
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setwarnings(False)
+        GPIO.setup(self.in1, GPIO.OUT)
+        GPIO.setup(self.in2, GPIO.OUT)
+        GPIO.setup(self.ena, GPIO.OUT)
+        self.pwm = GPIO.PWM(self.ena, 1000)
+        self.pwm.start(0)
+```
+
+**Explanation:** The `SimpleMotor` class initializes a DC motor controller:
+- Sets up three GPIO pins: two for direction (IN1, IN2) and one for speed control (ENA)
+- Creates a PWM (Pulse Width Modulation) signal at 1000 Hz on the enable pin to control speed
+- Starts with the motor stopped (0% duty cycle)
+
+```python
+    def set_speed(self, speed):
+        speed = max(-100, min(100, speed))
+        if speed > 0:
+            GPIO.output(self.in1, GPIO.HIGH)
+            GPIO.output(self.in2, GPIO.LOW)
+            self.pwm.ChangeDutyCycle(abs(speed))
+        elif speed < 0:
+            GPIO.output(self.in1, GPIO.LOW)
+            GPIO.output(self.in2, GPIO.HIGH)
+            self.pwm.ChangeDutyCycle(abs(speed))
+        else:
+            self.stop()
+```
+
+**Explanation:** Controls motor direction and speed:
+- **Positive speed**: Sets IN1 HIGH and IN2 LOW for forward motion
+- **Negative speed**: Sets IN1 LOW and IN2 HIGH for backward motion
+- **Speed value**: Converted to PWM duty cycle (0-100%)
+
+---
+
+<a name="camera-detection"></a>
+## 5. Camera and Object Detection
+
+```python
+def create_multi_range_mask(hsv: np.ndarray, color_ranges):
+    if not color_ranges:
+        return np.zeros(hsv.shape[:2], dtype=np.uint8)
+    
+    combined_mask = cv.inRange(hsv, color_ranges[0][0], color_ranges[0][1])
+    
+    for lower, upper in color_ranges[1:]:
+        mask = cv.inRange(hsv, lower, upper)
+        combined_mask = cv.bitwise_or(combined_mask, mask)
+    
+    return combined_mask
+```
+
+**Purpose:** Creates a binary mask from an HSV image using multiple color ranges. This allows detecting colors that might span across HSV boundaries (like red, which wraps around 0°/180°).
+
+```python
+class Picamera2Detector:
+    def __init__(self, show_display=True):
+        self.show_display = show_display
+        self.picam2 = Picamera2()
+        config = self.picam2.create_preview_configuration(
+            main={"size": (CAMERA_WIDTH, CAMERA_HEIGHT), "format": "BGR888"}
+        )
+        self.picam2.start()
+        time.sleep(1)
+```
+
+**Explanation:** Initializes the camera:
+- Sets resolution to 640×480 pixels
+- Uses BGR888 format (standard color format for OpenCV)
+- Waits 1 second for the camera to stabilize
+
+```python
+    def detect_obstacles(self):
+        frame = self.picam2.capture_array()
+        cropped_frame = frame[CROP_TOP:CROP_BOTTOM, :]
+        hsv_frame = cv.cvtColor(cropped_frame, cv.COLOR_RGB2HSV)
+        hsv_frame = cv.GaussianBlur(hsv_frame, (5, 5), 0)
+```
+
+**Explanation:** Captures and preprocesses an image:
+- **Cropping**: Removes top portion (0-220 pixels) to focus on the relevant area
+- **HSV conversion**: Changes from RGB to HSV color space for better color detection
+- **Gaussian blur**: Reduces noise to improve detection accuracy
+
+```python
+        color_configs = {
+            'red': RED_RANGES,
+            'green': GREEN_RANGES
+        }
+
+        for color_name, color_ranges in color_configs.items():
+            mask = create_multi_range_mask(hsv_frame, color_ranges)
+            
+            kernel = np.ones((5, 5), np.uint8)
+            mask = cv.erode(mask, kernel, iterations=1)
+            mask = cv.dilate(mask, kernel, iterations=2)
+            
+            contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+```
+
+**Explanation:** Detects colored obstacles:
+- **Masking**: Creates binary masks for red and green colors
+- **Morphological operations**: Erode removes small noise, dilate fills gaps
+- **Contours**: Finds the outlines of detected color regions
+
+```python
+            for contour in contours:
+                area = cv.contourArea(contour)
+                if area < OBSTACLE_MIN_AREA:
+                    continue
+                
+                x, y, w, h = cv.boundingRect(contour)
+                center_x = x + w // 2
+                center_y = y + h // 2
+                
+                if center_y < OBSTACLE_Y_MIN or center_y > OBSTACLE_Y_MAX:
+                    continue
+                
+                aspect_ratio = float(w) / h if h > 0 else 0
+                if aspect_ratio > 3.5 or aspect_ratio < 0.25:
+                    continue
+```
+
+**Explanation:** Filters detected objects:
+- **Area filter**: Ignores objects smaller than 275 pixels²
+- **Position filter**: Only considers objects in the valid Y range (35-250 pixels from crop top)
+- **Aspect ratio filter**: Rejects extremely wide or tall shapes that don't match pillar dimensions
+
+```python
+                obstacle_info = {
+                    'color': color_name,
+                    'center_x': center_x,
+                    'center_y': center_y,
+                    'area': area,
+                    'width': w,
+                    'height': h,
+                    'distance': distance
+                }
+                detected_obstacles.append(obstacle_info)
+```
+
+**Explanation:** Stores obstacle information including color, position, size, and estimated distance for navigation decisions.
+
+---
+
+<a name="vehicle-init"></a>
+## 6. Vehicle Class - Initialization
+
+```python
+class Vehicle:
+    def __init__(self):
+        self._init_board()
+        self._init_motor()
+        self._init_servo()
+        self._init_compass()
+        self._init_lidar()
+        self._init_camera()
+        
+        self.initial_heading = None
+        self.target_heading = None
+        self.heading_offset = 0
+        
+        self.turn_count = 0
+        self.turn_direction = None
+```
+
+**Explanation:** The Vehicle class manages all robot systems. During initialization:
+- Sets up hardware components (board, motor, servo, compass, LiDAR, camera)
+- Initializes navigation variables:
+  - `initial_heading`: Starting compass direction
+  - `target_heading`: Desired direction after turns
+  - `turn_count`: Number of lines crossed (tracks laps)
+  - `turn_direction`: Whether robot turns clockwise or counterclockwise
+
+```python
+        self.steering_history = deque(maxlen=3)
+        
+        self.lidar_buffer = bytearray()
+        self.front_data = deque(maxlen=20)
+        self.left_data = deque(maxlen=20)
+        self.right_data = deque(maxlen=20)
+```
+
+**Explanation:** Creates data buffers:
+- `steering_history`: Stores last 3 steering angles for smoothing
+- `lidar_buffer`: Temporary storage for incoming LiDAR bytes
+- `front_data`, `left_data`, `right_data`: Store recent distance readings (last 20 measurements) for filtering outliers
+
+```python
+    def _init_board(self):
+        self.board = Board(1, 0x10)
+        while self.board.begin() != self.board.STA_OK:
+            time.sleep(1)
+        self.board.set_adc_enable()
+```
+
+**Explanation:** Initializes the DFRobot expansion board at I2C address 0x10, waits until connection succeeds, then enables ADC (Analog-to-Digital Converter) for reading sensors.
+
+```python
+    def _init_servo(self):
+        self.servo_ctrl = Servo(self.board)
+        self.servo_ctrl.begin()
+        self.servo_ctrl.move(SERVO_CHANNEL, SERVO_CENTER)
+```
+
+**Explanation:** Sets up the steering servo and centers it at 94° (straight ahead position).
+
+```python
+    def _init_compass(self):
+        try:
+            i2c = busio.I2C(board_pins.SCL, board_pins.SDA)
+            self.compass = adafruit_bno055.BNO055_I2C(i2c)
+            time.sleep(1)
+        except:
+            self.compass = None
+```
+
+**Explanation:** Attempts to connect to the BNO055 compass via I2C. If it fails, sets `self.compass` to None so the robot can still operate without it.
+
+```python
+    def _init_lidar(self):
+        self.lidar = serial.Serial(port=LIDAR_PORT, baudrate=LIDAR_BAUD, timeout=1)
+        self.lidar.write(bytes([0xA5, 0x20]))
+        time.sleep(0.1)
+        response = self.lidar.read(7)
+```
+
+**Explanation:** Opens serial connection to LiDAR sensor at 460800 baud, sends start command (0xA5, 0x20), and reads the response to confirm communication.
+
+---
+
+<a name="sensors"></a>
+## 7. Sensor Systems
+
+### Compass Functions
+
+```python
+    def heading(self):
+        if self.compass:
+            try:
+                euler = self.compass.euler
+                if euler and euler[0] is not None:
+                    return round(euler[0], 1)
+            except:
+                pass
+        return None
+```
+
+**Purpose:** Reads the current compass heading (0-360°). Returns None if compass is unavailable or reading fails.
+
+```python
+    def set_initial_heading(self):
+        heading = self.heading()
+        if heading is not None:
+            self.initial_heading = heading
+            self.target_heading = heading
+```
+
+**Purpose:** Records the starting direction at the beginning of the mission. This becomes the reference for straight driving.
+
+```python
+    def update_heading_offset(self):
+        current = self.heading()
+        if current is not None and self.target_heading is not None:
+            self.heading_offset = angle_difference(self.target_heading, current)
+        else:
+            self.heading_offset = 0
+```
+
+**Purpose:** Calculates how far off course the robot is by comparing current heading to target heading. This offset is used to correct LiDAR angles and steering.
+
+### LiDAR Processing
+
+```python
+    def update_lidar(self):
+        if self.lidar.in_waiting > 0:
+            self.lidar_buffer.extend(self.lidar.read(self.lidar.in_waiting))
+        
+        self.update_heading_offset()
+        
+        while len(self.lidar_buffer) >= 5:
+            point_data = self.lidar_buffer[:5]
+            self.lidar_buffer = self.lidar_buffer[5:]
+            
+            point = self._parse_scan_point(point_data)
+            if point and point['distance'] > 0:
+                raw_angle = point['angle']
+                corrected_angle = correct_lidar_angle(raw_angle, self.heading_offset)
+                dist = point['distance']
+                
+                if self._is_front_angle(corrected_angle):
+                    self.front_data.append(dist)
+                elif self._is_left(corrected_angle):
+                    self.left_data.append(dist)
+                elif self._is_right(corrected_angle):
+                    self.right_data.append(dist)
+```
+
+**Explanation:** Processes LiDAR data:
+1. Reads available bytes from serial port into buffer
+2. Updates heading offset for angle correction
+3. Processes data in 5-byte chunks (each LiDAR point)
+4. Parses each point to get angle and distance
+5. Corrects angle based on robot's orientation
+6. Sorts distance into front/left/right categories
+
+```python
+    def _parse_scan_point(self, data):
+        if len(data) < 5:
+            return None
+        
+        quality = (data[0] >> 2) & 0x3F
+        angle_q6 = (data[1] >> 1) | (data[2] << 7)
+        angle = (angle_q6 / 64.0) % 360.0
+        distance_q2 = data[3] | (data[4] << 8)
+        distance = distance_q2 / 4.0
+        
+        if quality < LIDAR_MIN_QUALITY:
+            return None
+        
+        if distance < LIDAR_MIN_DISTANCE or distance > LIDAR_MAX_DISTANCE:
+            return None
+        
+        return {
+            'angle': angle,
+            'distance': distance,
+            'quality': quality
+        }
+```
+
+**Explanation:** Decodes the 5-byte LiDAR data packet:
+- **Byte 0**: Quality value (bits 2-7)
+- **Bytes 1-2**: Angle in 1/64° units
+- **Bytes 3-4**: Distance in 1/4 mm units
+- Filters out low-quality readings and distances outside valid range (30-4000mm)
+
+```python
+    def _filter_outliers(self, data):
+        if len(data) < 3:
+            return list(data)
+        
+        median = statistics.median(data)
+        filtered = [d for d in data if abs(d - median) < median * LIDAR_OUTLIER_THRESHOLD]
+        
+        return filtered if filtered else list(data)
+    
+    def distance_front(self):
+        if self.front_data:
+            filtered = self._filter_outliers(self.front_data)
+            if filtered:
+                return round(statistics.median(filtered))
+        return None
+```
+
+**Explanation:** Filters LiDAR readings to remove outliers:
+- Calculates median of recent readings
+- Removes values that differ from median by more than 30%
+- Returns median of filtered data for stable distance measurements
+
+### Line Detection
+
+```python
+    def detect_line_and_direction(self):
+        current_time = time.time()
+        if current_time - self.last_line_detection_time < LINE_IGNORE_TIME:
+            return False, None
+        
+        red_value = self.read_light_sensor(LIGHT_SENSOR_RED)
+        white_value = self.read_light_sensor(LIGHT_SENSOR_WHITE)
+```
+
+**Explanation:** Detects lines on the track:
+- Ignores detections within 2 seconds of last line (prevents multiple triggers)
+- Reads both red and white light sensors (lower values = darker surface)
+
+```python
+        if self.turn_direction is None:
+            if red_value < RED_THRESHOLD or white_value < WHITE_THRESHOLD:
+                lowest_red = red_value
+                sample_start = time.time()
+                while time.time() - sample_start < FIRST_LINE_SAMPLE_TIME:
+                    current_red = self.read_light_sensor(LIGHT_SENSOR_RED)
+                    if current_red is not None and current_red < lowest_red:
+                        lowest_red = current_red
+                    time.sleep(0.01)
+                
+                if lowest_red > RED_THRESHOLD:
+                    direction = 'right'
+                else:
+                    direction = 'left'
+```
+
+**Explanation:** Determines turn direction on first line detection:
+- When either sensor reads dark (< threshold), samples red sensor for 0.1 seconds
+- If red sensor stays bright during sampling → white line only → turn right (clockwise)
+- If red sensor goes dark during sampling → red line detected → turn left (counterclockwise)
+- This sets the turn direction for the entire mission
+
+---
+
+<a name="navigation"></a>
+## 8. Navigation and Control
+
+### Heading Correction
+
+```python
+    def calculate_heading_correction(self):
+        if self.heading_offset == 0:
+            return 0
+        correction = -self.heading_offset * HEADING_KP
+        return max(-MAX_TURN_ANGLE, min(MAX_TURN_ANGLE, correction))
+```
+
+**Purpose:** Calculates steering adjustment to maintain target heading. Uses proportional control (P-controller) with gain of 0.5, clamped to ±60°.
+
+### Turning at Lines
+
+```python
+    def execute_forward_turn(self, direction):
+        old_target = self.target_heading
+        
+        if direction == 'right':
+            self.target_heading = normalize_angle(old_target + 90)
+        else:
+            self.target_heading = normalize_angle(old_target - 90)
+        
+        self.just_finished_turn = True
+        self.turn_finish_time = time.time()
+```
+
+**Purpose:** Updates target heading when crossing a line:
+- Adds or subtracts 90° based on turn direction
+- Sets flag to ignore side obstacles briefly after turn (0.8 seconds)
+
+### Wall Following
+
+```python
+    def estimate_corridor_width(self):
+        left = self.distance_left()
+        right = self.distance_right()
+        
+        if left and right:
+            total_width = left + right
+            self.corridor_width_history.append(total_width)
+            
+            if len(self.corridor_width_history) >= 10:
+                avg_width = sum(self.corridor_width_history) / len(self.corridor_width_history)
+                return "wide" if avg_width > 750 else "narrow"
+        
+        return "unknown"
+```
+
+**Purpose:** Detects whether robot is in a wide or narrow section of the track by averaging the total corridor width over 20 readings. This adjusts the target wall distance (450mm for wide, 180mm for narrow).
+
+```python
+    def calculate_steering(self):
+        left_dist = self.distance_left()
+        right_dist = self.distance_right()
+        
+        corridor_type = self.estimate_corridor_width()
+        
+        if corridor_type == "narrow":
+            target_distance = TARGET_WALL_NARROW
+        else:
+            target_distance = TARGET_WALL_WIDE
+        
+        steering = 0
+        heading_correction = self.calculate_heading_correction()
+```
+
+**Explanation:** Begins steering calculation by getting wall distances, determining corridor width, and calculating compass-based correction.
+
+```python
+        if right_dist and right_dist < 800:
+            error = target_distance - right_dist
+            derivative = error - self.last_right_error
+            self.last_right_error = error
+            
+            steering = error * KP_WALL + derivative * KD_WALL
+            
+            if right_dist < MIN_SAFE_DISTANCE:
+                self.forward(SLOW_SPEED)
+            else:
+                self.forward(BASE_SPEED)
+```
+
+**Explanation:** PD controller for wall following:
+- **P term**: Proportional to distance error (too close → steer away)
+- **D term**: Based on rate of change (approaching wall → steer away more aggressively)
+- Slows down when very close to wall (< 150mm)
+- Positive steering value = turn left (away from right wall)
+
+```python
+        steering += heading_correction
+        return max(-MAX_TURN_ANGLE, min(MAX_TURN_ANGLE, steering))
+```
+
+**Purpose:** Combines wall-following steering with heading correction, then clamps to maximum turn angle.
+
+### Steering Control
+
+```python
+    def steer_smooth(self, target_angle):
+        target_angle = max(-MAX_TURN_ANGLE, min(MAX_TURN_ANGLE, target_angle))
+        self.steering_history.append(target_angle)
+        
+        if len(self.steering_history) > 0:
+            smooth_angle = sum(self.steering_history) / len(self.steering_history)
+            self.steer(smooth_angle)
+```
+
+**Purpose:** Smooths steering by averaging the last 3 commanded angles. This prevents jerky movements and improves stability.
+
+---
+
+<a name="obstacles"></a>
+## 9. Obstacle Avoidance
+
+### Finding Closest Obstacle
+
+```python
+    def get_closest_obstacle(self):
+        obstacles = self.camera.detect_obstacles()
+        if not obstacles:
+            return None
+        
+        valid_obstacles = [o for o in obstacles if o['center_y'] > OBSTACLE_Y_MIN]
+```
+
+**Explanation:** Gets all detected obstacles from camera and filters out those too high in the image (likely far away or false detections).
+
+```python
+        if self.parking_exit_time is not None:
+            time_since_exit = time.time() - self.parking_exit_time
+            if time_since_exit < 1.0:
+                MIDDLE_X_MIN = 240
+                MIDDLE_X_MAX = 400
+                middle_obstacles = [o for o in valid_obstacles 
+                                  if MIDDLE_X_MIN <= o['center_x'] <= MIDDLE_X_MAX]
+                
+                if middle_obstacles:
+                    valid_obstacles = middle_obstacles
+```
+
+**Explanation:** Special handling after exiting parking: For 1 second after exit, only considers obstacles in the center of the image to avoid false detections from parking pillars still visible at the sides.
+
+```python
+        closest = min(valid_obstacles, key=lambda o: o['distance'] * 0.7 + (OBSTACLE_Y_MAX - o['center_y']) * 0.3)
+        return closest
+```
+
+**Purpose:** Finds the "closest" obstacle using a weighted formula:
+- 70% weight on geometric distance from image center
+- 30% weight on vertical position (lower in image = closer to robot)
+
+### Calculating Avoidance Angle
+
+```python
+    def calculate_obstacle_avoidance_angle(self, obstacle):
+        if obstacle is None:
+            self.prev_obstacle_error = 0
+            return None
+        
+        if obstacle['center_y'] < OBSTACLE_PASSED_Y_THRESHOLD:
+            self.prev_obstacle_error = 0
+            return None
+```
+
+**Explanation:** Returns None if no obstacle exists or if obstacle is too high (< 35 pixels from crop top), meaning it's been passed.
+
+```python
+        obstacle_id = f"{obstacle['color']}_{obstacle['center_x']//50}_{obstacle['center_y']//50}"
+        
+        current_time = time.time()
+        
+        if obstacle_id == self.last_obstacle_id:
+            if current_time - self.last_obstacle_time < OBSTACLE_PASSED_TIME:
+                return None
+```
+
+**Purpose:** Prevents repeated avoidance of the same obstacle:
+- Creates unique ID based on color and position
+- Ignores obstacle if it matches the last one avoided within 0.8 seconds
+
+```python
+        if obstacle['color'] == 'red':
+            target = RED_TARGET
+            kp_multiplier = 1.2
+        else:
+            target = GREEN_TARGET
+            kp_multiplier = 0.85
+        
+        error = target - obstacle['center_x']
+```
+
+**Explanation:** Sets target X position based on color:
+- **Red obstacles**: Target X=100 (steer to keep them on left side)
+- **Green obstacles**: Target X=500 (steer to keep them on right side)
+- Red gets higher gain (1.2) for more aggressive avoidance
+
+```python
+        p_term = error * OBSTACLE_KP * kp_multiplier
+        d_term = (error - self.prev_obstacle_error) * OBSTACLE_KD
+        
+        steering_angle = p_term + d_term
+        
+        urgency_factor = 1.0
+        if obstacle['center_y'] > 180:
+            urgency_factor = 1.5
+        elif obstacle['area'] > 8000:
+            urgency_factor = 1.3
+        
+        steering_angle *= urgency_factor
+```
+
+**Explanation:** PD controller for obstacle avoidance:
+- **P term**: Proportional to horizontal error
+- **D term**: Based on rate of change
+- **Urgency factor**: Increases steering aggressiveness when obstacle is very close (low in image or large area)
+
+### Emergency Maneuvers
+
+```python
+    def check_emergency_obstacle(self, obstacle):
+        if obstacle is not None:
+            if obstacle.get('area', 0) > EMERGENCY_AREA_THRESHOLD:
+                return True
+            
+            if obstacle.get('center_y', 0) > EMERGENCY_Y_THRESHOLD:
+                return True
+        
+        return False
+```
+
+**Purpose:** Detects imminent collision when obstacle is either:
+- Very large (> 18000 pixels²)
+- Very low in image (> 240 pixels from crop top)
+
+```python
+    def execute_emergency_maneuver(self):
+        self.steer_center()
+        self.stop()
+        time.sleep(0.3)
+        
+        self.motor.set_speed(-SLOW_SPEED)
+        time.sleep(1.0)
+        
+        self.stop()
+        time.sleep(0.2)
+        
+        self.forward(SLOW_SPEED)
+        time.sleep(0.3)
+```
+
+**Purpose:** Emergency backup sequence:
+1. Straighten wheels and stop
+2. Reverse for 1 second
+3. Brief pause
+4. Resume forward slowly
+
+---
+
+<a name="parking"></a>
+## 10. Parking Logic
+
+### Exiting Parking at Start
+
+```python
+    def exit_parking_lot(self):
+        EXIT_THRESHOLD = 750
+        CHECK_INTERVAL = 0.1
+        EXIT_DRIVE_TIME = 1.1
+        
+        self.steer_center()
+        self.stop()
+        
+        while True:
+            self.update_lidar()
+            
+            if time.time() - last_check > CHECK_INTERVAL:
+                front_dist = self.distance_front() or 0
+                left_dist = self.distance_left() or 0
+                right_dist = self.distance_right() or 0
+                
+                if left_dist > EXIT_THRESHOLD:
+                    self.steer(MAX_TURN_ANGLE)
+                    break
+                elif right_dist > EXIT_THRESHOLD:
+                    self.steer(-MAX_TURN_ANGLE)
+                    break
+```
+
+**Explanation:** Finds the parking exit:
+- Scans LiDAR every 0.1 seconds
+- Looks for opening > 750mm on left or right
+- Steers toward the opening
+
+```python
+        self.forward(43)
+        time.sleep(EXIT_DRIVE_TIME)
+        
+        self.parking_exit_time = time.time()
+        self.steer_center()
+        time.sleep(0.2)
+```
+
+**Purpose:** Drives forward 1.1 seconds to fully exit, records exit time (used to filter obstacle detection), then straightens wheels.
+
+### Parking at End
+
+```python
+            self.parking_phase = True
+            
+            if self.turn_direction == 'left':
+                self.inner_wall_side = 'left'
+            else:
+                self.inner_wall_side = 'right'
+```
+
+**Explanation:** Enters parking mode after 12 line crossings:
+- Records which side is the "inner wall" (the side the robot has been following)
+- This determines parking strategy
+
+```python
+            while True:
+                self.update_lidar()
+                
+                line_detected, _ = self.detect_line_and_direction()
+                
+                if line_detected:
+                    self.turn_count += 1
+                    
+                    self.steer_center()
+                    self.forward(PARKING_SPEED)
+                    
+                    while True:
+                        self.update_lidar()
+                        front_dist = self.distance_front()
+                        
+                        if front_dist and front_dist < 500:
+                            break
+                        
+                        heading_correction = self.calculate_heading_correction()
+                        self.steer_smooth(heading_correction)
+                        
+                        time.sleep(0.02)
+                    
+                    self.execute_forward_turn(self.turn_direction)
+                    time.sleep(0.3)
+                    break
+                
+                obstacle = self.get_closest_obstacle()
+                
+                if obstacle and self.check_emergency_obstacle(obstacle):
+                    self.execute_emergency_maneuver()
+                    continue
+                
+                if obstacle:
+                    obstacle_steer = self.calculate_obstacle_avoidance_angle(obstacle)
+                    if obstacle_steer is not None:
+                        self.steer_smooth(obstacle_steer)
+                    else:
+                        wall_steer = self.calculate_steering()
+                        self.steer_smooth(wall_steer)
+                else:
+                    wall_steer = self.calculate_steering()
+                    self.steer_smooth(wall_steer)
+                
+                time.sleep(0.02)
+```
+
+**Explanation:** Drives until the 13th line (entering final parking section):
+- Detects line crossing
+- Straightens wheels and maintains heading
+- Continues forward until front wall is close (< 500mm)
+- Executes 90° turn in the predetermined direction
+- This completes entry into the final parking zone
+
+---
+
+### Final Parking Sequence
+
+```python
+            if self.inner_wall_side == 'left':
+                outer_wall_side = 'right'
+            else:
+                outer_wall_side = 'left'
+
+            self.forward(PARKING_SPEED)
+
+            while self.turn_count < 16:
+                self.update_lidar()
+                
+                line_detected, _ = self.detect_line_and_direction()
+                
+                if line_detected:
+                    self.turn_count += 1
+                    
+                    if self.turn_count >= 13 and self.turn_count <= 16:
+                        self.steer_center()
+                        self.forward(PARKING_SPEED)
+                        
+                        while True:
+                            self.update_lidar()
+                            front_dist = self.distance_front()
+                            
+                            if front_dist and front_dist < 500:
+                                break
+                            
+                            heading_correction = self.calculate_heading_correction()
+                            self.steer_smooth(heading_correction)
+                            
+                            time.sleep(0.02)
+                    
+                    self.execute_forward_turn(self.turn_direction)
+                
+                steering = self.calculate_outer_wall_steering()
+                self.steer_smooth(steering)
+                self.forward(PARKING_SPEED)
+                
+                time.sleep(0.02)
+```
+
+**Explanation:** Navigates through corners 13-16 using outer wall following:
+- Switches from inner wall to outer wall tracking
+- On each line detection (turns 13-16):
+  - Drives forward until close to front wall
+  - Uses heading correction to stay straight
+  - Executes 90° turn
+- Between lines, follows the outer wall using PD control
+- This brings the robot to the final straight section before parking
+
+---
+
+### Parking Pillar Detection
+
+```python
+            self.forward(30)
+            
+            while True:
+                self.update_lidar()
+                
+                current_heading = self.heading()
+    
+                heading_valid = False
+                if current_heading is not None:
+                    if current_heading >= 330 or current_heading <= 30:
+                        heading_valid = True
+                
+                if outer_wall_side == 'left':
+                    outer_dist = self.distance_left()
+                else:
+                    outer_dist = self.distance_right()
+```
+
+**Explanation:** Begins parking pillar search:
+- Slows to 30 speed for precision
+- Validates robot is approximately straight (heading within ±30° of north)
+- Monitors the outer wall distance continuously
+- This prepares to detect the gap between parking pillars
+
+```python
+                if heading_valid and outer_dist and outer_dist < 270:
+                    if self.last_outer_distance > 250:
+                        self.steer_center()
+                        self.forward(40)
+                        time.sleep(0.85)
+                        self.parking_pillars_detected += 1
+```
+
+**Explanation:** Detects parking pillars by finding sudden distance changes:
+- When outer wall distance drops below 270mm (pillar detected)
+- But previous reading was > 250mm (confirming transition from open space)
+- Drives forward 0.85 seconds to position between pillars
+- Increments pillar counter
+
+---
+
+### Parking Turn Execution
+
+```python
+                        if self.parking_pillars_detected >= 1:
+                            if self.turn_direction == 'right':
+                                parking_turn = 'right'
+                                target_heading_after_turn = normalize_angle(current_heading + 90)
+                                final_heading = 0
+                                steer_direction = -MAX_TURN_ANGLE
+                            else:
+                                parking_turn = 'left'
+                                target_heading_after_turn = normalize_angle(current_heading - 90)
+                                final_heading = 0
+                                steer_direction = MAX_TURN_ANGLE
+```
+
+**Explanation:** Sets up parking turn parameters:
+- **Right turn direction**: Steer right (-60°), target heading +90°
+- **Left turn direction**: Steer left (+60°), target heading -90°
+- Both aim to end at heading 0° (north-facing)
+
+```python
+                            self.target_heading = target_heading_after_turn
+                            self.steer(steer_direction)
+                            self.forward(45)
+                            
+                            while True:
+                                self.update_lidar()
+                                current = self.heading()
+                                
+                                if current is None:
+                                    time.sleep(0.02)
+                                    continue
+                                
+                                heading_error = abs(angle_difference(target_heading_after_turn, current))
+                                
+                                if heading_error <= 2:
+                                    break
+                                
+                                time.sleep(0.02)
+                            
+                            self.stop()
+```
+
+**Purpose:** Executes 90° turn into parking spot:
+- Steers to maximum angle and drives forward
+- Monitors compass continuously
+- Stops when heading is within 2° of target
+- Ensures precise 90° rotation
+
+---
+
+### Forward Parking Approach
+
+```python
+                            self.steer_center()
+                            self.forward(35)
+                            
+                            while True:
+                                self.update_lidar()
+                                front_dist = self.distance_front()
+                                
+                                if front_dist and front_dist < 110:
+                                    break
+                                
+                                heading_correction = self.calculate_heading_correction()
+                                self.steer_smooth(heading_correction)
+                                
+                                time.sleep(0.02)
+                            
+                            self.stop()
+```
+
+**Purpose:** Drives forward into parking spot:
+- Straightens wheels and moves slowly (speed 35)
+- Uses heading correction to maintain straight path
+- Stops when front LiDAR reads < 110mm (close to back wall)
+- This positions the robot deep in the parking spot
+
+---
+
+### Reverse Alignment
+
+```python
+                            self.steer_center()
+                            self.motor.set_speed(-35)
+                            
+                            while True:
+                                self.update_lidar()
+                                ultra = self.read_light_sensor(ULTRA)
+                                
+                                if ultra and ultra < 200:
+                                    break
+                                
+                                heading_correction = -1 * self.calculate_heading_correction()
+                                self.steer_smooth(heading_correction)
+                                
+                                time.sleep(0.02)
+                            
+                            self.stop()
+```
+
+**Explanation:** Reverses to center position:
+- Moves backward (negative speed)
+- Monitors ultrasonic sensor (ULTRA port 0)
+- Uses inverted heading correction (compensates for reverse motion)
+- Stops when ultrasonic reads < 200 (centered in parking spot)
+
+---
+
+### Final Orientation Adjustment
+
+```python
+                            if parking_turn == 'right':
+                                self.steer(-MAX_TURN_ANGLE)
+                                target_min = 340
+                                target_max = 343
+                            else:
+                                self.steer(MAX_TURN_ANGLE)
+                                target_min = 17
+                                target_max = 20
+                            
+                            self.motor.set_speed(-45)
+                            
+                            while True:
+                                self.update_lidar()
+                                current = self.heading()
+                                ultra = self.read_light_sensor(ULTRA)
+                                
+                                if current is None:
+                                    time.sleep(0.02)
+                                    continue
+                                
+                                if (current >= target_min and current <= target_max):
+                                    break
+                                
+                                time.sleep(0.02)
+
+                            self.stop()
+                            self.steer_center()
+                            
+                            break
+```
+
+**Purpose:** Final rotation to face forward:
+- **Right parking**: Steers right while reversing, targets 340-343° (slightly left of north)
+- **Left parking**: Steers left while reversing, targets 17-20° (slightly right of north)
+- Continues reversing and turning until target heading reached
+- Stops, centers wheels, and exits parking loop
+- Robot is now properly parked and aligned
+
+---
+
+### Wall Following During Parking Search
+
+```python
+                self.last_outer_distance = outer_dist if outer_dist else 9999
+                
+                if outer_dist and outer_dist < 1000:
+                    if outer_wall_side == 'left':
+                        error = 307 - outer_dist
+                        steering = -error * KP_PARKING
+                    else:
+                        error = 195 - outer_dist
+                        steering = error * KP_PARKING
+                else:
+                    steering = 0
+                
+                heading_correction = self.calculate_heading_correction()
+                total_steering = steering + heading_correction
+                
+                self.steer_smooth(clamp(total_steering, -MAX_TURN_ANGLE, MAX_TURN_ANGLE))
+                self.forward(43)
+                
+                time.sleep(0.02)
+```
+
+**Explanation:** While searching for parking pillars:
+- Records current outer distance for next iteration's comparison
+- **Left outer wall**: Target 307mm, steer away if closer
+- **Right outer wall**: Target 195mm, steer toward if farther
+- Combines wall following with heading correction
+- Drives at speed 43 until parking pillars detected
+- The asymmetric targets (307 vs 195) account for robot geometry
+
+---
+
+<a name="main-loop"></a>
+## 11. Main Mission Loop
+
+### Error Handling and Cleanup
+
+```python
+        except KeyboardInterrupt:
+            pass
+        
+        finally:
+            self.stop()
+            self.steer_center()
+            time.sleep(0.5)
+```
+
+**Purpose:** Ensures safe shutdown:
+- Catches Ctrl+C interruption gracefully
+- Always stops motor and centers steering
+- Brief pause allows systems to settle
+
+```python
+    def cleanup(self):
+        try:
+            self.stop()
+            self.steer_center()
+            time.sleep(0.2)
+            
+            if hasattr(self, 'motor'):
+                self.motor.cleanup()
+            
+            if hasattr(self, 'lidar') and self.lidar.is_open:
+                self.lidar.write(bytes([0xA5, 0x25]))
+                time.sleep(0.1)
+                self.lidar.close()
+            
+            if hasattr(self, 'camera'):
+                self.camera.cleanup()
+            
+            GPIO.cleanup()
+        
+        except Exception as e:
+            pass
+```
+
+**Explanation:** Complete system shutdown:
+- Stops all motion and centers steering
+- Cleans up motor PWM signals
+- Sends stop command to LiDAR (0xA5, 0x25)
+- Closes LiDAR serial connection
+- Stops camera and closes OpenCV windows
+- Releases all GPIO resources
+- Catches any errors during cleanup to ensure completion
+
+---
+
+### Program Entry Point
+
+```python
+if __name__ == "__main__":
+    try:
+        vehicle = Vehicle()
+        time.sleep(1)
+        vehicle.run_mission()
+    
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+    
+    finally:
+        try:
+            GPIO.cleanup()
+        except:
+            pass
+```
+
+**Explanation:** Main execution flow:
+- Creates Vehicle instance (initializes all hardware)
+- Waits 1 second for systems to stabilize
+- Runs the complete mission
+- Prints full error traceback if exception occurs
+- Ensures GPIO cleanup even if unexpected errors happen
+- This is the entry point when script is run directly
+
+---
+
+## Mission Overview Summary
+
+The complete mission flow:
+
+1. **Initialization** (30-40 seconds)
+   - Initialize all hardware systems
+   - Wait for button press
+   - Calibrate compass heading
+   - Exit parking lot by detecting opening
+
+2. **Main Navigation** (Turns 1-12)
+   - Follow right or left wall using PD control
+   - Detect and avoid red/green obstacles with camera
+   - Adjust steering based on corridor width
+   - Execute 90° turns at each line crossing
+   - Emergency backup if obstacle too close
+
+3. **Parking Entry** (Turn 13)
+   - Drive to front wall after line detection
+   - Execute final turn into parking zone
+
+4. **Parking Navigation** (Turns 14-16)
+   - Follow outer wall through final corners
+   - Use heading correction for straight sections
+
+5. **Parking Execution**
+   - Detect parking pillars by LiDAR distance change
+   - Turn 90° into parking spot
+   - Drive forward to back wall
+   - Reverse to center position
+   - Rotate to face forward
+   - Stop in final parked position
+
+**Key Technologies:**
+- **LiDAR**: Wall distance measurement and obstacle detection
+- **Camera**: Color-based obstacle identification and avoidance
+- **Compass**: Heading maintenance and turn execution
+- **Light sensors**: Line detection and turn direction determination
+- **PD Control**: Smooth wall following and steering
+- **State Machine**: Manages mission phases and parking sequence
+
+The code demonstrates a complete autonomous navigation system combining multiple sensors with sophisticated control algorithms to complete a complex robotic challenge.
+
+**End of Obstacle Challenge Code Explanation**
+
+This code represents a complete autonomous navigation system for WRO Future Engineers, using Camera-based decision making, compass-guided turning, and adaptive wall-following to complete 3 laps (12 turns) of an obstacle course and perform a parallel parking.
