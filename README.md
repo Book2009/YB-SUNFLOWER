@@ -1012,14 +1012,10 @@ To ensure compatibility with our motor's maximum voltage rating of 9V, we incorp
 
 <br><hr>
 
-### Wiring Diagram and Power Distribution Diagram
+### Wiring Diagram
 - #### **It shows you the connection of various components to the microcontroller.**
 <p align="center">
     <img src="https://github.com/Book2009/FE-NOC/blob/main/Schemes/Wiring%20Diagram.png" width="700"/>
-
-- #### **It shows the ports of various components connected to the microcontroller, as well as the voltage levels supplied to the microcontroller and its connected components.**
-<p align="center">
-    <img src="https://github.com/ThanyawutII/Test-2/blob/main/IMG_9878.jpeg" width="700"/>
 
 <br><hr>
 
@@ -1367,7 +1363,7 @@ The robot will drive to park in the purple parking area that was detected, using
 
 ### **Flowchart**
 
-<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/FlowChart/Obstacle_Challenge.jpg" height = "1100">
+<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/FlowChart/Obstacle_Challenge.jpg" height = "1300">
 
 <hr>
 
