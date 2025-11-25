@@ -2,7 +2,7 @@
 ### ***We Are Team Sunflower From Thailand***
 
 <p align="center">
-  <img src="https://ybrobot.club/image/YB%20Robot%20logo.png" width="420"/>
+  <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Team-Photos/Team%20Logo.png" width="420"/>
 </p>
 
 <p align="center">
@@ -89,7 +89,7 @@ There are two members on our team, each focused and dedicated to their responsib
 
 ### **1. Thanyawut Krittikanon – Team Coordinator, Robot Designer & Document Designer**
 <p align="center">
-    <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Thanyawut%20Krittikanon.png" width="400"/>
+    <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Team-Photos/Members/Thanyawut%20Krittikanon.png" width="400"/>
 </p>
 
 Thanyawut is responsible for team coordination, robot design, and documentation. His background in both robotics and programming helps him organize the team’s workflow and ensure that every process is clearly recorded and accurately presented.  
@@ -102,7 +102,7 @@ His creativity, attention to detail, and ability to combine engineering with pre
 
 ### **2. Pawit Nateenantasawasd – Programmer**
 <p align="center">
-    <img src="https://github.com/Book2009/FE-NOC/blob/main/Team-Photos/Members/Pawit%20Nateenantasawasd.png" width="400"/>
+    <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Team-Photos/Members/Pawit%20Nateenantasawasd.png" width="400"/>
 </p>
 
 Pawit is our lead programmer, specializing in languages such as **C++, C, Python, MicroPython, and HTML**.  
@@ -551,7 +551,7 @@ These adapters allow the LEGO cross axle of the front wheels to interface with t
 ## Components
 
 - #### **3D Printer**: Bambu Lab X1 Carbon by Bambu Lab
-<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/3D/3D%20Printer.png" width = "400">
+<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/3D/3D%20Printer.png" width = "400">
   
 The reasons that we use Bambu Lab X1-Carbon 3D printer because this printer is a high-performance 3D printer designed for precision and efficiency. It is equipped with advanced technology and features, making it suitable for professional use as well as hobbyist projects that require high-quality prints.
 
@@ -603,7 +603,7 @@ The reasons that we use Bambu Lab X1-Carbon 3D printer because this printer is a
 <hr>
 
 - #### **Filament** : Acrylonitrile Butadiene Styrene or simply known as ***ABS***
-<image src="https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/3D/ABS%20Filament.png" width = "400">
+<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/3D/ABS%20Filament.png" width = "400">
   
 ABS (Acrylonitrile Butadiene Styrene) was selected as the primary material for the robot’s structural components due to its balanced mechanical and thermal properties. Unlike more brittle plastics, ABS provides a unique combination of rigidity and impact resistance, which allows the parts to endure operational stresses without cracking. Its slight flexibility enables the structures to absorb shocks and vibrations while maintaining dimensional stability. Moreover, ABS retains its form and strength across a wide range of operating temperatures, ensuring reliable performance under varying environmental conditions. These properties make ABS particularly suitable for 3D-printed parts, where durability, accuracy, and stability are essential for assembling complex robotic systems.
 
