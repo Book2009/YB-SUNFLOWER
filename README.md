@@ -81,7 +81,7 @@ Over the past two years, we joined the **Future Engineers** category twice. Reac
 This year, we return with greater confidence and far more experience. We refined our workflow, strengthened our engineering approach, and fixed the mistakes from previous years. Coming back to this competition motivates us to do our best, and we aim to deliver results that make everyone proud.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/ec9f276e-e12d-4b1d-aa2c-7d7764336e50" width="500"/>
+    <img src="https://github.com/ThanyawutII/Essent1/blob/main/S__10887172.jpeg" width="500"/>
 </p>
 <hr>
 
