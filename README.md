@@ -721,7 +721,7 @@ There are many wheel options available, but this wheel was chosen primarily beca
 ### Controller
 
 - #### **Main Board** : Raspberry Pi 5 (8GB) from Raspberry Pi
-<img width="700" height="700" alt="image-Photoroom (14)" src="https://github.com/user-attachments/assets/3aaf27cc-818f-493f-b64f-25e2a9e370e8" />
+<img src = "https://github.com/user-attachments/assets/3aaf27cc-818f-493f-b64f-25e2a9e370e8" width = "400">
 
 The Raspberry Pi 5 (8GB) serves as the main processing unit of the robot. It functions like a high-performance mini computer, capable of handling advanced and computationally intensive tasks such as camera processing, LiDAR data analysis, SLAM, navigation algorithms, and real-time decision-making. Compared to previous generations, the Raspberry Pi 5 provides a major leap in CPU, GPU, and I/O performance, making it ideal for robotics applications that require fast data throughput and reliable multitasking.
 
@@ -748,7 +748,7 @@ We use this board because it delivers significantly higher processing power in t
 <hr>
 
 - #### **Interface Board** : IO Expansion HAT for Raspberry Pi
-<img src = "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4112/MFG_DFR0566.jpg?hidebanner=true" width = "400">
+<img src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/IO%20Expansion%20HAT%20for%20Raspberry%20Pi.png" width = "400">
 The second piece in the stack is the Arduino Shield for Raspberry Pi (DFR0327). While the Raspberry Pi is excellent for high-level processing, it is not designed to directly interface with many types of low-level sensors and devices. This shield bridges that gap by expanding the I/O and allowing us to easily connect components such as the light sensor, switches, servos, and the gyroscope. Without this layer, the integration of analog and PWM-based devices would be much more complex and less reliable.
 
 | Specification                  | Value                                                                 |
