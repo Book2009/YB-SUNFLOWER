@@ -747,75 +747,63 @@ We use this board because it delivers significantly higher processing power in t
 
 <hr>
 
-- #### **Interface Board** : IO Expansion HAT for Raspberry Pi
-<img src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/IO%20Expansion%20HAT%20for%20Raspberry%20Pi.png" width = "400">
-The second piece in the stack is the Arduino Shield for Raspberry Pi (DFR0327). While the Raspberry Pi is excellent for high-level processing, it is not designed to directly interface with many types of low-level sensors and devices. This shield bridges that gap by expanding the I/O and allowing us to easily connect components such as the light sensor, switches, servos, and the gyroscope. Without this layer, the integration of analog and PWM-based devices would be much more complex and less reliable.
+### **Interface Board — IO Expansion HAT for Raspberry Pi (DFR0566)**
+<img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/IO%20Expansion%20HAT%20for%20Raspberry%20Pi.png" width="400">
 
-| Specification                  | Value                                                                 |
-|--------------------------------|-----------------------------------------------------------------------|
-| Onboard Microcontroller        | ATmega32u4                                                            |
-| Chip                           | Arduino Leonardo Chip                                                 |
-| Compatibility                  | Arduino compatible pin mapping, supports all Arduino standard shields and sensors |
-| System Voltage                 | 5V                                                                   |
-| Arduino Digital I/O            | 20                                                                    |
-| Arduino Analog I/O             | 6                                                                     |
-| Raspberry Pi B+ GPIO           | 16                                                                    |
-| Raspberry Pi B+ I2C            | 1                                                                     |
-| Raspberry Pi B+ ID_I2C         | 1                                                                     |
-| Raspberry Pi B+ SPI            | 1                                                                     |
-| Raspberry Pi B+ TTL UART       | 1                                                                     |
-| Dimension                      | 86 mm x 61 mm x 26 mm (3.46" x 2.20" x 1.02")                         |
+The IO Expansion HAT for Raspberry Pi (DFR0566) acts as the main interface layer between the Raspberry Pi and most of the robot’s low-level electronics. In our system, only the camera and LiDAR are connected directly to the Raspberry Pi; all other sensors and actuators—such as the light sensor, touch sensor, gyroscope, ultrasonic sensor, and motor driver control signals—are routed through this expansion board. It adds analog input capability, provides 5V-compatible I/O ports, and uses Gravity-style connectors to simplify wiring and reduce mistakes. By offloading sensor interfacing to this HAT, the Raspberry Pi can focus on high-level tasks like camera processing and mission logic, while the overall wiring becomes cleaner, safer, and easier to maintain during the competition.
 
-Additional information about UART:
-UART operates by transmitting data as a series of bits, including a start bit, data bits, an optional parity bit, and stop bit(s). Unlike parallel communication, where multiple bits are transmitted simultaneously, UART sends data serially, one bit at a time. As the name reveals the protocol operates asynchronous which means that it doesn't rely on a shared clock signal. Instead, it uses predefined baud rates to determine the timing of data bits.
-
-<img src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Schemes/UART.png" width = "400">
+| Specification            | Value                                                   |
+|--------------------------|---------------------------------------------------------|
+| Supported Platforms      | Raspberry Pi 2B / 3B / 3B+ / 4B / Zero / Zero W / Pi 5 |
+| I/O Ports                | 24 (Gravity-compatible)                                |
+| Analog Inputs            | 6 (A0–A5, via ADS7830 ADC)                              |
+| Communication to Pi      | I²C                                                     |
+| Output Voltage           | 5V regulated                                            |
+| Power Input              | From Pi header or external 5V                          |
+| Port Type                | Gravity 3-pin (VCC–GND–Signal)                         |
+| Dimensions               | 65 × 56 mm                                             |
 
 <hr>
 
-- #### **Motor Driver** : L298N
-<img src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/L298N.png" width = "400">
-The final layer is the Gravity 2x2A Motor Shield for Arduino. Motors draw significantly higher current than what the Raspberry Pi or the Arduino shield can provide. This shield was added to handle motor control independently, with its own dedicated power input. It ensures stable operation of the drive system, prevents electrical noise from affecting sensitive components, and allows precise control of motor speed and direction.
+### **Motor Driver — L298N**
+<img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/L298N.png" width="400">
 
-| Specification            | Value                                  |
-|--------------------------|----------------------------------------|
-| Motor Driven Voltage    | 4.8V to 35V                            |
-| Output Current          | Up to 2A/channel                       |
-| Total Power Dissipation | 25W (T=75℃)                            |
-| Driven Structure        | Dual full-bridge driver                |
-| Driven Power Port       | External power terminal, or VIN from Arduino |
-| Driven Output Port      | 2 channel screw terminals, or male PIN headers |
-| Control Port            | 4 TTL compatible digital signals (Digital 10-13) |
-| Operation Temperature   | -25℃ to 130℃                           |
-| Shield Size             | 56x57mm (2.20x2.24")                   |
+The L298N motor driver is used to power our GM25 motors, which require a **12V supply**—a voltage far higher than what the Raspberry Pi or the IO Expansion HAT can handle. Since the Raspberry Pi operates at only **5V**, the motor power must be isolated to prevent damage. The L298N receives 12V directly from the battery and handles all high-current motor output, while the control signals (direction and PWM) are safely provided through the Expansion HAT. This separation protects the Raspberry Pi, ensures stable power delivery to the motors, and allows precise control of speed and direction during movement.
+
+| Specification            | Value                           |
+|--------------------------|---------------------------------|
+| Motor Voltage            | 5V–35V                          |
+| Output Current           | Up to 2A per channel            |
+| Power Dissipation        | 25W (at 75°C)                   |
+| Driver Structure         | Dual H-bridge                   |
+| Power Input              | External power terminal         |
+| Output Ports             | 2 motor channels (screw terminals) |
+| Control Signals          | TTL digital inputs + PWM        |
+| Operating Temperature     | -25°C to 130°C                  |
+| Board Size               | 56 × 57 mm                      |
 
 <hr><br>
 
 ### Power Management And Inspection
-- #### **Camera** : Raspberry Pi Night Vision Camera Module
-<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Raspberry%20Pi%20Night%20Vision%20Camera%20Module.png" width = "400">
-The IMX378-190 wide-angle camera module was selected for its high resolution (4056 × 3040, 12.3 MP) and ultra-wide 190° field of view, which make it highly effective for color detection across a large area of the field. Detecting color is an essential part of the competition tasks, and the wide coverage ensures that the robot does not miss important visual cues. By connecting the camera directly to the Raspberry Pi on the first layer, the system benefits from high-bandwidth data transfer and real-time image processing. This direct integration minimizes latency and allows the robot to react quickly to visual input, providing both accuracy and responsiveness during operation.
+### **Camera — Raspberry Pi Night Vision Camera Module**
+<img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Raspberry%20Pi%20Night%20Vision%20Camera%20Module.png" width="400">
 
-| Specification       | Value                        |
-|---------------------|------------------------------|
-| Photosensitive chip | Sony IMX378                  |
-| Pixels              | 12.3 million                 |
-| Chip pixel size     | 1.55 µm × 1.55 µm            |
-| Resolution          | 4056 × 3040                  |
-| Camera type         | Color                        |
-| Shutter mode        | Rolling shutter              |
-| Focus mode          | Fixed focus                  |
-| CMOS size           | 1/2.3 inches                 |
-| Infrared filter     | Integrated                   |
-| Aperture            | f/2.4                        |
-| Focal length        | 6.5 mm                       |
-| Field of view       | 190°                         |
-| Distortion          | ＜58%                        |
-| Interface           | MIPI-CSI-2 Lane              |
-| Lens size           | M12                          |
-| PCB size            | 38 × 38 mm                   |
+The Raspberry Pi Night Vision Camera Module is used as the main vision system of our robot. It connects directly to the Raspberry Pi through the MIPI-CSI interface, allowing high-speed image transmission for real-time processing. The built-in infrared capability ensures that the camera can maintain consistent brightness detection even under uneven lighting conditions, which is especially useful when competing abroad where lighting environments may differ from local testing. Its compact size and fixed-focus lens make it stable, lightweight, and easy to mount on our adjustable camera mechanism.
 
-  <hr>
+Thanks to its direct connection to the Raspberry Pi, the camera provides low-latency image data, enabling fast color detection, line tracking, and environmental inspection during autonomous operation.
+
+| Specification       | Value                         |
+|---------------------|-------------------------------|
+| Camera Type         | Raspberry Pi Night Vision     |
+| Resolution          | 5 MP                          |
+| Sensor Format       | 1/4 inch                      |
+| Lens Type           | Fixed focus                   |
+| Infrared Capability | Yes (IR-sensitive)            |
+| Interface           | MIPI CSI                      |
+| PCB Size            | 25 × 24 mm                    |
+| Field of View       | ~60° (depending on lens)      |
+
+<hr>
 
 - #### **Lidar** : RPLiDAR C1
 <image src="https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_145336-removebg-preview.png" width = "400">
@@ -888,7 +876,7 @@ This button gives us an easier way to start the robot. Since the controller boar
 <hr>
 
 - #### **On/Off Switch** : SPST ON/OFF Switch 2 Pin Rocker Switch DC 125/250V
-This switch is for cutting the power from the battery to the robot. The regulation states that before starting the robot, the power must be cut off. That's when this switch came in. To use this switch, we solder red wire (Positive pole) to the switch on 1 side for input. Then another solder red wire for output on the opposite side. You can put the black wire (Negative pole) straight into the step-down. When the switch is turned on, the power from the battery will direct into the stepdown and then the robot. Additionally, we have designed a protective case for this switch to ensure safety and durability. [You can view the 3D model here](https://github.com/Book2009/FE-NOC/blob/main/3D_Models/Switch%20Box.stl).
+This switch is for cutting the power from the battery to the robot. The regulation states that before starting the robot, the power must be cut off. That's when this switch came in. To use this switch, we solder red wire (Positive pole) to the switch on 1 side for input. Then another solder red wire for output on the opposite side. You can put the black wire (Negative pole) straight into the step-down. When the switch is turned on, the power from the battery will direct into the stepdown and then the robot. Additionally, we have designed a protective case for this switch to ensure safety and durability. [You can view the 3D model here](https://github.com/Book2009/YB-SUNFLOWER/blob/main/3DModels/Switch%20Box.stl).
 
 <img src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/OnOff%20Switch.png" width = "400">
 
