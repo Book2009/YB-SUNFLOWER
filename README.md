@@ -773,8 +773,8 @@ UART operates by transmitting data as a series of bits, including a start bit, d
 
 <hr>
 
-- #### **Motor Shield** : Gravity 2x2A Motor Shield for Arduino Twin
-<img src = "https://github.com/Book2009/FE-NOC/blob/main/Robot-Photos/Robot%20Parts/Controller/Motorshield.png" width = "400">
+- #### **Motor Driver** : L298N
+<img src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Controller/L298N.png" width = "400">
 The final layer is the Gravity 2x2A Motor Shield for Arduino. Motors draw significantly higher current than what the Raspberry Pi or the Arduino shield can provide. This shield was added to handle motor control independently, with its own dedicated power input. It ensures stable operation of the drive system, prevents electrical noise from affecting sensitive components, and allows precise control of motor speed and direction.
 
 | Specification            | Value                                  |
@@ -792,8 +792,8 @@ The final layer is the Gravity 2x2A Motor Shield for Arduino. Motors draw signif
 <hr><br>
 
 ### Power Management And Inspection
-- #### **Camera** : IMX-190
-<image src="https://github.com/ThanyawutII/Test2/blob/main/Screenshot_2025-09-01_144626-removebg-preview.png" width = "400">
+- #### **Camera** : Raspberry Pi Night Vision Camera Module
+<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Raspberry%20Pi%20Night%20Vision%20Camera%20Module.png" width = "400">
 The IMX378-190 wide-angle camera module was selected for its high resolution (4056 × 3040, 12.3 MP) and ultra-wide 190° field of view, which make it highly effective for color detection across a large area of the field. Detecting color is an essential part of the competition tasks, and the wide coverage ensures that the robot does not miss important visual cues. By connecting the camera directly to the Raspberry Pi on the first layer, the system benefits from high-bandwidth data transfer and real-time image processing. This direct integration minimizes latency and allows the robot to react quickly to visual input, providing both accuracy and responsiveness during operation.
 
 | Specification       | Value                        |
@@ -848,11 +848,11 @@ The RPLIDAR C1 was selected as the primary distance measurement sensor of the ro
 
 ZX-03B
 
-<image src = "https://github.com/ThanyawutII/Test/blob/main/fc679f07ebcded1ab267a5d197fac817-removebg-preview.png" width = "300">
+<image src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Light%20Sensor%20White.png" width = "300">
 
 ZX-03R
 
-<image src = "https://github.com/ThanyawutII/Test/blob/main/Screenshot_2024-10-23_152022-removebg-preview.png" width = "300">
+<image src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Light%20Sensor%20Red.png" width = "300">
 
 The color sensors play an important role in both rounds, as we use them for line detection. There are 2 lines with different colors in the corner of the race field, which is why we use 2 different colors of the color sensor, blue and red. The blue color sensor is used for detecting both colors, while the red color sensor is only used for the blue line.
 
