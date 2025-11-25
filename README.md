@@ -3487,9 +3487,28 @@ def cleanup(self):
 4. **Precise stopping:** Uses both heading and position to verify return to start
 5. **Robust design:** Handles sensor failures and edge cases gracefully
 
----
-
 **End of Open Challenge Code Explanation**
 
 This code represents a complete autonomous navigation system for WRO Future Engineers, using LiDAR-based decision making, compass-guided turning, and adaptive wall-following to complete 3 laps (12 turns) of an obstacle course.
 
+---
+
+## Obstacle Challenge round
+
+### **Obstacle Challenge round(Youtube Link)**
+
+This video shows our robot completing the Second round(Obstacle Challenge), you can [click here](https://youtu.be/DKxKQNMbDbE) to view the video we created.
+
+<div align="center">
+  <a href="https://youtu.be/DKxKQNMbDbE">
+    <img src="https://github.com/ThanyawutII/Test-2/blob/main/dgddv.png" width="600">
+  </a>
+</div>
+
+<br><hr>
+
+### **Flowchart**
+
+<image src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/FlowChart/Obstacle_Challenge.jpg" height = "1200">
+
+<br><hr>
