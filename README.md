@@ -834,15 +834,15 @@ The RPLIDAR C1 was selected as the primary distance measurement sensor of the ro
 
 - #### **Light Sensor** : ZX-03B and ZX-03R By INEX
 
-ZX-03B
+Light Sensor White
 
 <image src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Light%20Sensor%20White.png" width = "300">
 
-ZX-03R
+Light Sensor Red
 
 <image src = "https://github.com/Book2009/YB-SUNFLOWER/blob/main/Robot-Photos/Robot%20Parts/Power%20Management%20And%20Inspection/Light%20Sensor%20Red.png" width = "300">
 
-The color sensors play an important role in both rounds, as we use them for line detection. There are 2 lines with different colors in the corner of the race field, which is why we use 2 different colors of the color sensor, blue and red. The blue color sensor is used for detecting both colors, while the red color sensor is only used for the blue line.
+The color sensors play an important role in both rounds, as we use them for line detection. There are 2 lines with different colors in the corner of the race field, which is why we use 2 different colors of the color sensor, white and red. The white color sensor is used for detecting both colors, while the red color sensor is only used for the blue line.
 
 <hr>
 
