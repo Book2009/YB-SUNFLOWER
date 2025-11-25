@@ -1015,7 +1015,7 @@ To ensure compatibility with our motor's maximum voltage rating of 9V, we incorp
 ### Wiring Diagram
 - #### **It shows you the connection of various components to the microcontroller.**
 <p align="center">
-    <img src="https://github.com/Book2009/FE-NOC/blob/main/Schemes/Wiring%20Diagram.png" width="700"/>
+    <img src="https://github.com/Book2009/YB-SUNFLOWER/blob/main/Schemes/Wiring%20Diagram.png" width="700"/>
 
 <br><hr>
 
